@@ -42,7 +42,6 @@ h1, h2, h3, h4,{
 
     /* needed styles for the overlay */
     z-index: 1; /* keep on top of other elements on the page */
-    box-shadow: 0 0 0 9999px rgba(0,0,0,0.5);
 }
 #inputfloat{
     color: darkgray;

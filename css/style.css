@@ -29,7 +29,10 @@
 .quartenion_color {
     color: var(--quartion_color_1)!important;
 }
-
+body{
+    background-image: url("../images/photo3.jpeg");
+    background-size: 'cover;'
+}
 #avatar{
     padding-left: 60px !important;
     padding-top: 5%! important;
@@ -50,7 +53,6 @@ html, body {
     left:0;
 }
 body{
-    background: linear-gradient(180deg, white,#dff9fb);
     font-size: 48px;
 
 }
