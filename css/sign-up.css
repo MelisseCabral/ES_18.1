@@ -22,20 +22,33 @@ h1, h2, h3, h4,{
 }
 
 #button-sign-up{
-    padding-top: 1%;
     background: transparent;
 }
 
 #sign-up-panel{
     display : none;
 }
+#login-panel{
+    /* some styles to position the modal at the center of the page */
+ 	position: absolute;
+    top: 15%;
+    left: 30%;
+    right: 30%;
+    height: 70%;
+    border-radius: 10px;
+    background: white;
+    text-align: center;
+    padding-bottom: 2%;
+
+    /* needed styles for the overlay */
+    z-index: 1; /* keep on top of other elements on the page */
+    box-shadow: 0 0 0 9999px rgba(0,0,0,0.5);
+}
 #inputfloat{
     color: darkgray;
 }
 
 .sign-up{
-    margin-right: 1%;
-    margin-top: 1%;
     display: inline-block;
     float: right;
 }
@@ -69,7 +82,7 @@ h1, h2, h3, h4,{
 	top: 15%;
 	left: 30%;
 	right: 30%;
-	height: auto;
+	height: 70%;
     border-radius: 10px;
 	background: white;
 	text-align: center;

@@ -1,6 +1,6 @@
 :root {
     /* Color */
-    --primary_color_1: #4834d4;
+    --primary_color_1: #000;
     --primary_color_2: rgba(255, 255, 255, 1);
     --secondary_color: #f6e58d;
     --terciary_color: rgba(252, 245, 247, 0.97);
@@ -39,7 +39,6 @@
 #title-screen{
     color: var(--primary_color_1) !important;
     text-align: center;
-    margin-left: 5vh;
 }
 html, body {
     position: absolute;
@@ -116,15 +115,14 @@ h4{
     color: var(--primary_color_1) !important;
 }
 #row-fluid{
-    width: 25%;
+    width: 50%;
     top: 40%;
-    left: 40%;
+    margin-left: 25%;
     position: absolute;
 }
 
 #btnLogin{
     float: right;
-    right: 11%;
 }
 
 .label-sign{
@@ -193,7 +191,7 @@ h4{
 }
 #logo{
     height: 10vh;
-    margin-left: 49%;
+    margin-top: 5vh;
 }
 .mdl-button--raised.mdl-button--colored{
     color: var(--primary_color_1) !important;
