@@ -3,7 +3,7 @@
     --primary_color_1: #000;
     --primary_color_2: rgba(255, 255, 255, 1);
     --secondary_color: #f6e58d;
-    --terciary_color: rgba(252, 245, 247, 0.97);
+    --terciary_color: #b3d4fc;
     /* Angles */
     --primary_color_deg: -0deg;
     --secondary_color_deg: -90deg;
@@ -26,9 +26,6 @@
     background: linear-gradient(var(--terciary_color_deg), var(--terciary_color_1), var(--terciary_color_2)) !important;
 }
 
-.quartenion_color {
-    color: var(--quartion_color_1)!important;
-}
 body{
     background-image: url("../images/photo3.jpeg");
     background-size: 'cover;'

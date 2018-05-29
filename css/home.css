@@ -1,12 +1,25 @@
 th{
     text-align: left !important;
 }
-#gaveta{
-    width: 5vh;
-    height: 1vh;
-    margin-left: 7vh;
-    margin-bottom: 0.5vh;
-    background: #7bed9f;
+#option{
+    width: 50vh;
+    height: 25vh;
+    margin-left: 2vh;
+    background-color: #b3d4fc;
+    border-radius: 5px;
+    display: grid;
+    text-align: center;
+}
+
+#icon-option{
+   font-size: -webkit-xxx-large
+}
+#option-account{
+    width: 50vh;
+    height: 25vh;
+    margin-left: 2vh;
+    background-color: #f6e58d;
+    border-radius: 5px;
 }
 #button-nav{
     color: white !important;
@@ -31,6 +44,7 @@ th{
 }
 .home{
     display: -webkit-box;
+    height: 100% !important;
 }
 #overlay{
     position: absolute;
@@ -44,27 +58,20 @@ th{
 #title{
     margin-left: 50%;
 }
-#group-gaveta{
+#group-option{
     margin-bottom: 2vh;
-    margin-top: 5vh;        
-}
-#gaveta-ocupada{
-    width: 5vh;
-    height: 1vh;
-    margin-left: 7vh;
-    margin-bottom: 0.5vh;
-    background: #ff4757;
+    margin-top: 2vh; 
+    display: -webkit-box;       
 }
 .page-content{
     width: 100%;
     height: 100%;
     display: inline-flex;
 }
-#street-scp{
-    padding-top: 18vh 
-}
-#street{
-    margin-left: 15vh;
+
+#square-menu{
+    margin-left: 22vh;
+    margin-top: 5vh;    
 }
 .demo-list-icon {
     width: 300px;
@@ -139,6 +146,22 @@ html, body {
 }
 .demo-drawer-header{
     height: fit-content;
+}
+#mini-avatar{
+    width: 15%;
+    height: auto;;
+    margin: 42.5%;
+    margin-top: 2%;
+    margin-bottom: 0%;
+    align-self: center !important;
+    padding-top: 5%! important;
+    padding-bottom: 5% !important;
+       
+}
+#name-info{
+    width: 100%;
+    text-align: center;
+    margin: 0;
 }
 #avatar{
     width: 40%;
