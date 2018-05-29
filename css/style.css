@@ -34,9 +34,9 @@ body{
     background-size: 'cover;'
 }
 #avatar{
-    padding-left: 60px !important;
-    padding-top: 5%! important;
-    padding-bottom: 5% !important;      
+    width: 50%;
+    margin: 25%;
+    height: auto;     
 }
 
 #title-screen{
@@ -81,7 +81,9 @@ footer{
     position: static;
     width: 100%;
 }
+.demo-layout-transparent .mdl-layout__header{
 
+}
 #subtitle{
     color: var(--primary_color_1);
     font-size: 23px !important;

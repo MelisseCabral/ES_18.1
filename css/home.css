@@ -137,6 +137,20 @@ html, body {
 .material-icons{
     color: white;
 }
+.demo-drawer-header{
+    height: fit-content;
+}
+#avatar{
+    width: 40%;
+    height: auto;;
+    margin: 30%;
+    margin-top: 2%;
+    margin-bottom: 0%;
+    align-self: center !important;
+    padding-top: 5%! important;
+    padding-bottom: 5% !important;
+       
+}
 .demo-avatar-dropdown {
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -149,6 +163,7 @@ html, body {
       -ms-flex-align: center;
           align-items: center;
   width: 100%;
+  
 }
 
 .demo-navigation {
@@ -290,15 +305,6 @@ _:-ms-input-placeholder, :root .demo-graph {
           align-items: center;
 }
 
-#avatar{
-
-    align-self: center !important;
-    padding-top: 5%! important;
-    padding-bottom: 5% !important;
-    height: 100px;
-    width: initial;
-    padding-bottom: 2%!important;
-}
 .round {
     border-radius: 50%;
 }
@@ -400,10 +406,9 @@ tbody{
 }
 
 #demo-avatar-dropdown{
-    display: inline-flex !important;
+    display: block !important;
 }
 #name-profile{
-    padding-top: 15% !important;
     width: 100%;
     text-align: center;
 }
