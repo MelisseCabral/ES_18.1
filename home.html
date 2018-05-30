@@ -18,18 +18,50 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="apple-mobile-web-app-title" content="Personal">
 
-    <!-- Tile icon for Win8 (144x144 + tile color) -->
-    <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
-    <meta name="msapplication-TileColor" content="#3372DF">
-
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/sign-up.css">
     <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.cyan-light_blue.min.css">
 
   </head>
   <body>
-    
+    <div id="new-add-panel">
+        <div class="overlay" onclick="closeModal()"></div>
+
+        <div class="modal">
+            <div id="sign-up-text">
+                <h4>Cadastro</h4>
+            </div>
+            <div id='fields-sign-up'>
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" id="label-sign">
+                    <input class="mdl-textfield__input label-float" type="text" id="sign-sample" id="name-signup" autocomplete="off">
+                    <label class="mdl-textfield__label" for="sample3">Nome</label>
+                </div>
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" id="label-sign">
+                    <input class="mdl-textfield__input sign-sample" type="text" id="email-signup" autocomplete="off">
+                    <label class="mdl-textfield__label" for="sample3">Email</label>
+                </div>
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" id="label-sign">
+                    <input class="mdl-textfield__input sign-sample" type="password" id="password-signup" autocomplete="off">
+                    <label class="mdl-textfield__label" for="sample3">Senha</label>
+                </div>
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" id="label-sign">
+                    <input class="mdl-textfield__input sign-sample" type="password" id="confirm-password" autocomplete="off">
+                    <label class="mdl-textfield__label" for="sample3">Confirme a senha</label>
+                </div>
+
+            </div>
+            <div id='actions-sign-up'>
+                <button id='cancel-add' class="mdl-button mdl-js-button mdl-js-ripple-effect">
+                  Cancelar
+                </button>
+                <button id='btnCadastro' type="submit" class="mdl-button mdl-js-button mdl-js-ripple-effect">
+                  Cadastrar
+                </button>
+            </div>
+        </div>
+    </div>
     <!-- Uses a transparent header that draws on top of the layout's background -->
 <style>
   .demo-layout-transparent {
@@ -48,7 +80,7 @@
         <div class="mdl-layout__header-row" style="width: 100%">
           <span id="title-screen" class="mdl-layout-title">Inicio</span>
           <div class="mdl-layout-spacer"></div>
-            <a id="button-nav" class="mdl-navigation__link" href="" onclick="openForm()">
+            <a id="button-nav" class="mdl-navigation__link" onclick="openModal()">
               <i class="material-icons mdl-list__item-icon crud">add</i>
               Novo Cadastro</a>
           <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable">
@@ -83,216 +115,127 @@
         </div>
       </header>
       <nav class="demo-navigation mdl-navigation">
-        <a class="mdl-navigation__link mdl-color-text--blue-grey-400" onclick="openInicio()"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">home</i>Inicio</a>
-        <a class="mdl-navigation__link mdl-color-text--blue-grey-400" onclick="openRelEntrada()"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">account_box</i><span>Minha Conta</span></a>
-        <a class="mdl-navigation__link mdl-color-text--blue-grey-400" onclick="openRelSaida()"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">inbox</i>Publicações</a>
-        <a class="mdl-navigation__link mdl-color-text--blue-grey-400" onclick="openSolicitacoes()"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">local_offer</i>Solicitações</a>
-        <a class="mdl-navigation__link mdl-color-text--blue-grey-400" onclick="openEstatistica()"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">assessment</i>Estatistica</a>
+        <a class="mdl-navigation__link mdl-color-text--blue-grey-400" id="item-drawer-inicio"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">home</i>Inicio</a>
+        <a class="mdl-navigation__link mdl-color-text--blue-grey-400" id="item-drawer-my_account"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">account_box</i><span>Minha Conta</span></a>
+        <a class="mdl-navigation__link mdl-color-text--blue-grey-400" id="item-drawer-publications"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">inbox</i>Publicações</a>
+        <a class="mdl-navigation__link mdl-color-text--blue-grey-400" id="item-drawer-solicitations"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">local_offer</i>Solicitações</a>
+        <a class="mdl-navigation__link mdl-color-text--blue-grey-400" id="item-drawer-estatistics"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">assessment</i>Estatistica</a>
         <a class="mdl-navigation__link mdl-color-text--blue-grey-400" href="" id="btnLogout"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">keyboard_backspace</i>Sair</a>
 
         <div class="mdl-layout-spacer"></div>
       </nav>
     </div>
     <main class="mdl-layout__content">
-      <section class="home" id="inicio" >
-          <div class="home" id="inicio" >
-              <section id='square-menu'>
-                      <!-- Gavetas -->
-                      <div id='group-option' class="terciary_color">
-                          <div id='option'>
+        <div class="panel" id="inicio_panel">
+            <section id='square-menu'>
+                    <!-- Gavetas -->
+                    <div id='group-option' class="terciary_color">
+                        <div class='option' id="my_account">
+                        <a class="mdl-navigation__link" id="my_account" style="margin-top: 5vh">
+                            <i class="material-icons" role="presentation" id="icon-option">account_circle</i>
+                            <h5 style="color: white">Minha conta</h5>
+                        </a>
+                        </div>
+                        <div class='option' id="professores"> 
                             <a class="mdl-navigation__link" style="margin-top: 5vh">
-                                <i class="material-icons" role="presentation" id="icon-option">account_circle</i>
-                                <h5 style="color: white">Minha conta</h5>
+                                <i class="material-icons" role="presentation" id="icon-option">people</i>
+                                <h5 style="color: white">Professores</h5>
 
                             </a>
-                          </div>
-                          <div id='option'>
-                                <a class="mdl-navigation__link" style="margin-top: 5vh">
-                                    <i class="material-icons" role="presentation" id="icon-option">people</i>
-                                    <h5 style="color: white">Professores</h5>
-    
-                                </a>
-                          </div>
-                          <div id='option'>
-                                <a class="mdl-navigation__link" style="margin-top: 5vh">
-                                    <i class="material-icons" role="presentation" id="icon-option">school</i>
-                                    <h5 style="color: white">Discentes</h5>
-    
-                                </a>
-                          </div>
-                      </div>
-                      <div id='group-option'>
-                              <div id='option'>
-                                    <a class="mdl-navigation__link" style="margin-top: 5vh">
-                                        <i class="material-icons" role="presentation" id="icon-option">notes</i>
-                                        <h5 style="color: white">Produção Intelectual</h5>
-        
-                                    </a>
-                              </div>
-                              <div id='option-account'>
-                                <div id ="demo-avatar-dropdown" class="demo-avatar-dropdown">
-                                    <img src="/images/logo.png" id ="mini-avatar"/>
-                                    <div style="width: 100%;text-align: center; display: grid">
-                                    <h6 id = "name-info">Nome Usuario</h6> 
-                                    <span id = "name-cargo">Cargo</span>  
-                                    </div>
-                                    </ul>
-                                </div>
-                              </div>
-                              <div id='option'>
-                                    <a class="mdl-navigation__link" style="margin-top: 5vh">
-                                        <i class="material-icons" role="presentation" id="icon-option">inbox</i>
-                                        <h5 style="color: white">Projetos</h5>
-        
-                                    </a>
-                              </div>
-                      </div>
-                      <div id='group-option'>
-                              <div id='option'>
-                                    <a class="mdl-navigation__link" style="margin-top: 5vh">
-                                        <i class="material-icons" role="presentation" id="icon-option">attach_money</i>
-                                        <h5 style="color: white">Financiadores</h5>
-        
-                                    </a>
-                              </div>
-                              <div id='option'>
-                                    <a class="mdl-navigation__link" style="margin-top: 5vh">
-                                        <i class="material-icons" role="presentation" id="icon-option">people_outline</i>
-                                        <h5 style="color: white">Participantes Externos</h5>
-        
-                                    </a>
-                              </div>
-                              <div id='option'>
-                                    <a class="mdl-navigation__link" style="margin-top: 5vh">
-                                        <i class="material-icons" role="presentation" id="icon-option">file_copy</i>
-                                        <h5 style="color: white">Trabalhos de conclusão</h5>
-        
-                                    </a>
-                              </div>
-                      </div>
-                      
-              </section>
+                        </div>
+                        <div class='option' id="discentes">
+                            <a class="mdl-navigation__link" style="margin-top: 5vh">
+                                <i class="material-icons" role="presentation" id="icon-option">school</i>
+                                <h5 style="color: white">Discentes</h5>
 
-          </div>
-  
-          <div id="rel_entrada" style="display: none">
-              <table style="display: contents; width: 100%" class="mdl-data-table mdl-js-data-table mdl-data-table mdl-shadow--2dp">
-                  <thead style="display: table-row-group">
-                      <tr>
-                          <th class="mdl-data-table__cell--non-numeric">Data</th>
-                          <th>Nota Fiscal</th>
-                          <th>Descrição</th>
-                          <th>Qnt</th>
-                          <th>Unid.</th>
-                          <th>Lote</th>
-                          <th>Validade</th>
-                          <th>Qnt</th>
-                          <th>Localização</th>
-                      </tr>
-                  </thead>
-                  <tbody style="display: table-row-group">
-                      <tr>
-                          <td class="mdl-data-table__cell--non-numeric">20/04/2018</td>
-                          <td>000.000.035</td>
-                          <td>Mexalgina 20 ml</td>
-                          <td>5</td>
-                          <td>Neo química</td>
-                          <td>320817</td>
-                          <td>01/12/2019</td>
-                          <td>100</td>
-                          <td>Rua 3 / Gaveta 20</td>
-                      </tr>
-                      <tr>
-                          <td class="mdl-data-table__cell--non-numeric">03/05/2018</td>
-                          <td>000.000.236</td>
-                          <td>Cefalexina</td>
-                          <td>15</td>
-                          <td>Bayer</td>
-                          <td>322641</td>
-                          <td>15/02/2020</td>
-                          <td>1
-                              500</td>
-                          <td>Rua 1 / Gaveta 02</td>
-                      </tr>
-                      <tr>
-                              <td class="mdl-data-table__cell--non-numeric">20/04/2018</td>
-                              <td>000.050.055</td>
-                              <td>Paracetamol</td>
-                              <td>20</td>
-                              <td>Neo química</td>
-                              <td>326464</td>
-                              <td>01/08/2020</td>
-                              <td>200</td>
-                              <td>Rua 8 / Gaveta 5</td>
-                      </tr>
-                  </tbody>
-              </table>
-          </div>
-  
-          <div id="rel_saida" style="display: none">
-              <table style="display: contents; width: 100%" class="mdl-data-table mdl-js-data-table mdl-data-table mdl-shadow--2dp">
-                  <thead style="display: table-row-group">
-                      <tr>
-                          <th>Produto</th>
-                          <th>Lote</th>
-                          <th>Validade</th>
-                          <th>Quantidade</th>
-                          <th>Saida</th>
-                          <th>Destino</th>
-                      </tr>
-                  </thead>
-                  <tbody style="display: table-row-group">
-                      
-                  <tr>
-                          <td class="mdl-data-table__cell--non-numeric">Mexalgina</td>
-                          <td>0002</td>
-                          <td>01/08/2020</td>
-                          <td>1010</td>
-                          <td>500</td>
-                          <td>Junco</td>
-                  
-                      </tr>
-                      <tr>
-                          <td class="mdl-data-table__cell--non-numeric">Cefalexina</td>
-                          <td>0001</td>
-                          <td>05/02/2019</td>
-                          <td>1000</td>
-                          <td>200</td>
-                          <td>Alto Cristo</td>
-              
-                      </tr>
-                      <tr>
-                          <td class="mdl-data-table__cell--non-numeric">Paracetamol</td>
-                          <td>0005</td>
-                          <td>05/02/2020</td>
-                          <td>2000</td>
-                          <td>800</td>
-                          <td>Aracatiaçu</td>
-                      </tr>
-                  </tbody>
-              </table>
-          </div>
-  
-          <div id="solicitacoes" style="display: none">
-  
-          </div>
-  
-          <div id="estatistica" style="display: none">
-              <div class="mdl-grid demo-content">
-                  <div id='charts' class="demo-graphs mdl-shadow--2dp mdl-color--white mdl-cell mdl-cell--8-col chart">
-                          <h6 id='title-chart'>Capacidade de estocagem</h6>
-                      <svg fill="currentColor" viewBox="0 0 500 250" class="demo-graph">
-                      <use xlink:href="#chart" />
-                      </svg>
-                  </div>
-                  <div id='charts' class="demo-graphs mdl-shadow--2dp mdl-color--white mdl-cell mdl-cell--8-col chart">
-                          <h6 id='title-chart'>Desperdicio por validade</h6>
-                      <svg fill="currentColor" viewBox="0 0 500 250" class="demo-graph">
-                      <use xlink:href="#chart" />
-                      </svg>
-                  </div>   
-              </div>
-          </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div id='group-option'>
+                            <div class='option' id="publications">
+                                <a class="mdl-navigation__link" style="margin-top: 5vh">
+                                    <i class="material-icons" role="presentation" id="icon-option">notes</i>
+                                    <h5 style="color: white">Produção Intelectual</h5>
+    
+                                </a>
+                            </div>
+                            <div id='option-account'>
+                            <div id ="demo-avatar-dropdown" class="demo-avatar-dropdown">
+                                <img src="/images/user.png" id ="mini-avatar"/>
+                                <div style="width: 100%;text-align: center; display: grid">
+                                <h6 id = "name-info">Nome Usuario</h6> 
+                                <span id = "name-cargo">Cargo</span>  
+                                </div>
+                                </ul>
+                            </div>
+                            </div>
+                            <div class='option' id="projetos">
+                                <a class="mdl-navigation__link" style="margin-top: 5vh">
+                                    <i class="material-icons" role="presentation" id="icon-option">inbox</i>
+                                    <h5 style="color: white">Projetos</h5>
+    
+                                </a>
+                            </div>
+                    </div>
+                    <div id='group-option'>
+                            <div class='option' id="financiadores">
+                                <a class="mdl-navigation__link" style="margin-top: 5vh">
+                                    <i class="material-icons" role="presentation" id="icon-option">attach_money</i>
+                                    <h5 style="color: white">Financiadores</h5>
+    
+                                </a>
+                            </div>
+                            <div class='option' id="participantes_ext">
+                                <a class="mdl-navigation__link" style="margin-top: 5vh">
+                                    <i class="material-icons" role="presentation" id="icon-option">people_outline</i>
+                                    <h5 style="color: white">Participantes Externos</h5>
+    
+                                </a>
+                            </div>
+                            <div class='option' id="tccs">
+                                <a class="mdl-navigation__link" style="margin-top: 5vh">
+                                    <i class="material-icons" role="presentation" id="icon-option">file_copy</i>
+                                    <h5 style="color: white">Trabalhos de conclusão</h5>
+    
+                                </a>
+                            </div>
+                    </div>
+                    
+            </section>
+        </div>
+
+        <div id="my_account_panel" class="panel" style="display: none">
+            <h1 style="text-align: center; width: 100%">Minha conta</h1>
+        </div>
+        <div id="professores_panel" class="panel" style="display: none">
+            <h1 style="text-align: center; width: 100%">Professores</h1>
+        </div>
+        <div id="discentes_panel" class="panel" style="display: none">
+            <h1 style="text-align: center; width: 100%">Discentes</h1>
+        </div>
+        <div id="publications_panel" class="panel" style="display: none">
+            <h1 style="text-align: center; width: 100%">Publicações</h1>
+        </div>
+
+        <div id="solicitacoes_panel" class="panel" style="display: none">
+            <h1 style="text-align: center; width: 100%">Solicitações</h1>
+        </div>
+
+        <div id="estatistica_panel" class="panel" style="display: none">
+            <h1 style="text-align: center; width: 100%">Estatistica</h1>
+        </div>
+        <div id="participantes_ext_panel" class="panel" style="display: none">
+            <h1 style="text-align: center; width: 100%">Participantes Externos</h1>
+        </div>
+        <div id="projetos_panel" class="panel" style="display: none">
+            <h1 style="text-align: center; width: 100%">Projetos</h1>
+        </div>
+        <div id="financiadores_panel" class="panel" style="display: none">
+            <h1 style="text-align: center; width: 100%">Financiadores</h1>
+        </div>
+        <div id="tccs_panel" class="panel" style="display: none">
+            <h1 style="text-align: center; width: 100%">Tccs</h1>
+        </div>
       </section>
       
     </main>
@@ -301,7 +244,8 @@
     <footer>
         <script src="js/main.js"></script>
         <script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
-        <script src="js/App.js"></script>
+        <script src="js/cadastros.js"></script>
+        <script src="js/jquery-3.3.1.min.js"></script>
         <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
     </footer>
 </html>

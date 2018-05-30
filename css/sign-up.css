@@ -51,14 +51,6 @@ h1, h2, h3, h4,{
     display: inline-block;
     float: right;
 }
-.mdl-layout {
-    align-items: center;
-    justify-content: center;
-}
-.mdl-layout__content {
-	padding: 24px;
-	flex: none;
-}
 .mdl-button {
     margin-top: 10px;
     margin-bottom: 10px;
