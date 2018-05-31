@@ -13,6 +13,9 @@ th{
 #new-add-panel{
     display: none;
 }
+.mdl-data-table{
+    position: absolute;
+}
 #icon-option{
    font-size: -webkit-xxx-large
 }
@@ -405,7 +408,11 @@ h4{
 .mdl-textfield__input{
     text-emphasis-color: white;
 }
-
+#title-panel{
+    text-align: Left; 
+    width: 80%; 
+    margin-left: 5vh
+}
 #row-fluid{
     width: 25%;
     top: 55%;
@@ -413,17 +420,24 @@ h4{
     right: 35%;
     position: absolute;
 }
-
+.view{
+    display: -webkit-box;   
+}
+#functions-panel{
+    color: rgb(0,188,212)
+}
+#options-panel{
+    text-align: Left; 
+    width: 50%; 
+    margin-left: 5vh;
+    margin-top: 2.5vh;
+}
 #label-sign{
     color: white;
 }
 
 #row-fluid-principal{
     display:inline-table;
-}
-
-tbody{
-    display: none;
 }
 
 #icon-tables{

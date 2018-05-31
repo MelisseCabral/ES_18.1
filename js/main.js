@@ -6,8 +6,12 @@ for(var i=0; i<divs.length; i++) {
         var id_ = this.id + "_panel";
         var div = document.getElementById(id_);
         hiddenAllPanels();
-        div.style.display = "-webkit-box";
-        changeTitleScreen("Inicio");
+        if(id_ != 'inicio_panel'){
+            div.style.display = "block";
+        } else{
+            div.style.display = "-webkit-box";
+        }
+        changeTitleScreenById(id_);
         closeMenuMobile();
     })
 }
@@ -48,11 +52,25 @@ function closeMenuMobile(){
     var menu = document.getElementById("container-menu");
 }
 
+function changeTitleScreenById(titleScreen_var){
+    var str;
+    switch(true) {
+        case titleScreen_var == '' :
+            str = '';
+            break;
+        case titleScreen_var == '':
+            str = '';
+            break;
+        default:
+            str = 'Inicio';
+    }
+    var titleScreen = document.getElementById("title-screen");
+    titleScreen.innerHTML = str;
+}
 function changeTitleScreen(titleScreen_var){
     var titleScreen = document.getElementById("title-screen");
     titleScreen.innerHTML = titleScreen_var;
 }
-
 function logout(){
 
 }
