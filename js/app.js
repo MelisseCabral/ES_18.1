@@ -46,12 +46,12 @@ $(function(){
         var errorCode = error.code;
         var errorMessage = error.message;
         if (errorCode == 'auth/invalid-email') {
-            alert('The email is invalid.');
+            snackbar('The email is invalid.');
         }
         if (errorCode == 'auth/weak-password') {
-            alert('The password is too weak.');
+            snackbar('The password is too weak.');
         } else {
-            alert(errorMessage);
+            snackbar(errorMessage);
         }
         console.log(error)
     });
@@ -60,12 +60,12 @@ $(function(){
     firebase.auth().currentUser.sendEmailVerification().then(function () {
         // Email Verification sent!
         // [START_EXCLUDE]
-        alert('Email Verification Sent!');
+        snackbar('Email de verificação enviado!');
         // [END_EXCLUDE]
     });
     // [END sendemailverification]
     } else {
-    alert("Senhas não conferem");
+    snackbar("Senhas não conferem");
     }
     });
     function logout_firebase(){
@@ -73,7 +73,6 @@ $(function(){
     }
     btnLogout.addEventListener('click', function() {
         firebase.auth().signOut().then(function() {
-        console.log('Signed Out');
         location.href= "/index.html";
         }, function(error) {
         console.error('Sign Out Error', error);
@@ -85,7 +84,6 @@ $(function(){
 
     if (firebaseUser) {
     console.log(firebaseUser);
-    console.log("LoggedIn");
     location.href="home.html";
     // User is signed in.
     } else {    
@@ -94,4 +92,11 @@ $(function(){
     // [START_EXCLUDE]
     }
     });
+    function snackbar(string) {
+        var snackbarContainer = document.querySelector('#demo-snackbar-example');
+        var data = {
+            message: string,
+        };
+        snackbarContainer.MaterialSnackbar.showSnackbar(data);
+    };
 })
