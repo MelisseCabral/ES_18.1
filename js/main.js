@@ -71,6 +71,12 @@ function changeTitleScreen(titleScreen_var){
     var titleScreen = document.getElementById("title-screen");
     titleScreen.innerHTML = titleScreen_var;
 }
-function logout(){
 
-}
+// Snackbar function.
+function snackbar(string) {
+	var snackbarContainer = document.querySelector('#demo-snackbar-example');
+	var data = {
+		message: string,
+	};
+	snackbarContainer.MaterialSnackbar.showSnackbar(data);
+};
