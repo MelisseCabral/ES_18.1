@@ -84,6 +84,43 @@ th{
 .demo-list-icon {
     width: 300px;
 }
+fieldset{
+    border: 1px solid black !important;
+}
+legend{
+    margin-left: 5vh
+}
+#section_one{
+    display: -webkit-box;
+}
+#box{
+    display: grid;
+    margin-left: 5vh
+}
+#info_personal_container{
+    margin-left: 15vh;
+    width: 40%
+}
+#address_personal_container{
+    margin-left: 10vh;
+    width: 40%
+}
+#education_personal_container{
+    margin-left: 15vh;
+    margin-right: 15vh;
+    margin-top: 6vh;
+}
+#projetos_personal_container{
+    margin-left: 15vh;
+    margin-right: 15vh;
+    margin-top: 6vh;
+}
+#publications_personal_container{
+    margin-left: 15vh;
+    margin-right: 15vh;
+    margin-top: 6vh;
+    margin-bottom: 15vh;
+}
 #alerta-validade{
     margin: 2vh;
     margin-left: 7vh;
@@ -92,6 +129,24 @@ th{
 }
 .mdl-list__item-icon{
     color: #757575 !important;
+}
+#options-panel_my_account{
+
+    margin-top: 6vh;
+    margin-left: 12vh;
+
+}
+#avatar_my_account{
+    width: 25vh; 
+    height: 25vh;
+    margin: 5vh;
+    margin-left: 15vh;  
+}
+#name_my_account{
+    margin-top: 3vh;
+}
+#cargo_title{
+    
 }
 #alerta-estoque{
     margin: 2vh;

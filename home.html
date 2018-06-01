@@ -110,6 +110,7 @@
             <h6 id = "name-profile">Nome Usuario</h6> 
             <span id = "name-cargo">Cargo</span>  
           </div>
+
           <div class="mdl-layout-spacer"></div>
           </ul>
         </div>
@@ -205,7 +206,143 @@
         </div>
 
         <div id="my_account_panel" class="panel" style="display: none">
-            <h1 style="text-align: center; width: 100%">Minha conta</h1>
+            <div style="display: -webkit-box">
+                <img src="./images/user.png" id="avatar_my_account"/>
+                <div id="name_my_account">
+                    <h3 id="name_my_account">Nome</h3>
+                    <span>Cargo</span>
+                </div>
+                <div id="options-panel_my_account">
+                   
+                    <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab" onclick="snackbar('edit')">
+                        <i class="material-icons" id="functions-panel">edit</i>
+                    </button>
+                    <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab" onclick="snackbar('print')">
+                        <i class="material-icons" id="functions-panel">print</i>
+                    </button>
+                    
+                </div>
+            </div>
+            <div id="section_one">
+                    <div id="info_personal_container">
+                            <fieldset>
+                                <legend class="legends">Informações Pessoais</legend>
+                                <div id="box">
+                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                        <input class="mdl-textfield__input" type="text" id="sample3">
+                                        <label class="mdl-textfield__label" for="sample3">Nome</label>
+                                    </div>
+                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                            <input class="mdl-textfield__input" type="text" id="sample3">
+                                            <label class="mdl-textfield__label" for="sample3">Email</label>
+                                    </div>
+                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                        <input class="mdl-textfield__input" type="text" id="sample3">
+                                        <label class="mdl-textfield__label" for="sample3">CPF</label>
+                                    </div>
+                                </div>
+                                
+                            </fieldset>
+                    </div>
+                    <div id="address_personal_container">
+                            <fieldset>
+                                <legend class="legends">Endereço</legend>
+                                <div id="box">
+                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                        <input class="mdl-textfield__input" type="text" id="sample3">
+                                        <label class="mdl-textfield__label" for="sample3">Endereço</label>
+                                    </div>
+                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                            <input class="mdl-textfield__input" type="text" id="sample3">
+                                            <label class="mdl-textfield__label" for="sample3">Complemento</label>
+                                    </div>
+                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                        <input class="mdl-textfield__input" type="text" id="sample3">
+                                        <label class="mdl-textfield__label" for="sample3">CEP</label>
+                                    </div>
+                                </div>
+                                
+                            </fieldset>
+                    </div>
+            </div>
+            <div id="education_personal_container">
+                    <fieldset>
+                        <legend class="legends">Educação</legend>
+                        <div id="box">
+                            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                <input class="mdl-textfield__input" type="text" id="sample3">
+                                <label class="mdl-textfield__label" for="sample3">Endereço</label>
+                            </div>
+                            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" id="sample3">
+                                    <label class="mdl-textfield__label" for="sample3">Complemento</label>
+                            </div>
+                            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                <input class="mdl-textfield__input" type="text" id="sample3">
+                                <label class="mdl-textfield__label" for="sample3">CEP</label>
+                            </div>
+                        </div>
+                        
+                    </fieldset>
+            </div>
+            <div id="projetos_personal_container">
+                    <h3>Projetos</h3>
+                    <table class="mdl-data-table mdl-js-data-table mdl-data-table mdl-shadow--2dp">
+                            <thead>
+                                <tr>
+                                <th class="mdl-data-table__cell--non-numeric">Nome</th>
+                                <th>Status</th>
+                                <th>Area</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                <td class="mdl-data-table__cell--non-numeric">Acrylic (Transparent)</td>
+                                <td>25</td>
+                                <td>$2.90</td>
+                                </tr>
+                                <tr>
+                                <td class="mdl-data-table__cell--non-numeric">Plywood (Birch)</td>
+                                <td>50</td>
+                                <td>$1.25</td>
+                                </tr>
+                                <tr>
+                                <td class="mdl-data-table__cell--non-numeric">Laminate (Gold on Blue)</td>
+                                <td>10</td>
+                                <td>$2.35</td>
+                                </tr>
+                            </tbody>
+                        </table>
+            </div>
+            <div id="publications_personal_container">
+                    <h3>Publicações</h3>
+                    <table class="mdl-data-table mdl-js-data-table mdl-data-table mdl-shadow--2dp">
+                        <thead>
+                            <tr>
+                            <th class="mdl-data-table__cell--non-numeric">Nome</th>
+                            <th>Data</th>
+                            <th>Download</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                            <td class="mdl-data-table__cell--non-numeric">Acrylic (Transparent)</td>
+                            <td>25</td>
+                            <td>$2.90</td>
+                            </tr>
+                            <tr>
+                            <td class="mdl-data-table__cell--non-numeric">Plywood (Birch)</td>
+                            <td>50</td>
+                            <td>$1.25</td>
+                            </tr>
+                            <tr>
+                            <td class="mdl-data-table__cell--non-numeric">Laminate (Gold on Blue)</td>
+                            <td>10</td>
+                            <td>$2.35</td>
+                            </tr>
+                        </tbody>
+                    </table>
+            </div>
         </div>
         <div id="professores_panel" class="panel" style="display: none">
             <div class="view">

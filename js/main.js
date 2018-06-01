@@ -24,7 +24,7 @@ document.getElementById('item-drawer-inicio').addEventListener('click', function
 });
 document.getElementById('item-drawer-my_account').addEventListener('click', function(){
     hiddenAllPanels();
-    document.getElementById('my_account_panel').style.display = "-webkit-box";
+    document.getElementById('my_account_panel').style.display = "block";
     changeTitleScreen("Minha conta");
 });
 document.getElementById('item-drawer-publications').addEventListener('click', function(){
