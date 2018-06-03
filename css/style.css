@@ -222,11 +222,21 @@ h4{
         width: 10%;
     }
     #login-panel{
-        width: 90%;
-        left: 5% !important;
+        width: 80%;
+        left: 10% !important;
     }
     #label-sign{
         width: 100%;
         font-size: 35px;
+    }
+    .mdl-textfield__input{
+        font-size: 24px !important;
+    }
+    .mdl-textfield__label{
+        font-size: 24px !important;
+    }
+    #login-btn{
+        font-size: 24px !important;
+        height: 4vh
     }
 }
