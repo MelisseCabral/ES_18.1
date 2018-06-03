@@ -546,3 +546,34 @@ only screen and (min-device-pixel-ratio : 1.5) {
         left: 10%;
     }
 }
+/* Smartphones (portrait and landscape) ———– */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+
+    .mdl-layout__header {
+        display: flex !important;
+        background: rgb(0,188,212) !important
+
+    }
+    #square-menu{
+        margin-left: 0%;
+    }
+    .option {
+        width: 16vh;
+    }
+    #option-account {
+        width: 16vh !important;
+    }
+    h5{
+        font-size: 14px !important;
+    }
+    #icon-option {
+        font-size: x-large;
+    }
+    #mini-avatar{
+        display: none
+    }
+    #name-info{
+        margin-top: 5vh
+    }
+
+}
