@@ -202,6 +202,9 @@ h4{
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
 
     /* Styles */
+    body{
+        font-size: 24px !important;
+    }
     .icon{
         width: 36%;
         left: 34%;
@@ -209,17 +212,18 @@ h4{
 
     #row-fluid{
         width: 60%;
-        top: 55%;
-        left: 20%;
+        top: 40%;
         position: absolute;
+        margin-left: 20%;
     }
     #btnLogin{
         float: right;
         right: 0;
         width: 10%;
     }
-    #form-login{
-        width: 100%;
+    #login-panel{
+        width: 90%;
+        left: 5% !important;
     }
     #label-sign{
         width: 100%;
