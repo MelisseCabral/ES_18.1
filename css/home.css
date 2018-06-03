@@ -528,7 +528,11 @@ h4{
 #mensagens-table{
     display: table-row-group !important;
 }
+.mdl-layout__header {
+    display: flex !important;
+    background: rgb(0,188,212) !important
 
+}
 @media
 only screen and (-webkit-min-device-pixel-ratio : 1.5),
 only screen and (min-device-pixel-ratio : 1.5) {
@@ -574,6 +578,9 @@ only screen and (min-device-pixel-ratio : 1.5) {
     }
     #name-info{
         margin-top: 5vh
+    }
+    #button-nav{
+        display: none;
     }
 
 }
