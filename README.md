@@ -1,6 +1,6 @@
 # Sistema de Gerenciamento de Programa de Pós-Graduação
 Projeto para a disciplina de Engenharia de Software, UFC - Sobral 2018.1
-Sistema de Pós Graduação - posGrad
+//Sistema de Pós Graduação - posGrad//
 
 O sistema posGrad deve possuir 2 tipos de usuários:
 1.	Professor:
