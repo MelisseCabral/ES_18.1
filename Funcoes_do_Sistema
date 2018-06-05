@@ -1,0 +1,57 @@
+# Definição das funções do sistema posGrad
+
+Cadastrar financiadores:
+ID Financiador (String);
+CNPJ (String);
+Razão	 Social (String);
+Nome de Fantasia (String);
+Status	 Jurídico (String); 
+País (String);
+Site (String).
+Cadastrar programa de fomento:
+ID Programa (String);
+	ID Financiador (String);
+Nome (String).
+Cadastrar área de concentração:
+ID Área (String);
+Nome(String);
+Descrição (String);
+	Data de Início (String);
+	Data de Fim (String).
+Cadastrar linha de pesquisa:
+ID Linha (String);
+Nome (String);
+Área Associada (ID	Área);
+Descrição (String);
+	Data de Início (String);
+	Data de Fim (String).
+Cadastrar professor:
+ID Professor (String);
+Tipo de Documento (CPF,	 RG,	 Passaporte)(String);
+Número do Documento (String);
+Nome (String);
+Data de Nascimento (String);
+Sexo (Masculino ou	Feminino)(String);
+Nome Social (String);
+Nacionalidade (String);
+Bolsa de Produtividade e Pesquisa (sim	ou não?);
+E-mail (String);
+Instituição de	origem (String);
+Nível (Graduação, Especialização, Mestrado ou Doutorado);
+	Ano da Titulação (String);
+País da Titulação (String);
+Instituição da	Titulação (String);
+Tipo de Vínculo com a Instituição (Servidor Público, CLT, Pessoa Jurídica);	Regime de Trabalho (Dedicação	Exclusiva, 20H, 40H);
+Categoria (Permanente ou Colaborador);
+Carga	Horária Semanal;
+Data de início do vínculo com o programa (String);
+Data de fim do vínculo com o programa (String);
+Participação em Projetos de Pesquisa (IDs	 Projetos);
+Participação em Produções Intelectuais (IDs	 Produções);
+Participação em Bancas de Trabalho de	Conclusão (IDs Bancas).
+Cadastrar discente;
+Cadastrar projetos;
+Cadastrar participantes externos;
+Cadastrar trabalho de conclusão;
+Cadastrar produção intelectual;
+Gerar relatórios.
