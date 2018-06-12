@@ -1,44 +1,48 @@
 # Definição das funções do sistema posGrad
 
-Cadastrar financiadores:
-ID Financiador (String);
+*Cadastrar financiadores:
+ID Financiador (Int);
 CNPJ (String);
 Razão	 Social (String);
 Nome de Fantasia (String);
 Status	 Jurídico (String); 
 País (String);
 Site (String).
-Cadastrar programa de fomento:
-ID Programa (String);
-	ID Financiador (String);
+
+*Cadastrar programa de fomento:
+ID Programa (Int);
+ID Financiador (String);
 Nome (String).
-Cadastrar área de concentração:
-ID Área (String);
+
+*Cadastrar área de concentração:
+ID Área (Int);
 Nome(String);
 Descrição (String);
-	Data de Início (String);
-	Data de Fim (String).
-Cadastrar linha de pesquisa:
-ID Linha (String);
+Data de Início (String);
+Data de Fim (String).
+
+*Cadastrar linha de pesquisa:
+ID Linha (Int);
 Nome (String);
-Área Associada (ID	Área);
+Área Associada (ID Área);
 Descrição (String);
-	Data de Início (String);
-	Data de Fim (String).
-Cadastrar professor:
-ID Professor (String);
-Tipo de Documento (CPF,	 RG,	 Passaporte)(String);
+Data de Início (String);
+Data de Fim (String).
+
+*Cadastrar professor:
+ID Professor (Int);
+Tipo de Documento (CPF,	RG, Passaporte)(String);
 Número do Documento (String);
 Nome (String);
 Data de Nascimento (String);
-Sexo (Masculino ou	Feminino)(String);
+Sexo (Masculino ou Feminino)(String);
 Nome Social (String);
 Nacionalidade (String);
 Bolsa de Produtividade e Pesquisa (sim	ou não?);
 E-mail (String);
 Instituição de	origem (String);
 Nível (Graduação, Especialização, Mestrado ou Doutorado);
-	Ano da Titulação (String);
+Ano da Titulação (String);
 País da Titulação (String);
 Instituição da	Titulação (String);
 Tipo de Vínculo com a Instituição (Servidor Público, CLT, Pessoa Jurídica);	Regime de Trabalho (Dedicação	Exclusiva, 20H, 40H);
@@ -49,9 +53,105 @@ Data de fim do vínculo com o programa (String);
 Participação em Projetos de Pesquisa (IDs	 Projetos);
 Participação em Produções Intelectuais (IDs	 Produções);
 Participação em Bancas de Trabalho de	Conclusão (IDs Bancas).
-Cadastrar discente;
-Cadastrar projetos;
-Cadastrar participantes externos;
-Cadastrar trabalho de conclusão;
-Cadastrar produção intelectual;
-Gerar relatórios.
+
+*Cadastrar discente:
+ID Discente (Int);
+Tipo de Documento (CPF, RG, Passaporte)(String);
+Número do Documento(String);	
+Nome (String);
+Data de	Nascimento (String);
+Sexo (String);
+Nome Social (String);
+Nacionalidade (String);
+Pessoa com Deficiência (String);
+E-mail (String);
+Nível (Mestrado	ou Doutorado)(String);
+Situação (Matriculado, Trancado, Desistente)(String);
+Data de Matrícula(String);
+Orientador (ID	Professor);
+Data de	início da orientação (String);
+Data de fim da orientação (String);
+Co-Orientador (ID Professor)
+Data de início da co-orientação (String);
+Data de fim da co-orientação (String);
+Participação em	Projetos de Pesquisa (IDs Projetos);
+Participação em	Produções Intelectuais (IDs Produções);
+Bancas de Trabalho de Conclusão (ID Banca);
+Bolsa (ID Programa de Fomento);
+Data de Início da Bolsa (String);
+Data de Fim da Bolsa (String);
+
+*Cadastrar projetos:
+ID Projeto (Int);
+Nome (String);
+Data de Início (String);
+Natureza do Projeto (PESQUISA, DESENVOLVIMENTO OU INOVAÇÃO)(String);
+Situação do Projeto (EM	ANDAMENTO, CANCELADO OU	CONCLUÍDO)(String);
+Descrição(String);
+Linha de Pesquisa (ID Linha);
+Área de	Concentração (ID Área);
+Equipe (IDs Professores, IDs Discentes, IDs Externos)(Strings);
+Financiador (ID	 Financiadores);
+Produções Intelectuais Associados (IDs Produções);
+Trabalho de Conclusão Associados (IDs Trabalhos);
+
+*Cadastrar participantes externos:
+ID Externo (Int);
+Tipo de	Documento (CPF,	RG, Passaporte)(String);
+Número do Documento(String);
+Nome(String);
+Data de	Nascimento (String);
+Sexo (Masculino	 ou	 Feminino)(String);
+Nome Social (String);
+Nacionalidade (String);
+Bolsa de Produtividade e Pesquisa (sim ou não?)(String);
+E-mail (String);
+Instituição de origem (String);
+Nível (Graduação, Especialização, Mestrado ou Doutorado)(String);
+Ano da Titulação (String);
+País da	Titulação (String);
+Instituição da Titulação (String);
+Participação em	Projetos de Pesquisa (IDs Projetos);
+Participação em	Produções Intelectuais (IDs Produções);
+Participação em	Bancas de Trabalho de Conclusão	(IDs Bancas);
+
+*Cadastrar trabalho de conclusão:
+ID Trabalho (Int);
+Título (String);
+Autor (ID Discente);
+Tipo de Trabalho de Conclusão (DISSERTAÇÃO ou TESE)(String);
+Data da Defesa (String);
+Resumo (String);
+Abstract (String);
+Palavras-chave (String);
+Número de Páginas (String);
+Idioma (String);
+Área de	Concentração (ID Área);
+Linha de Pesquisa (ID Linha);
+Projeto de Pesquisa (ID Projeto);
+Orientador (ID Professor);
+Membros (IDs Professores, ID Externos);
+Financiador (ID	Financiador);
+Tipo de	Vínculo	Empregatício (Servidor Público,	CLT, Pessoa Jurídica)(String);
+Tipo de	Instituição (Pública, Privada, Instituição de Ensino e Pesquisa, Outros)(String);
+Expectativa de Atuação (Ensino e Pesquisa, Pesquisa, Empresas, Profissional Autônomo, Outros)(String);
+Mesma Área de Atuação?(Sim ou Não)(String);
+
+*Cadastrar produção intelectual:
+ID Produção (Int);
+Título (String);
+Ano (String);
+Vinculada a Trabalho de	Conclusão (sim ou não?)(String);	
+Autores (IDs Professores, IDs Discentes,IDs Externos);
+É o Mais Relevante?(sim	ou	não?)(String);
+Tipo (ARTÍSTICA, BIBLIOGRÁFICA,	TÉCNICA)(String);
+Subtipo	(ARTIGO	EM JORNAL OU REVISTA, ARTIGO EM	PERIÓDICO);
+caso Jornal/revista, Número da página inicial(String);
+Número da página final (String);
+ISSN (String);
+URL (String);
+DOI (String);
+Área de	Concentração (ID Área),	Linha de Pesquisa (ID Linha);
+Projeto	de Pesquisa (ID	Projeto);
+
+*Gerar relatórios.
