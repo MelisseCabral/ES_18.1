@@ -9,7 +9,9 @@ $(function(){
         storageBucket: "posgradufc.appspot.com",
         messagingSenderId: "775660398938"
     };
-    firebase.initializeApp(config);    
+    firebase.initializeApp(config);
+    const db = firebase.firestore();
+    db.settings({timestampsInSnapshots: true});    
 
     // Control variables;
     var signedout = false;
@@ -125,3 +127,85 @@ $(function(){
         snackbarContainer.MaterialSnackbar.showSnackbar(data);
     };
 })
+
+//funções banco de dados de listagem
+
+var listaProf = db.collection('professores').get().then(function(querySnapshot){
+    querySnapshot.forEach(function(doc){
+        console.log(doc.idProf, "=>", doc.data());
+    });
+}).catch(function(error){
+    console.log("Erro ao acessar documentos: ", error);
+});
+
+var listaFinanciadores = db.collection('financers').get().then(function(querySnapshot){
+    querySnapshot.forEach(function(doc){
+        console.log(doc.idProf, "=>", doc.data());
+    });
+}).catch(function(error){
+    console.log("Erro ao acessar documentos: ", error);
+});
+
+var listaDiscentes = db.collection('discentes').get().then(function(querySnapshot){
+    querySnapshot.forEach(function(doc){
+        console.log(doc.idProf, "=>", doc.data());
+    });
+}).catch(function(error){
+    console.log("Erro ao acessar documentos: ", error);
+});
+
+var listaAreaConcentracao = db.collection('areaConcentracao').get().then(function(querySnapshot){
+    querySnapshot.forEach(function(doc){
+        console.log(doc.idProf, "=>", doc.data());
+    });
+}).catch(function(error){
+    console.log("Erro ao acessar documentos: ", error);
+});
+
+var listaExternos = db.collection('externos').get().then(function(querySnapshot){
+    querySnapshot.forEach(function(doc){
+        console.log(doc.idProf, "=>", doc.data());
+    });
+}).catch(function(error){
+    console.log("Erro ao acessar documentos: ", error);
+});
+
+var listaLinhaPesquisa = db.collection('linhaPesquisa').get().then(function(querySnapshot){
+    querySnapshot.forEach(function(doc){
+        console.log(doc.idProf, "=>", doc.data());
+    });
+}).catch(function(error){
+    console.log("Erro ao acessar documentos: ", error);
+});
+
+var listaProducaoIntel = db.collection('producaoIntel').get().then(function(querySnapshot){
+    querySnapshot.forEach(function(doc){
+        console.log(doc.idProf, "=>", doc.data());
+    });
+}).catch(function(error){
+    console.log("Erro ao acessar documentos: ", error);
+});
+
+var listaProgramaFomento = db.collection('programaFomento').get().then(function(querySnapshot){
+    querySnapshot.forEach(function(doc){
+        console.log(doc.idProf, "=>", doc.data());
+    });
+}).catch(function(error){
+    console.log("Erro ao acessar documentos: ", error);
+});
+
+var listaProjetos = db.collection('projeto').get().then(function(querySnapshot){
+    querySnapshot.forEach(function(doc){
+        console.log(doc.idProf, "=>", doc.data());
+    });
+}).catch(function(error){
+    console.log("Erro ao acessar documentos: ", error);
+});
+
+var listaTcc = db.collection('tcc').get().then(function(querySnapshot){
+    querySnapshot.forEach(function(doc){
+        console.log(doc.idProf, "=>", doc.data());
+    });
+}).catch(function(error){
+    console.log("Erro ao acessar documentos: ", error);
+});
