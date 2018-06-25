@@ -236,7 +236,7 @@ form.addEventListener('submit', (e) => {
 //insere area concentração
 form.addEventListener('submit', (e) => {
     e.preventDefault();
-    db.collection('financers').add({
+    db.collection('areaConcentracao').add({
         nome: form.nome.value,
         descricao: form.descricao.value,
         dataInicio: form.dataInicio.value,
@@ -251,7 +251,7 @@ form.addEventListener('submit', (e) => {
 //insere aluno (discente)
 form.addEventListener('submit', (e) => {
     e.preventDefault();
-    db.collection('financers').add({
+    db.collection('discentes').add({
         nome: form.nome.value,
         nomeSocial: form.nomeSocial.value,
         numDocumento: form.numDocumento.value,
@@ -306,7 +306,7 @@ form.addEventListener('submit', (e) => {
 //adicionar externo
 form.addEventListener('submit', (e) => {
     e.preventDefault();
-    db.collection('financers').add({
+    db.collection('externos').add({
         nome: form.nome.value,
         nomeSocial: form.nomeSocial.value,
         numDocumento: form.numDocumento.value,
@@ -349,7 +349,7 @@ form.addEventListener('submit', (e) => {
 //adiciona liha de pesquisa
 form.addEventListener('submit', (e) => {
     e.preventDefault();
-    db.collection('financers').add({
+    db.collection('linhaPesquisa').add({
         nome: form.nome.value,
         idAreaAssiciada: form.idAreaAssiciada.value,
         descricao: form.descricao.value,
@@ -366,7 +366,7 @@ form.addEventListener('submit', (e) => {
 //adiciona produção intelectual
 form.addEventListener('submit', (e) => {
     e.preventDefault();
-    db.collection('financers').add({
+    db.collection('producaoIntel').add({
        vincTcc: form.vincTcc.value,
        url: form.url.value,
        titulo: form.titulo.value,
@@ -399,7 +399,7 @@ form.addEventListener('submit', (e) => {
 //adiciona professores
 form.addEventListener('submit', (e) => {
     e.preventDefault();
-    db.collection('financers').add({
+    db.collection('professores').add({
         tipoVinculo: form.tipoVinculo.value,
         nome: form.nome.value,
         nomeSocial: form.nomeSocial.value,
@@ -453,7 +453,7 @@ form.addEventListener('submit', (e) => {
 
 form.addEventListener('submit', (e) => {
     e.preventDefault();
-    db.collection('financers').add({
+    db.collection('programaFomento').add({
         nome: form.nome.value,
         idFinancer: form.idFinancer.value,
     })
@@ -465,7 +465,7 @@ form.addEventListener('submit', (e) => {
 
 form.addEventListener('submit', (e) => {
     e.preventDefault();
-    db.collection('financers').add({
+    db.collection('projetos').add({
         nome: form.nome.value,
         situacaoProj: form.situacaoProj.value,
         naturezaProj: form.naturezaProj.value,
@@ -493,7 +493,7 @@ form.addEventListener('submit', (e) => {
 
 form.addEventListener('submit', (e) => {
     e.preventDefault();
-    db.collection('financers').add({
+    db.collection('tcc').add({
         titulo: form.titulo.value,
         tipoVeicEmpr: form.tipoVeicEmpr.value,
         tipoTcc: form.tipoTcc.value,
@@ -539,7 +539,7 @@ form.addEventListener('submit', (e) => {
 
 form.addEventListener('submit', (e) => {
     e.preventDefault();
-    db.collection('financers').add({
+    db.collection('usuarios').add({
         nome: form.nome.value,
         email: form.email.value,
         senha: form.senha.value
