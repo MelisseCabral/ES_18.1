@@ -548,3 +548,73 @@ form.addEventListener('submit', (e) => {
         form.email.value = '';
         form.senha.value = '';
 });
+
+//funções de remoção do banco de dados
+
+//removendo professor
+
+cross.addEventListener('click', (e)=>{ //caso para remover o elemento seria apertando um 'x' do lado elemento
+    e.stopPropagation();
+    let id = e.target.parentElement.getAttribute('data-id');
+    db.collection('financers').doc(id).delete();
+});
+
+cross.addEventListener('click', (e)=>{ //caso para remover o elemento seria apertando um 'x' do lado elemento
+    e.stopPropagation();
+    let id = e.target.parentElement.getAttribute('data-id');
+    db.collection('areaConcentracao').doc(id).delete();
+});
+
+cross.addEventListener('click', (e)=>{ //caso para remover o elemento seria apertando um 'x' do lado elemento
+    e.stopPropagation();
+    let id = e.target.parentElement.getAttribute('data-id');
+    db.collection('discentes').doc(id).delete();
+});
+
+cross.addEventListener('click', (e)=>{ //caso para remover o elemento seria apertando um 'x' do lado elemento
+    e.stopPropagation();
+    let id = e.target.parentElement.getAttribute('data-id');
+    db.collection('externos').doc(id).delete();
+});
+
+cross.addEventListener('click', (e)=>{ //caso para remover o elemento seria apertando um 'x' do lado elemento
+    e.stopPropagation();
+    let id = e.target.parentElement.getAttribute('data-id');
+    db.collection('linhaPesquisa').doc(id).delete();
+});
+
+cross.addEventListener('click', (e)=>{ //caso para remover o elemento seria apertando um 'x' do lado elemento
+    e.stopPropagation();
+    let id = e.target.parentElement.getAttribute('data-id');
+    db.collection('producaoIntel').doc(id).delete();
+});
+
+cross.addEventListener('click', (e)=>{ //caso para remover o elemento seria apertando um 'x' do lado elemento
+    e.stopPropagation();
+    let id = e.target.parentElement.getAttribute('data-id');
+    db.collection('professores').doc(id).delete();
+});
+
+cross.addEventListener('click', (e)=>{ //caso para remover o elemento seria apertando um 'x' do lado elemento
+    e.stopPropagation();
+    let id = e.target.parentElement.getAttribute('data-id');
+    db.collection('programaFomento').doc(id).delete();
+});
+
+cross.addEventListener('click', (e)=>{ //caso para remover o elemento seria apertando um 'x' do lado elemento
+    e.stopPropagation();
+    let id = e.target.parentElement.getAttribute('data-id');
+    db.collection('projetos').doc(id).delete();
+});
+
+cross.addEventListener('click', (e)=>{ //caso para remover o elemento seria apertando um 'x' do lado elemento
+    e.stopPropagation();
+    let id = e.target.parentElement.getAttribute('data-id');
+    db.collection('tcc').doc(id).delete();
+});
+
+cross.addEventListener('click', (e)=>{ //caso para remover o elemento seria apertando um 'x' do lado elemento
+    e.stopPropagation();
+    let id = e.target.parentElement.getAttribute('data-id');
+    db.collection('usuarios').doc(id).delete();
+});
