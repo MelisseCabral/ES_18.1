@@ -88,32 +88,32 @@
                         <div class="mdl-grid">
                             <div class="mdl-cell mdl-cell--4-col text_box">
                                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                    <input class="mdl-textfield__input" type="text" id="sample3">
-                                    <label class="mdl-textfield__label" for="sample3">Razão Social</label>
+                                    <input class="mdl-textfield__input" type="text" id="razaoSocialFinancer">
+                                    <label class="mdl-textfield__label" for="razaoSocialFinancer">Razão Social</label>
                                 </div>
                                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                    <input class="mdl-textfield__input" type="text" id="sample3">
-                                    <label class="mdl-textfield__label" for="sample3">Nome Fantasia</label>
+                                    <input class="mdl-textfield__input" type="text" id="nomeFantasiaFinancer">
+                                    <label class="mdl-textfield__label" for="nomeFantasiaFinancer">Nome Fantasia</label>
                                 </div>
                                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                    <input class="mdl-textfield__input" type="text" id="sample3">
-                                    <label class="mdl-textfield__label" for="sample3">Pais</label>
+                                    <input class="mdl-textfield__input" type="text" id="paisFinancer">
+                                    <label class="mdl-textfield__label" for="paisFinancer">Pais</label>
                                 </div>
                             </div>
 
                             <div class="mdl-cell mdl-cell--4-col text_box">
                                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                    <input class="mdl-textfield__input" type="text" id="sample3">
-                                    <label class="mdl-textfield__label" for="sample3">Site</label>
+                                    <input class="mdl-textfield__input" type="text" id="siteFinancer">
+                                    <label class="mdl-textfield__label" for="siteFinancer">Site</label>
                                 </div>
                                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                    <input class="mdl-textfield__input" type="text" id="sample3">
-                                    <label class="mdl-textfield__label" for="sample3">CNPJ</label>
+                                    <input class="mdl-textfield__input" type="text" id="cnpj_finan">
+                                    <label class="mdl-textfield__label" for="cnpj_finan">CNPJ</label>
                                 </div>
                                 <!-- Simple Select -->
                                 <div class="mdl-textfield mdl-js-textfield getmdl-select">
                                     <input type="text" value="" class="mdl-textfield__input" id="sample1" readonly>
-                                    <input type="hidden" value="" name="sample1">
+                                    <input type="hidden" value="" name="sample1" id='status_jur'>
                                     <label for="sample1" class="mdl-textfield__label">Status Juridico</label>
                                     <ul for="sample1" class="mdl-menu mdl-menu--bottom-left mdl-js-menu">
                                         <li class="mdl-menu__item" data-val="FED">Federal</li>
@@ -132,12 +132,12 @@
                             <div class="mdl-cell mdl-cell--4-col"></div>
                             <div class="mdl-cell mdl-cell--4-col">
                                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                    <input class="mdl-textfield__input" type="text" id="sample3">
-                                    <label class="mdl-textfield__label" for="sample3">Nome do Programa</label>
+                                    <input class="mdl-textfield__input" type="text" id="nomePrograma">
+                                    <label class="mdl-textfield__label" for="nomePrograma">Nome do Programa</label>
                                 </div>
                                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                    <input class="mdl-textfield__input" type="text" id="sample3">
-                                    <label class="mdl-textfield__label" for="sample3">ID Financiador</label>
+                                    <input class="mdl-textfield__input" type="text" id="finanPrograma">
+                                    <label class="mdl-textfield__label" for="finanPrograma">ID Financiador</label>
                                 </div>
                             </div>
                             <div class="mdl-cell mdl-cell--4-col"></div>
@@ -173,26 +173,26 @@
                         <div class="mdl-grid">
                             <div class="mdl-cell mdl-cell--4-col">
                                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                    <input class="mdl-textfield__input" type="text" id="sample3">
-                                    <label class="mdl-textfield__label" for="sample3">Nome</label>
+                                    <input class="mdl-textfield__input" type="text" id="nome_linha">
+                                    <label class="mdl-textfield__label" for="nome_linha">Nome</label>
                                 </div>
                                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                    <input class="mdl-textfield__input" type="text" id="sample3">
-                                    <label class="mdl-textfield__label" for="sample3">ID Área associada</label>
+                                    <input class="mdl-textfield__input" type="text" id="id_area">
+                                    <label class="mdl-textfield__label" for="id_area">ID Área associada</label>
                                 </div>
                                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                    <input class="mdl-textfield__input" type="text" id="sample3">
-                                    <label class="mdl-textfield__label" for="sample3">Descrição</label>
+                                    <input class="mdl-textfield__input" type="text" id="desc_linha">
+                                    <label class="mdl-textfield__label" for="desc_linha">Descrição</label>
                                 </div>
                             </div>
                             <div class="mdl-cell mdl-cell--4-col">
                                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                    <input class="mdl-textfield__input" type="date" placeholder='' id="sample3">
-                                    <label class="mdl-textfield__label" for="sample3">Data de Inicio</label>
+                                    <input class="mdl-textfield__input" type="date" placeholder='' id="date_inicio_linha">
+                                    <label class="mdl-textfield__label" for="date_inicio_linha">Data de Inicio</label>
                                 </div>
                                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                    <input class="mdl-textfield__input" type="date" placeholder='' id="sample3">
-                                    <label class="mdl-textfield__label" for="sample3">Data de Termino</label>
+                                    <input class="mdl-textfield__input" type="date" placeholder='' id="date_fim_linha">
+                                    <label class="mdl-textfield__label" for="date_fim_linha">Data de Termino</label>
                                 </div>
                             </div>
                             <div class="mdl-cell mdl-cell--4-col"></div>
@@ -204,118 +204,106 @@
                         <div class="mdl-grid">
                             <div class="mdl-cell mdl-cell--4-col">
                                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                    <input class="mdl-textfield__input" type="text" id="sample3">
-                                    <label class="mdl-textfield__label" for="sample3">Nome</label>
+                                    <input class="mdl-textfield__input" type="text" id="nome_prof">
+                                    <label class="mdl-textfield__label" for="nome_prof">Nome</label>
                                 </div>
                                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                    <input class="mdl-textfield__input" type="text" id="sample3">
-                                    <label class="mdl-textfield__label" for="sample3">Nome Social</label>
+                                    <input class="mdl-textfield__input" type="text" id="nome_social_prof">
+                                    <label class="mdl-textfield__label" for="nome_social_prof">Nome Social</label>
                                 </div>
                                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                    <input class="mdl-textfield__input" type="text" id="sample3">
-                                    <label class="mdl-textfield__label" for="sample3">Tipo Documento</label>
+                                    <input class="mdl-textfield__input" type="text" id="tipo_doc_prof">
+                                    <label class="mdl-textfield__label" for="tipo_doc_prof">Tipo Documento</label>
                                 </div>
                                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                    <input class="mdl-textfield__input" type="text" id="sample3">
-                                    <label class="mdl-textfield__label" for="sample3">Email</label>
+                                    <input class="mdl-textfield__input" type="text" id="num_doc_prof">
+                                    <label class="mdl-textfield__label" for="num_doc_prof">Número do Documento</label>
                                 </div>
                                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                    <input class="mdl-textfield__input" type="text" id="sample3">
-                                    <label class="mdl-textfield__label" for="sample3">Número do Documento</label>
+                                    <input class="mdl-textfield__input" type="text" id="email_prof">
+                                    <label class="mdl-textfield__label" for="email_prof">Email</label>
                                 </div>
                                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                    <input class="mdl-textfield__input" type="text" id="sample3">
-                                    <label class="mdl-textfield__label" for="sample3">Instituição de Origem</label>
+                                    <input class="mdl-textfield__input" type="text" id="nacionalidade_prof">
+                                    <label class="mdl-textfield__label" for="nacionalidade_prof">Nacionalidade</label>
                                 </div>
                                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                    <input class="mdl-textfield__input" type="text" id="sample3">
-                                    <label class="mdl-textfield__label" for="sample3">Data de termino do vinculo</label>
+                                    <input class="mdl-textfield__input" type="text" id="sexo_prof">
+                                    <label class="mdl-textfield__label" for="sexo_prof">Sexo</label>
                                 </div>
                                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                    <input class="mdl-textfield__input" type="date" placeholder='' id="sample3">
-                                    <label class="mdl-textfield__label" for="sample3">Data de Termino</label>
+                                    <input class="mdl-textfield__input" type="date" placeholder='' id="data_nasc_prof">
+                                    <label class="mdl-textfield__label" for="data_nasc_prof">Data de Nascimento</label>
                                 </div>
+
                             </div>
 
                             <div class="mdl-cell mdl-cell--4-col">
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" id="instOrigem_prof">
+                                    <label class="mdl-textfield__label" for="instOrigem_prof">Instituição de Origem</label>
+                                </div>
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" id="nivel_prof">
+                                    <label class="mdl-textfield__label" for="nivel_prof">Nivel</label>
+                                </div>
 
                                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                    <input class="mdl-textfield__input" type="text" id="sample3">
-                                    <label class="mdl-textfield__label" for="sample3">Sexo</label>
+                                    <input class="mdl-textfield__input" type="text" id="pais_tit_prof">
+                                    <label class="mdl-textfield__label" for="pais_tit_prof">País do Titulo</label>
                                 </div>
                                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                    <input class="mdl-textfield__input" type="text" id="sample3">
-                                    <label class="mdl-textfield__label" for="sample3">Nacionalidade</label>
+                                    <input class="mdl-textfield__input" type="text" id="ano_tit_prof">
+                                    <label class="mdl-textfield__label" for="ano_tit_prof">Ano Titulação</label>
                                 </div>
                                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                    <input class="mdl-textfield__input" type="text" id="sample3">
-                                    <label class="mdl-textfield__label" for="sample3">Nivel</label>
+                                    <input class="mdl-textfield__input" type="text" id="pais_tit_prof">
+                                    <label class="mdl-textfield__label" for="pais_tit_prof">País titulação</label>
                                 </div>
                                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                    <input class="mdl-textfield__input" type="text" id="sample3">
-                                    <label class="mdl-textfield__label" for="sample3">Ano Titulação</label>
+                                    <input class="mdl-textfield__input" type="text" id="inst_tit_prof">
+                                    <label class="mdl-textfield__label" for="inst_tit_prof">Instituição de titulação</label>
                                 </div>
+
                                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                    <input class="mdl-textfield__input" type="text" id="sample3">
-                                    <label class="mdl-textfield__label" for="sample3">País titulação</label>
+                                    <input class="mdl-textfield__input" type="text" id="ch_sem_prof">
+                                    <label class="mdl-textfield__label" for="ch_sem_prof">Carga horaria semanal</label>
                                 </div>
+
                                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                    <input class="mdl-textfield__input" type="text" id="sample3">
-                                    <label class="mdl-textfield__label" for="sample3">Tipo de Vinculo com a Instituição</label>
+                                    <input class="mdl-textfield__input" type="text" id="part_banc">
+                                    <label class="mdl-textfield__label" for="part_banc">Participação em bancas e TCC</label>
                                 </div>
-                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                    <input class="mdl-textfield__input" type="text" id="sample3">
-                                    <label class="mdl-textfield__label" for="sample3">Carga horaria semanal</label>
-                                </div>
-                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                    <input class="mdl-textfield__input" type="text" id="sample3">
-                                    <label class="mdl-textfield__label" for="sample3">Data de inicio do Vinculo</label>
-                                </div>
-                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                    <input class="mdl-textfield__input" type="text" id="sample3">
-                                    <label class="mdl-textfield__label" for="sample3">Participação em bancas e TCC</label>
-                                </div>
-                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                    <input class="mdl-textfield__input" type="date" placeholder='' id="sample3">
-                                    <label class="mdl-textfield__label" for="sample3">Data de Nascimento</label>
-                                </div>
+
                             </div>
                             <div class="mdl-cell mdl-cell--4-col">
                                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                    <input class="mdl-textfield__input" type="text" id="sample3">
-                                    <label class="mdl-textfield__label" for="sample3">Regime de Trabalho</label>
+                                    <input class="mdl-textfield__input" type="text" id="reg_trab">
+                                    <label class="mdl-textfield__label" for="reg_trab">Regime de Trabalho</label>
                                 </div>
                                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                    <input class="mdl-textfield__input" type="text" id="sample3">
-                                    <label class="mdl-textfield__label" for="sample3">Categoria</label>
+                                    <input class="mdl-textfield__input" type="text" id="categ_prof">
+                                    <label class="mdl-textfield__label" for="categ_prof">Categoria</label>
                                 </div>
                                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                    <input class="mdl-textfield__input" type="text" id="sample3">
-                                    <label class="mdl-textfield__label" for="sample3">Bolsa de Produtividade</label>
+                                    <input class="mdl-textfield__input" type="text" id="bolsaPP_prof">
+                                    <label class="mdl-textfield__label" for="bolsaPP_prof">Bolsa de Produtividade</label>
                                 </div>
                                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                    <input class="mdl-textfield__input" type="text" id="sample3">
-                                    <label class="mdl-textfield__label" for="sample3">Carga horaria semanal</label>
+                                    <input class="mdl-textfield__input" type="text" id="part_proj_prof">
+                                    <label class="mdl-textfield__label" for="part_proj_prof">Participação em projetos</label>
                                 </div>
                                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                    <input class="mdl-textfield__input" type="text" id="sample3">
-                                    <label class="mdl-textfield__label" for="sample3">Data de inicio do Vinculo</label>
+                                    <input class="mdl-textfield__input" type="text" id="part_prod_prof">
+                                    <label class="mdl-textfield__label" for="part_prod_prof">Participação em produção intelectual</label>
                                 </div>
                                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                    <input class="mdl-textfield__input" type="text" id="sample3">
-                                    <label class="mdl-textfield__label" for="sample3">Carga horaria semanal</label>
+                                    <input class="mdl-textfield__input" type="date" placeholder='' id="date_inicio_prof">
+                                    <label class="mdl-textfield__label" for="date_inicio_prof">Data de Inicio do Vinculo</label>
                                 </div>
                                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                    <input class="mdl-textfield__input" type="text" id="sample3">
-                                    <label class="mdl-textfield__label" for="sample3">Data de inicio do Vinculo</label>
-                                </div>
-                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                    <input class="mdl-textfield__input" type="text" id="sample3">
-                                    <label class="mdl-textfield__label" for="sample3">Participação em projetos</label>
-                                </div>
-                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                    <input class="mdl-textfield__input" type="text" id="sample3">
-                                    <label class="mdl-textfield__label" for="sample3">Participação em produção intelectual</label>
+                                    <input class="mdl-textfield__input" type="date" placeholder='' id="date_fim_prof">
+                                    <label class="mdl-textfield__label" for="date_fim_prof">Data de Fim do Vinculo</label>
                                 </div>
                             </div>
                         </div>
@@ -324,68 +312,153 @@
                         <div class="mdl-grid">
                             <div class="mdl-cell mdl-cell--4-col">
                                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                    <input class="mdl-textfield__input" type="text" id="nome_area_add">
-                                    <label class="mdl-textfield__label" for="nome_area_add">Nome da área</label>
+                                    <input class="mdl-textfield__input" type="text" id="nome_disc">
+                                    <label class="mdl-textfield__label" for="nome_disc">Nome</label>
                                 </div>
                                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                    <input class="mdl-textfield__input" type="text" id="desc_area_add">
-                                    <label class="mdl-textfield__label" for="desc_area_add">Descrição</label>
+                                    <input class="mdl-textfield__input" type="text" id="nome_social_disc">
+                                    <label class="mdl-textfield__label" for="nome_social_disc">Nome Social</label>
                                 </div>
                                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                    <input class="mdl-textfield__input date-mask" type="date" placeholder="" id="data_inicio_area_add">
-                                    <label class="mdl-textfield__label" for="data_inicio_area_add">Data de Inicio</label>
+                                    <input class="mdl-textfield__input" type="text" id="tipo_doc_disc">
+                                    <label class="mdl-textfield__label" for="tipo_doc_disc">Tipo Documento</label>
                                 </div>
                                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                    <input class="mdl-textfield__input" type="date" placeholder="" maxlength="10" id="data_fim_area_add">
-                                    <label class="mdl-textfield__label" for="data_fim_area_add">Data de Termino</label>
+                                    <input class="mdl-textfield__input" type="text" id="num_doc_disc">
+                                    <label class="mdl-textfield__label" for="num_doc_disc">Número do Documento</label>
                                 </div>
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" id="email_disc">
+                                    <label class="mdl-textfield__label" for="email_disc">Email</label>
+                                </div>
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" id="nacionalidade_disc">
+                                    <label class="mdl-textfield__label" for="nacionalidade_disc">Nacionalidade</label>
+                                </div>
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" id="sexo_disc">
+                                    <label class="mdl-textfield__label" for="sexo_disc">Sexo</label>
+                                </div>
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="date" placeholder='' id="data_nasc_disc">
+                                    <label class="mdl-textfield__label" for="data_nasc_disc">Data de Nascimento</label>
+                                </div>
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="date" placeholder='' id="data_mat_disc">
+                                    <label class="mdl-textfield__label" for="data_mat_disc">Data de Matricula</label>
+                                </div>
+
+                            </div>
+
+                            <div class="mdl-cell mdl-cell--4-col">
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" id="def_disc">
+                                    <label class="mdl-textfield__label" for="def_disc">Deficiencia</label>
+                                </div>
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" id="categ_disc">
+                                    <label class="mdl-textfield__label" for="categ_disc">Categoria</label>
+                                </div>
+
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" id="situacao_disc">
+                                    <label class="mdl-textfield__label" for="situacao_disc">Situaçao</label>
+                                </div>
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" id="nasc_disc">
+                                    <label class="mdl-textfield__label" for="nasc_disc">Nacionalidade</label>
+                                </div>
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" id="id_orient">
+                                    <label class="mdl-textfield__label" for="id_orient">Id orientação</label>
+                                </div>
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" id="id_pesq">
+                                    <label class="mdl-textfield__label" for="id_pesq">Id Pesquisa</label>
+                                </div>
+
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" id="id_prod_disc">
+                                    <label class="mdl-textfield__label" for="id_prod_disc">Id Produção intelectual</label>
+                                </div>
+
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" id="nivel_disc">
+                                    <label class="mdl-textfield__label" for="nivel_disc">Nível</label>
+                                </div>
+
                             </div>
                             <div class="mdl-cell mdl-cell--4-col">
                                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                    <input class="mdl-textfield__input" type="text" id="nome_area_add">
-                                    <label class="mdl-textfield__label" for="nome_area_add">Nome da área</label>
+                                    <input class="mdl-textfield__input" type="date" placeholder='' id="date_inicio_bolsa_disc">
+                                    <label class="mdl-textfield__label" for="date_inicio_bolsa_disc">Data de Inicio da Bolsa</label>
                                 </div>
                                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                    <input class="mdl-textfield__input" type="text" id="desc_area_add">
-                                    <label class="mdl-textfield__label" for="desc_area_add">Descrição</label>
+                                    <input class="mdl-textfield__input" type="date" placeholder='' id="date_fim_bolsa_disc">
+                                    <label class="mdl-textfield__label" for="date_fim_bolsa_disc">Data de Fim da Bolsa</label>
                                 </div>
                                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                    <input class="mdl-textfield__input date-mask" type="date" placeholder="" id="data_inicio_area_add">
-                                    <label class="mdl-textfield__label" for="data_inicio_area_add">Data de Inicio</label>
+                                    <input class="mdl-textfield__input" type="date" placeholder='' id="date_inicio_orient_disc">
+                                    <label class="mdl-textfield__label" for="date_inicio_orient_disc">Data de Inicio da Orientação</label>
                                 </div>
                                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                    <input class="mdl-textfield__input" type="date" placeholder="" maxlength="10" id="data_fim_area_add">
-                                    <label class="mdl-textfield__label" for="data_fim_area_add">Data de Termino</label>
-                                </div>
-                            </div>
-                            <div class="mdl-cell mdl-cell--4-col">
-                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                    <input class="mdl-textfield__input" type="text" id="nome_area_add">
-                                    <label class="mdl-textfield__label" for="nome_area_add">Nome da área</label>
-                                </div>
-                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                    <input class="mdl-textfield__input" type="text" id="desc_area_add">
-                                    <label class="mdl-textfield__label" for="desc_area_add">Descrição</label>
-                                </div>
-                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                    <input class="mdl-textfield__input date-mask" type="date" placeholder="" id="data_inicio_area_add">
-                                    <label class="mdl-textfield__label" for="data_inicio_area_add">Data de Inicio</label>
-                                </div>
-                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                    <input class="mdl-textfield__input" type="date" placeholder="" maxlength="10" id="data_fim_area_add">
-                                    <label class="mdl-textfield__label" for="data_fim_area_add">Data de Termino</label>
+                                    <input class="mdl-textfield__input" type="date" placeholder='' id="date_fim_orient_disc">
+                                    <label class="mdl-textfield__label" for="date_fim_orient_disc">Data de Fim da Orientação</label>
                                 </div>
                             </div>
                         </div>
 
                     </div>
                     <div id='form-projeto' class="panel_cadastro" style="display: none">
-                        <h4>Projeto</h4>
                         <div class="mdl-grid">
-                            <div class="mdl-cell mdl-cell--4-col">4</div>
-                            <div class="mdl-cell mdl-cell--4-col">4</div>
-                            <div class="mdl-cell mdl-cell--4-col">4</div>
+                            <div class="mdl-cell mdl-cell--4-col">
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" id="nome_proj">
+                                    <label class="mdl-textfield__label" for="nome_proj">Nome</label>
+                                </div>
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" id="desc_proj">
+                                    <label class="mdl-textfield__label" for="desc_proj">Descrição</label>
+                                </div>
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" id="id_area_proj">
+                                    <label class="mdl-textfield__label" for="id_area_proj">ID da Area deConcentracao</label>
+                                </div>
+
+                            </div>
+
+                            <div class="mdl-cell mdl-cell--4-col">
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" id="id_finan_proj">
+                                    <label class="mdl-textfield__label" for="id_finan_proj">ID do Financiador</label>
+                                </div>
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" id="id_pesq_proj">
+                                    <label class="mdl-textfield__label" for="id_pesq_proj">ID de Linha de Pesquisa</label>
+                                </div>
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" id="id_prod_proj">
+                                    <label class="mdl-textfield__label" for="id_prod_proj">ID Produção Intelectual</label>
+                                </div>
+
+                            </div>
+                            <div class="mdl-cell mdl-cell--4-col">
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" id="id_tcc_proj">
+                                    <label class="mdl-textfield__label" for="id_tcc_proj">ID de Trabalho de conclusão</label>
+                                </div>
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" id="nat_proj">
+                                    <label class="mdl-textfield__label" for="nat_proj">Natureza do projeto</label>
+                                </div>
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" id="situacao_proj">
+                                    <label class="mdl-textfield__label" for="situacao_proj">Situação</label>
+                                </div>
+
+                            </div>
                         </div>
+
                     </div>
                     <div id='form-participante-ext' class="panel_cadastro" style="display: none">
                         <h4>Participantes externos</h4>
@@ -417,9 +490,10 @@
             <div id='actions-sign-up'>
                 <button id="cancel-add" style='margin: 1em' class="btn-close mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-button--colored   	">
                     <i class=" material-icons">close</i>
-                    <button id="btnCadastro_bd" style='margin: 1em' class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-button--colored   	">
-                        <i class="material-icons">save</i>
-                    </button>
+                </button>
+                <button id="btnCadastro_bd" style='margin: 1em' class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-button--colored   	">
+                    <i class="material-icons">save</i>
+                </button>
             </div>
         </div>
     </div>
@@ -1059,14 +1133,14 @@
 </body>
 <footer>
     <script src="js/main.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
     <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-firestore.js"></script>
     <script src="js/cadastros.js"></script>
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
     <script src="js/app.js"></script>
     <script src="js/db.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
+
 </footer>
 
 </html>

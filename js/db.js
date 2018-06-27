@@ -5,24 +5,98 @@ $(function () {
 
     var btn_insertion_db = document.getElementById('btnCadastro_bd');
 
-    // Campos cadastro de area
+    // Campos cadastro de area de concentração
     var nome_area_add = document.getElementById("nome_area_add");
     var desc_area_add = document.getElementById("desc_area_add");
     var data_inicio_area_add = document.getElementById("data_inicio_area_add");
     var data_fim_area_add = document.getElementById("data_fim_area_add");
 
-    // insert('areaConcentracao', {nomeArea: nome_area_add.value, descricao: desc_area_add.value, 
-    //dataInicio:  data_inicio_area_add.value, dataFim: data_fim_area_add.value })
+    // Campos cadastro de Financiador
+    var razao_social_finan = document.getElementById("razaoSocialFinancer");
+    var nome_fantasia_finan = document.getElementById("nomeFantasiaFinancer");
+    var pais_finan = document.getElementById("paisFinancer");
+    var site_finan = document.getElementById("siteFinancer");
+    var cnpj = document.getElementById("cnpj_finan");
+    var status_jur = document.getElementById("status_jur");
+
+    // Programa de Fomento
+    var nome_programa = document.getElementById("nomePrograma");
+    var id_finan = document.getElementById("finanPrograma");
+
+    // Campos cadastro de Linha de Pesquisa
+    var nome_linha = document.getElementById("nome_linha");
+    var desc_linha = document.getElementById("desc_linha");
+    var date_inicio_linha = document.getElementById("date_inicio_linha");
+    var date_fim_linha = document.getElementById("date_fim_linha");
+    var id_area_ass = document.getElementById("id_area");
+
+    // Campos cadastro de Professores
+
+    var nome_prof = document.getElementById("nome_prof");
+    var nomeSocial_prof = document.getElementById("nome_social_prof");
+    var email_prof = document.getElementById("email_prof");
+    var dataNasc_prof = document.getElementById("data_nasc_prof");
+    var sexo_prof = document.getElementById("sexo_prof");
+    var dataInicioVinculo_prof = document.getElementById("date_inicio_prof");
+    var dataFimVinculo_prof = document.getElementById("date_fim_prof");
+    var categoria_prof = document.getElementById("categ_prof");
+    var tipoDocumento_prof = document.getElementById("tipo_doc_prof");
+    var numDocumento_prof = document.getElementById("num_doc_prof");
+    var nacionalidade_prof = document.getElementById("nacionalidade_prof");
+    var bolsaPP_prof = document.getElementById("bolsaPP_prof");
+    var cargaHorariaSemanal_prof = document.getElementById("ch_sem_prof");
+    var anoTitulaao_prof = document.getElementById("ano_tit_prof");
+    var instTitulacao_prof = document.getElementById("pais_tit_prof");
+    var paisTitulacao_prof = document.getElementById("inst_tit_prof");
+    var intituicaoOrigem_prof = document.getElementById("instOrigem_prof");
+    var nivel_prof = document.getElementById("nivel_prof");
+
+    // Campos cadastro de Discentes
+
+    var nome_disc = document.getElementById("nome_disc");
+    var nomeSocial_disc = document.getElementById("nome_social_disc");
+    var tipoDocumento_disc = document.getElementById("tipo_doc_disc");
+    var numDocumento_disc = document.getElementById("num_doc_disc");
+    var email_prof_disc = document.getElementById("email_disc");
+    var sexo_disc = document.getElementById("sexo_prof");
+    var dataNasc_disc = document.getElementById("data_nasc_disc");
+    var dataMat_disc = document.getElementById("data_mat_disc");
+
+    var deficiencia_disc = document.getElementById("def_disc");
+    var categoria_disc = document.getElementById("categ_disc");
+    var nacionalidade_prof = document.getElementById("situacao_disc");
+    var situacao_disc = document.getElementById("nasc_disc");
+    var idOrient_disc = document.getElementById("id_orient");
+    var idPartPesquisa_disc = document.getElementById("id_pesq");
+    var idProdIntel_disc = document.getElementById("id_prod_disc");
+    var nivel_disc = document.getElementById("nivel_disc");
+
+    var dataInicioBolsa_disc = document.getElementById("date_inicio_bolsa_disc");
+    var dataFimBolsa_disc = document.getElementById("date_fim_bolsa_disc");
+    var dataInicioOrient_disc = document.getElementById("date_inicio_orient_disc");
+    var dataFimOrient_disc = document.getElementById("date_fim_orient_disc");
+
+    // Campos cadastro de Projetos
+
+    var nome_proj = document.getElementById("nome_proj");
+    var desc_proj = document.getElementById("desc_proj");
+    var id_area_proj = document.getElementById("id_area_proj");
+    var id_finan_proj = document.getElementById("id_finan_proj");
+    var id_pesq_proj = document.getElementById("id_pesq_proj");
+    var id_prod_proj = document.getElementById("id_prod_proj");
+    var id_tcc_proj = document.getElementById("id_tcc_proj");
+    var nat_proj = document.getElementById("nat_proj");
+    var situacao_proj = document.getElementById("situacao_proj");
 
     btn_insertion_db.addEventListener('click', function () {
+        alert('clicked');
         insertData(active_chip);
-        snackbar("added");
+        active_chip = 'financiador';
     });
 
     document.getElementById("refresh_professor").addEventListener('click', function () {
         atualizaProfessoresTable();
     });
-
 
     function getData(path) {
         db.collection(path).get().then((querySnapshot) => {
@@ -42,102 +116,102 @@ $(function () {
                 idArea: "01",
                 nome: nome_area_add.value
             }
+            snackbar("Adicionado");
             console.log(obj)
         }
 
-        else if (path == 'financiador') {
+        else if (active_chip == 'financiador') {
             path = 'financers';
             obj = {
-                cnpj: '',
-                nomeFantasia: data_inicio_area_add.value,
-                pais: desc_area_add.value,
-                razaoSocial: "01",
-                site: nome_area_add.value,
-                statusJuri: ''
+                cnpj: cnpj.value,
+                nomeFantasia: nome_fantasia_finan.value,
+                pais: pais_finan.value,
+                razaoSocial: razao_social_finan.value,
+                site: site_finan.value,
+                statusJuri: status_jur.value
             }
         }
-        else if (path == 'fomento') {
+        else if (active_chip == 'fomento') {
+            console.log(active_chip);
             path = 'programaFomento';
             obj = {
-                idFinancer: '',
-                idPrograma: ''.value,
-                nome: ''.value,
+                idFinancer: id_finan.value,
+                nome: nome_programa.value,
             }
         }
         else if (path == 'linha') {
             path = 'linhaPesquisa';
             obj = {
-                dataFim: '',
-                dataInicio: ''.value,
-                descricao: ''.value,
-                isAreaAssociada: '',
-                nome: ''
+                dataFim: date_fim_linha.value,
+                dataInicio: date_inicio_linha.value,
+                descricao: desc_linha.value,
+                idAreaAssociada: id_area_ass.value,
+                nome: nome_linha.value
             }
         }
         else if (path == 'professor') {
             path = 'professores';
             obj = {
-                nome: '',
-                nomeSocial: ''.value,
-                email: '',
-                dataNascimento: '',
-                sexo: ''.value,
-                dataInicioVinculo: '',
-                dataFimVinculo: '',
-                categoria: '',
-                tipoDocumento: '',
-                numDocumento: '',
-                nacionalidade: '',
-                bolsaPP: '',
-                cargaHorariaSemanal: '',
+                nome: nome_prof.value,
+                nomeSocial: nomeSocial_prof.value,
+                email: email_prof.value,
+                dataNascimento: dataNasc_prof.value,
+                sexo: sexo_prof.value,
+                dataInicioVinculo: dataInicioVinculo_prof.value,
+                dataFimVinculo: dataFimVinculo_prof.value,
+                categoria: categoria_prof.value,
+                tipoDocumento: tipoDocumento_prof.value,
+                numDocumento: numDocumento_prof.value,
+                nacionalidade: nacionalidade_prof.value,
+                bolsaPP: bolsaPP_prof.value,
+                cargaHorariaSemanal: cargaHorariaSemanal_prof.value,
                 tipoVinculo: '',
-                anoTitulaao: '',
-                instTitulacao: '',
-                paisTitulacao: '',
-                intituicaoOrigem: '',
-                nivel: '',
+                anoTitulaao: anoTitulaao_prof.value,
+                instTitulacao: instTitulacao_prof.value,
+                paisTitulacao: paisTitulacao_prof.value,
+                intituicaoOrigem: intituicaoOrigem_prof.value,
+                nivel: nivel_prof.value,
 
             }
         }
         else if (path == 'discente') {
             path = 'discentes';
             obj = {
-                nome: '',
-                nomeSocial: ''.value,
-                email: '',
-                dataNasc: '',
-                sexo: ''.value,
-                dataInicioBolsa: '',
-                dataFimBolsa: '',
-                dataInicioOrient: '',
-                dataFimOrient: '',
-                dataMat: '',
-                deficiencia: '',
-                categoria: '',
-                tipoDocumento: '',
-                numDocumento: '',
-                nacionalidade: '',
-                situacao: '',
-                idOrientador: '',
-                idPartPesquisa: '',
-                idProdIntel: '',
-                nivel: '',
+                nome: nome_disc.value,
+                nomeSocial: nomeSocial_disc.value,
+                email: email_prof_disc.value,
+                dataNasc: dataNasc_disc.value,
+                sexo: sexo_disc.value,
+                dataInicioBolsa: dataInicioBolsa_disc.value,
+                dataFimBolsa: dataFimBolsa_disc.value,
+                dataInicioOrient: dataInicioOrient_disc.value,
+                dataFimOrient: dataFimOrient_disc.value,
+                dataMat: dataMat_disc.value,
+                deficiencia: deficiencia_disc.value,
+                categoria: categoria_disc.value,
+                tipoDocumento: tipoDocumento_disc.value,
+                numDocumento: numDocumento_disc.value,
+                nacionalidade: nacionalidade_disc.value,
+                situacao: situacao_disc.value,
+                idOrientador: idOrient_disc.value,
+                idPartPesquisa: idPartPesquisa_disc.value,
+                idProdIntel: idProdIntel_disc.value,
+                nivel: nivel_disc.value,
 
             }
         }
         else if (path == 'projeto') {
             path = 'projetos';
             obj = {
-                nome: '',
-                descricao: ''.value,
-                idAreaConcentracao: '',
-                idFinancer: '',
-                idLinhaPesquisa: ''.value,
-                idProdIntel: '',
-                idTccAss: '',
-                naturezaProj: '',
-                nome: '',
-                situacaoProj: '',
+                nome: nome_proj.value,
+                descricao: desc_proj.value,
+                idAreaConcentracao: id_area_proj.value,
+                idFinancer: id_finan_proj.value,
+                idLinhaPesquisa: id_pesq_proj.value,
+                idProdIntel: id_prod_proj.value,
+                idTccAss: id_tcc_proj.value,
+                naturezaProj: nat_proj.value,
+                situacaoProj: situacao_proj.value,
             }
         }
         else if (path == 'participante-ext') {
@@ -190,6 +264,22 @@ $(function () {
         }
         else if (path == 'producao') {
             path = 'producaoIntel';
+            obj = {
+                ano: "",
+                autores: "id prof, id aluno, id externos",
+                doi: "",
+                idProducao: "",
+                issn: "1723681732",
+                maisRelevante: true,
+                nomeJR: "Galileu",
+                numeroPagFinal: "",
+                numeroPagInic: "",
+                subTipo: "",
+                tipo: "Artigo de Divulgação",
+                titulo: "Notas de Fisica",
+                url: "www.notasfisica.com.br",
+                vincTcc: true
+            }
         }
 
         db.collection(path).add(obj)
@@ -305,7 +395,7 @@ $(function () {
                 $('#area-contentracao-table').append(content);
             });
         }).catch(function (error) {
-            snackbar(error); console.log("Erro ao acessar documentos: ", error);
+            snackbar(error);
         });
     }
 
@@ -464,7 +554,6 @@ $(function () {
             document.getElementById(this.id).style.backgroundColor = "deepskyblue";
             document.getElementById(id_form).style.display = "flex";
             active_chip = this.id;
-            console.log(active_chip);
         })
     }
 

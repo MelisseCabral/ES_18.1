@@ -39,9 +39,6 @@ document.getElementById('item-drawer-solicitations').addEventListener('click', f
     changeTitleScreen("Minha conta");
     document.getElementsByClassName("mdl-layout__obfuscator is-visible").click;
 });
-document.getElementById("estatisticas_panel").addEventListener('click', function () {
-
-});
 
 function hiddenAllPanels() {
     for (var i = 0; i < panels.length; i++) {
