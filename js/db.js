@@ -285,4 +285,23 @@ $(function () {
     });
     }
 
+    //pega o valor do lastCount de cada coleção
+/*db.collection('areaConcentracao').where(firebase.firestore.FieldPath.documentId(), "==","lastCount").get().then(function(querySnapshot){
+    querySnapshot.forEach(function(doc){
+        var lastCount = doc.data().lastCount;
+        return lastCount;
+    });
 });
+
+//doc.data().documentId = lastCount+1;
+//atualiza o valor da lastCount
+db.collection('areaConcentracao').where(firebase.firestore.FieldPath.documentId(), "==","lastCount").get().then(function(querySnapshot){
+    querySnapshot.forEach(function(doc){
+        doc.data().lastCount = doc.data().lastCount + 1;
+        
+    });
+});*/
+
+});
+
+
