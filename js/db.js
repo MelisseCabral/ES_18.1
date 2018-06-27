@@ -11,7 +11,7 @@ $(function () {
     //dataInicio:  data_inicio_area_add.value, dataFim: data_fim_area_add.value })
 
     document.getElementById("hdrbtn").addEventListener('click', function () {
-        insertData('usuarios/Melisse/Test', { email: 'Mil.com', nome: 'faza', });
+        atualizaProfessoresTable();
         snackbar("added");
     });
 
@@ -33,15 +33,35 @@ $(function () {
 
     //funções banco de dados de listagem
 
+    function atualizaProfessoresTable() {
+        db.collection('professores').get().then(function (querySnapshot) {
+            querySnapshot.forEach(function (doc) {
+                var content = '';
 
-    var listaProf = db.collection('professores').get().then(function (querySnapshot) {
-        querySnapshot.forEach(function (doc) {
-            console.log(doc.idProf, "=>", doc.data());
+                content += '<tr>';
+                content += '<td></td>';
+                content += '<td class="mdl-data-table__cell--non-numeric">25</td>';
+                content += '<td>RG</td>';
+                content += '<td>176238163</td>';
+                content += '<td>9/12/1977</td>';
+                content += '<td>Masculino</td>';
+                content += '<td>' + doc.data().nomeSocial + '</td>'; //column1
+                content += '<td>Brasileiro</td>';
+                content += '<td>Não</td>';
+                content += '<td>' + doc.data().email + '</td>';//column2
+                content += '<td>Phd</td>';
+                content += '<td>Dedicacao exclusiva</td>';
+                content += '<td>40h</td>';
+                content += '</tr>';
+
+                $('#ex-table').append(content);
+            });
+
+        }).catch(function (error) {
+            snackbar(error);
         });
-    }).catch(function (error) {
-        snackbar(error);
-    });
-    console.log(listaProf);
+    }
+
     var listaFinanciadores = db.collection('financers').get().then(function (querySnapshot) {
         querySnapshot.forEach(function (doc) {
             console.log(doc.idProf, "=>", doc.data());
@@ -49,6 +69,7 @@ $(function () {
     }).catch(function (error) {
         snackbar(error);
     });
+
 
     var listaDiscentes = db.collection('discentes').get().then(function (querySnapshot) {
         querySnapshot.forEach(function (doc) {
