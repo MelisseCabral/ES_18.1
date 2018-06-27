@@ -16,22 +16,6 @@ for (var i = 0; i < divs.length; i++) {
     })
 }
 
-var forms = document.querySelectorAll(".panel_cadastro");
-var chips = document.querySelectorAll(".mdl-chip");
-
-for (var i = 0; i < chips.length; i++) {
-    chips[i].addEventListener('click', function () {
-
-        var id_form = "form-" + this.id;
-        for (var j = 0; j < chips.length; j++) {
-            document.getElementById(forms[j].id).style.display = "none";
-            document.getElementById(chips[j].id).style.backgroundColor = "#dedede";
-        }
-        document.getElementById(this.id).style.backgroundColor = "deepskyblue";
-        document.getElementById(id_form).style.display = "flex";
-    })
-}
-
 var panels = document.querySelectorAll(".panel");
 
 document.getElementById('item-drawer-inicio').addEventListener('click', function () {
