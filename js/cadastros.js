@@ -5,20 +5,19 @@ function openModal() {
 /* Close when someone clicks on the "x" symbol inside the overlay */
 function closeModal() {
     document.getElementById("new-add-panel").style.display = "none";
-    cleanFieldSignUp();
 }
 
-function confirmAdd(){
+function confirmAdd() {
     closeModal()
 }
-function cleanFieldModal(){
+function cleanFieldModal() {
 
 }
 
-document.getElementById("btnCadastro").addEventListener('click', function(){
+document.getElementById("btnCadastro").addEventListener('click', function () {
     //Proceder cadastro
     closeModal();
 });
-document.getElementById("cancel-add").addEventListener('click', function(){
+document.getElementById("cancel-add").addEventListener('click', function () {
     closeModal();
 });
