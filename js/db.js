@@ -11,9 +11,13 @@ $(function () {
     //dataInicio:  data_inicio_area_add.value, dataFim: data_fim_area_add.value })
 
     document.getElementById("hdrbtn").addEventListener('click', function () {
-        insertData('usuarios/Melisse/Test', { email: 'Mil.com', nome: 'faza', });
+        atualizaProfessoresTable();
         snackbar("added");
     });
+    document.getElementById("refresh_professor").addEventListener('click', function () {
+        atualizaProfessoresTable();
+    });
+
 
     function getData(path) {
         db.collection(path).get().then((querySnapshot) => {
@@ -33,11 +37,17 @@ $(function () {
 
     //funções banco de dados de listagem
 
-
     function atualizaProfessoresTable() {
         db.collection('professores').get().then(function (querySnapshot) {
             $('#professor-table tbody tr').remove();
 
+<<<<<<< HEAD
+    function atualizaProfessoresTable() {
+        db.collection('professores').get().then(function (querySnapshot) {
+            $('#professor-table tbody tr').remove();
+
+=======
+>>>>>>> 1daeec61039fadb5b079d2a80f0328eb093964db
             querySnapshot.forEach(function (doc) {
 
                 var content = '';
@@ -45,6 +55,7 @@ $(function () {
                 content += '<tr>';
                 content += '<td></td>';
                 content += '<td class="mdl-data-table__cell--non-numeric">25</td>';
+<<<<<<< HEAD
                 content += '<td>' + doc.data().nome + '</td>'; //column1
                 content += '<td>'+doc.data().tipoDocumento+'</td>';
                 content += '<td>'+ doc.data().numDocumento+'</td>';
@@ -57,6 +68,19 @@ $(function () {
                 content += '<td>'+doc.data().nivel+'</td>';
                 content += '<td>'+doc.data().regimeTrabalho+'</td>';
                 content += '<td>'+doc.data().cargaHorariaSemanal+'</td>';
+=======
+                content += '<td>RG</td>';
+                content += '<td>176238163</td>';
+                content += '<td>9/12/1977</td>';
+                content += '<td>Masculino</td>';
+                content += '<td>' + doc.data().nomeSocial + '</td>'; //column1
+                content += '<td>Brasileiro</td>';
+                content += '<td>Não</td>';
+                content += '<td>' + doc.data().email + '</td>';//column2
+                content += '<td>Phd</td>';
+                content += '<td>Dedicacao exclusiva</td>';
+                content += '<td>40h</td>';
+>>>>>>> 1daeec61039fadb5b079d2a80f0328eb093964db
                 content += '</tr>';
 
                 $('#professor-table').append(content);
@@ -64,6 +88,15 @@ $(function () {
 
         }).catch(function (error) {
             snackbar(error);
+<<<<<<< HEAD
+=======
+        });
+    }
+
+    var listaFinanciadores = db.collection('financers').get().then(function (querySnapshot) {
+        querySnapshot.forEach(function (doc) {
+            console.log(doc.idProf, "=>", doc.data());
+>>>>>>> 1daeec61039fadb5b079d2a80f0328eb093964db
         });
     }
 
@@ -84,6 +117,7 @@ $(function () {
                 content += '<td>'+ doc.data().statusJuri +'</td>';
                 content += '</tr>';
 
+<<<<<<< HEAD
                 $('#financers-table').append(content);
             });
         }).catch(function (error) {
@@ -93,6 +127,10 @@ $(function () {
     function atualizaAlunosTable(){
     db.collection('discentes').get().then(function (querySnapshot) {
         $('#aluno-table body tr').remove();
+=======
+
+    var listaDiscentes = db.collection('discentes').get().then(function (querySnapshot) {
+>>>>>>> 1daeec61039fadb5b079d2a80f0328eb093964db
         querySnapshot.forEach(function (doc) {
             var content = '';
 
