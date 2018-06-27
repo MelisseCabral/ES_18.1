@@ -39,9 +39,9 @@ $(function () {
 
     function atualizaProfessoresTable() {
         db.collection('professores').get().then(function (querySnapshot) {
+            $('#professor-table tbody tr').remove();
 
             querySnapshot.forEach(function (doc) {
-                $('#professor-table tbody tr').remove();
 
                 var content = '';
 
