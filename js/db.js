@@ -54,7 +54,7 @@ $(function () {
                 content += '<td>40h</td>';
                 content += '</tr>';
 
-                $('#ex-table').append(content);
+                $('#professor-table').append(content);
             });
 
         }).catch(function (error) {
