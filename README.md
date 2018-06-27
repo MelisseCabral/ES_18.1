@@ -144,7 +144,7 @@ Funcionalidades:
 <b>Funcionalidade:</b> Cadastro de produção intelectual.<br>
 <b>Funcionalidade:</b> Gerar relatórios.<br>
 
-
+<b>
 <b>US2:</b>Como discente, gostaria de ter criar uma conta.<br>
 <b>Cliente:</b> Discente sem vinculo.<br>
 <b>Funcionalidade:</b> Criação de conta para alunos da pos graduação.<br>
