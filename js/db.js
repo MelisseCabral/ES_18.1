@@ -14,6 +14,10 @@ $(function () {
         atualizaProfessoresTable();
         snackbar("added");
     });
+    document.getElementById("refresh_professor").addEventListener('click', function () {
+        atualizaProfessoresTable();
+    });
+
 
     function getData(path) {
         db.collection(path).get().then((querySnapshot) => {
@@ -35,7 +39,10 @@ $(function () {
 
     function atualizaProfessoresTable() {
         db.collection('professores').get().then(function (querySnapshot) {
+
             querySnapshot.forEach(function (doc) {
+                $('#professor-table tbody tr').remove();
+
                 var content = '';
 
                 content += '<tr>';
