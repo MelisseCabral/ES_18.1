@@ -140,7 +140,7 @@ Funcionalidades:
 <b>Funcionalidade:</b> Cadastro de linha de pesquisa.<br>
 <b>Funcionalidade:</b> Cadastro de projetos.<br>
 <b>Funcionalidade:</b> Cadastro de participantes externos.<br>
-<b>Funcionalidade:</b> Cadastro de trabalho de conslusão.<br>
+<b>Funcionalidade:</b> Cadastro de trabalho de conclusão.<br>
 <b>Funcionalidade:</b> Cadastro de produção intelectual.<br>
 <b>Funcionalidade:</b> Gerar relatórios.<br>
 
