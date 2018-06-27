@@ -135,7 +135,6 @@ Funcionalidades:
 <b>Funcionalidade:</b> Cadastro de alunos da pos graduação.<br>
 <b>Funcionalidade:</b> Cadastro de financiadores.<br>
 <b>Funcionalidade:</b> Cadastro de programa de fomento.<br>
-<b>Funcionalidade:</b> Cadastro de financiadores.<br>
 <b>Funcionalidade:</b> Cadastro de area de concentração.<br>
 <b>Funcionalidade:</b> Cadastro de linha de pesquisa.<br>
 <b>Funcionalidade:</b> Cadastro de projetos.<br>
@@ -143,12 +142,6 @@ Funcionalidades:
 <b>Funcionalidade:</b> Cadastro de trabalho de conclusão.<br>
 <b>Funcionalidade:</b> Cadastro de produção intelectual.<br>
 <b>Funcionalidade:</b> Gerar relatórios.<br>
-
-<b>
-<b>US2:</b>Como discente, gostaria de ter criar uma conta.<br>
-<b>Cliente:</b> Discente sem vinculo.<br>
-<b>Funcionalidade:</b> Criação de conta para alunos da pos graduação.<br>
-<br>
 
 
 Arquitetura do Sistema
