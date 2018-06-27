@@ -47,27 +47,146 @@ $(function () {
 
         else if (path == 'financiador') {
             path = 'financers';
+            obj = {
+                cnpj: '',
+                nomeFantasia: data_inicio_area_add.value,
+                pais: desc_area_add.value,
+                razaoSocial: "01",
+                site: nome_area_add.value,
+                statusJuri: ''
+            }
         }
         else if (path == 'fomento') {
             path = 'programaFomento';
+            obj = {
+                idFinancer: '',
+                idPrograma: ''.value,
+                nome: ''.value,
+            }
         }
         else if (path == 'linha') {
             path = 'linhaPesquisa';
+            obj = {
+                dataFim: '',
+                dataInicio: ''.value,
+                descricao: ''.value,
+                isAreaAssociada: '',
+                nome: ''
+            }
         }
         else if (path == 'professor') {
             path = 'professores';
+            obj = {
+                nome: '',
+                nomeSocial: ''.value,
+                email: '',
+                dataNascimento: '',
+                sexo: ''.value,
+                dataInicioVinculo: '',
+                dataFimVinculo: '',
+                categoria: '',
+                tipoDocumento: '',
+                numDocumento: '',
+                nacionalidade: '',
+                bolsaPP: '',
+                cargaHorariaSemanal: '',
+                tipoVinculo: '',
+                anoTitulaao: '',
+                instTitulacao: '',
+                paisTitulacao: '',
+                intituicaoOrigem: '',
+                nivel: '',
+
+            }
         }
         else if (path == 'discente') {
             path = 'discentes';
+            obj = {
+                nome: '',
+                nomeSocial: ''.value,
+                email: '',
+                dataNasc: '',
+                sexo: ''.value,
+                dataInicioBolsa: '',
+                dataFimBolsa: '',
+                dataInicioOrient: '',
+                dataFimOrient: '',
+                dataMat: '',
+                deficiencia: '',
+                categoria: '',
+                tipoDocumento: '',
+                numDocumento: '',
+                nacionalidade: '',
+                situacao: '',
+                idOrientador: '',
+                idPartPesquisa: '',
+                idProdIntel: '',
+                nivel: '',
+
+            }
         }
         else if (path == 'projeto') {
             path = 'projetos';
+            obj = {
+                nome: '',
+                descricao: ''.value,
+                idAreaConcentracao: '',
+                idFinancer: '',
+                idLinhaPesquisa: ''.value,
+                idProdIntel: '',
+                idTccAss: '',
+                naturezaProj: '',
+                nome: '',
+                situacaoProj: '',
+            }
         }
         else if (path == 'participante-ext') {
             path = 'externos';
+            obj = {
+                nome: '',
+                nomeSocial: ''.value,
+                email: '',
+                dataNasc: '',
+                sexo: ''.value,
+                tipoDocumento: '',
+                numDocumento: '',
+                nacionalidade: '',
+                situacao: '',
+                idPartPP: '',
+                idPartIntel: '',
+                idBancaTcc: '',
+                nivel: '',
+                bolsaPP: '',
+                instTitulacao: '',
+                paisTitulacao: '',
+                instOrigem: '',
+                nivel: '',
+
+            }
         }
         else if (path == 'tcc') {
-
+            obj = {
+                abstract: "",
+                dataDefesa: "",
+                expecAtuacao: "Engenharia",
+                idAreaConcetracao: "",
+                idAutor: "fJUa1YdfmLJeuknWyBlN",
+                idFinanciador: "",
+                idLinhaPesquisa: "",
+                idOrientador: "",
+                idTcc: "",
+                idioma: "Portugues",
+                membros: "id prof, id externos",
+                mesmaArea: true,
+                numeroPaginas: "10",
+                palavrasChave: "carro, bola,etc",
+                projetoDePesquisa: "",
+                resumo: "Estudo de um novo paradigma de programação",
+                tipoInst: "",
+                tipoTcc: "Monografia",
+                tipoVeicEmpr: "Tipo Veiculo Empregatico",
+                titulo: "Novo Paradigma de Programação"
+            }
         }
         else if (path == 'producao') {
             path = 'producaoIntel';
