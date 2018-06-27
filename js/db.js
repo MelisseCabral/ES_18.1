@@ -89,7 +89,6 @@ $(function () {
     var situacao_proj = document.getElementById("situacao_proj");
 
     btn_insertion_db.addEventListener('click', function () {
-        alert('clicked');
         insertData(active_chip);
         active_chip = 'financiador';
     });
@@ -284,6 +283,7 @@ $(function () {
 
         db.collection(path).add(obj)
             .then(function (docRef) {
+                snackbar("Adicionado")
             })
             .catch(function (error) {
                 snackbar(error);
@@ -558,21 +558,21 @@ $(function () {
     }
 
     //pega o valor do lastCount de cada coleção
-/*db.collection('areaConcentracao').where(firebase.firestore.FieldPath.documentId(), "==","lastCount").get().then(function(querySnapshot){
-    querySnapshot.forEach(function(doc){
-        var lastCount = doc.data().lastCount;
-        return lastCount;
+    /*db.collection('areaConcentracao').where(firebase.firestore.FieldPath.documentId(), "==","lastCount").get().then(function(querySnapshot){
+        querySnapshot.forEach(function(doc){
+            var lastCount = doc.data().lastCount;
+            return lastCount;
+        });
     });
-});
-
-//doc.data().documentId = lastCount+1;
-//atualiza o valor da lastCount
-db.collection('areaConcentracao').where(firebase.firestore.FieldPath.documentId(), "==","lastCount").get().then(function(querySnapshot){
-    querySnapshot.forEach(function(doc){
-        doc.data().lastCount = doc.data().lastCount + 1;
-        
-    });
-});*/
+    
+    //doc.data().documentId = lastCount+1;
+    //atualiza o valor da lastCount
+    db.collection('areaConcentracao').where(firebase.firestore.FieldPath.documentId(), "==","lastCount").get().then(function(querySnapshot){
+        querySnapshot.forEach(function(doc){
+            doc.data().lastCount = doc.data().lastCount + 1;
+            
+        });
+    });*/
 
 });
 
