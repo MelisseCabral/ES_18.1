@@ -129,7 +129,23 @@ Funcionalidades:
   User Stories:
   -------------
 <br>
-<b>US1:</b>Como discente, gostaria de ter criar uma conta.<br>
+<b>US1:</b>Como doscente, gostaria de ter criar uma conta.<br>
+<b>Cliente:</b> Doscente.<br>
+<b>Funcionalidade:</b> Criação de conta para professores da pos graduação.<br>
+<b>Funcionalidade:</b> Cadastro de alunos da pos graduação.<br>
+<b>Funcionalidade:</b> Cadastro de financiadores.<br>
+<b>Funcionalidade:</b> Cadastro de programa de fomento.<br>
+<b>Funcionalidade:</b> Cadastro de financiadores.<br>
+<b>Funcionalidade:</b> Cadastro de area de concentração.<br>
+<b>Funcionalidade:</b> Cadastro de linha de pesquisa.<br>
+<b>Funcionalidade:</b> Cadastro de projetos.<br>
+<b>Funcionalidade:</b> Cadastro de participantes externos.<br>
+<b>Funcionalidade:</b> Cadastro de trabalho de conslusão.<br>
+<b>Funcionalidade:</b> Cadastro de produção intelectual.<br>
+<b>Funcionalidade:</b> Gerar relatórios.<br>
+
+
+<b>US2:</b>Como discente, gostaria de ter criar uma conta.<br>
 <b>Cliente:</b> Discente sem vinculo.<br>
 <b>Funcionalidade:</b> Criação de conta para alunos da pos graduação.<br>
 <br>
