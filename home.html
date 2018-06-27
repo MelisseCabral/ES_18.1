@@ -1,7 +1,8 @@
 <!doctype html>
 
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="A front-end template that helps you build fast, modern mobile web apps.">
@@ -24,8 +25,9 @@
     <link rel="stylesheet" href="css/sign-up.css">
     <link rel="stylesheet" href="./css/material.css">
 
-  </head>
-  <body>
+</head>
+
+<body>
     <div id="demo-snackbar-example" class="mdl-js-snackbar mdl-snackbar">
         <div class="mdl-snackbar__text"></div>
         <button class="mdl-snackbar__action" type="button"></button>
@@ -33,100 +35,467 @@
     <div id="new-add-panel">
         <div class="overlay" onclick="closeModal()"></div>
 
-        <div class="modal">
+        <div class="modal_cadastro">
             <div id="sign-up-text">
                 <h4>Cadastro</h4>
             </div>
             <div id='fields-sign-up'>
-                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" id="label-sign">
-                    <input class="mdl-textfield__input sign-sample" type="text" id="email-signup" autocomplete="off">
-                    <label class="mdl-textfield__label" for="sample3">Email</label>
+                <div style="margin-bottom: 2em">
+
+                    <!-- Button Chip -->
+                    <button id='financiador' type="button" class="mdl-chip" style="background-color: deepskyblue">
+                        <span class="mdl-chip__text">Financiador </span>
+                    </button>
+                    <!-- Button Chip -->
+                    <button id='fomento' type="button" class="mdl-chip">
+                        <span class="mdl-chip__text">Programa de fomento</span>
+                    </button>
+                    <!-- Button Chip -->
+                    <button id='area' type="button" class="mdl-chip">
+                        <span class="mdl-chip__text">Área de Concentração</span>
+                    </button>
+                    <!-- Button Chip -->
+                    <button id='linha' type="button" class="mdl-chip">
+                        <span class="mdl-chip__text">Linha de Pesquisa</span>
+                    </button>
+                    <!-- Button Chip -->
+                    <button id='professor' type="button" class="mdl-chip">
+                        <span class="mdl-chip__text">Professor</span>
+                    </button>
+                    <!-- Button Chip -->
+                    <button id='discente' type="button" class="mdl-chip">
+                        <span class="mdl-chip__text">Discente </span>
+                    </button>
+                    <!-- Button Chip -->
+                    <button id='projeto' type="button" class="mdl-chip">
+                        <span class="mdl-chip__text">Projeto</span>
+                    </button>
+                    <!-- Button Chip -->
+                    <button id='participante-ext' type="button" class="mdl-chip">
+                        <span class="mdl-chip__text">Participante Externo</span>
+                    </button>
+                    <!-- Button Chip -->
+                    <button id='tcc' type="button" class="mdl-chip">
+                        <span class="mdl-chip__text">Trabalho de conclusão</span>
+                    </button>
+                    <!-- Button Chip -->
+                    <button id='producao' type="button" class="mdl-chip">
+                        <span class="mdl-chip__text">Produção Intelectual</span>
+                    </button>
                 </div>
-                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" id="label-sign">
-                    <input class="mdl-textfield__input sign-sample" type="password" id="password-signup" autocomplete="off">
-                    <label class="mdl-textfield__label" for="sample3">Senha</label>
-                </div>
-                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" id="label-sign">
-                    <input class="mdl-textfield__input sign-sample" type="password" id="confirm-password" autocomplete="off">
-                    <label class="mdl-textfield__label" for="sample3">Confirme a senha</label>
+                <div class="panel-cadastros" id="">
+                    <div id='form-financiador' class="panel_cadastro">
+                        <div class="mdl-grid">
+                            <div class="mdl-cell mdl-cell--4-col text_box">
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" id="sample3">
+                                    <label class="mdl-textfield__label" for="sample3">Razão Social</label>
+                                </div>
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" id="sample3">
+                                    <label class="mdl-textfield__label" for="sample3">Nome Fantasia</label>
+                                </div>
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" id="sample3">
+                                    <label class="mdl-textfield__label" for="sample3">Pais</label>
+                                </div>
+                            </div>
+
+                            <div class="mdl-cell mdl-cell--4-col text_box">
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" id="sample3">
+                                    <label class="mdl-textfield__label" for="sample3">Site</label>
+                                </div>
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" id="sample3">
+                                    <label class="mdl-textfield__label" for="sample3">CNPJ</label>
+                                </div>
+                                <!-- Simple Select -->
+                                <div class="mdl-textfield mdl-js-textfield getmdl-select">
+                                    <input type="text" value="" class="mdl-textfield__input" id="sample1" readonly>
+                                    <input type="hidden" value="" name="sample1">
+                                    <label for="sample1" class="mdl-textfield__label">Status Juridico</label>
+                                    <ul for="sample1" class="mdl-menu mdl-menu--bottom-left mdl-js-menu">
+                                        <li class="mdl-menu__item" data-val="FED">Federal</li>
+                                        <li class="mdl-menu__item" data-val="EST">Estadual</li>
+                                        <li class="mdl-menu__item" data-val="MUN">Municipal</li>
+                                        <li class="mdl-menu__item" data-val="PRI">Privado</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="mdl-cell mdl-cell--4-col"></div>
+                        </div>
+
+                    </div>
+                    <div id='form-fomento' class="panel_cadastro" style="display: none">
+                        <div class="mdl-grid">
+                            <div class="mdl-cell mdl-cell--4-col"></div>
+                            <div class="mdl-cell mdl-cell--4-col">
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" id="sample3">
+                                    <label class="mdl-textfield__label" for="sample3">Nome do Programa</label>
+                                </div>
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" id="sample3">
+                                    <label class="mdl-textfield__label" for="sample3">ID Financiador</label>
+                                </div>
+                            </div>
+                            <div class="mdl-cell mdl-cell--4-col"></div>
+                        </div>
+
+                    </div>
+                    <div id='form-area' class="panel_cadastro" style="display: none">
+                        <div class="mdl-grid">
+                            <div class="mdl-cell mdl-cell--4-col"></div>
+                            <div class="mdl-cell mdl-cell--4-col">
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" id="nome_area_add">
+                                    <label class="mdl-textfield__label" for="nome_area_add">Nome da área</label>
+                                </div>
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" id="desc_area_add">
+                                    <label class="mdl-textfield__label" for="desc_area_add">Descrição</label>
+                                </div>
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input date-mask" type="date" placeholder="" id="data_inicio_area_add">
+                                    <label class="mdl-textfield__label" for="data_inicio_area_add">Data de Inicio</label>
+                                </div>
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="date" placeholder="" maxlength="10" id="data_fim_area_add">
+                                    <label class="mdl-textfield__label" for="data_fim_area_add">Data de Termino</label>
+                                </div>
+                            </div>
+                            <div class="mdl-cell mdl-cell--4-col"></div>
+                        </div>
+
+                    </div>
+                    <div id='form-linha' class="panel_cadastro" style="display: none">
+                        <div class="mdl-grid">
+                            <div class="mdl-cell mdl-cell--4-col">
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" id="sample3">
+                                    <label class="mdl-textfield__label" for="sample3">Nome</label>
+                                </div>
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" id="sample3">
+                                    <label class="mdl-textfield__label" for="sample3">ID Área associada</label>
+                                </div>
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" id="sample3">
+                                    <label class="mdl-textfield__label" for="sample3">Descrição</label>
+                                </div>
+                            </div>
+                            <div class="mdl-cell mdl-cell--4-col">
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="date" placeholder='' id="sample3">
+                                    <label class="mdl-textfield__label" for="sample3">Data de Inicio</label>
+                                </div>
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="date" placeholder='' id="sample3">
+                                    <label class="mdl-textfield__label" for="sample3">Data de Termino</label>
+                                </div>
+                            </div>
+                            <div class="mdl-cell mdl-cell--4-col"></div>
+                        </div>
+
+                    </div>
+
+                    <div id='form-professor' class="panel_cadastro" style="display: none">
+                        <div class="mdl-grid">
+                            <div class="mdl-cell mdl-cell--4-col">
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" id="sample3">
+                                    <label class="mdl-textfield__label" for="sample3">Nome</label>
+                                </div>
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" id="sample3">
+                                    <label class="mdl-textfield__label" for="sample3">Nome Social</label>
+                                </div>
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" id="sample3">
+                                    <label class="mdl-textfield__label" for="sample3">Tipo Documento</label>
+                                </div>
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" id="sample3">
+                                    <label class="mdl-textfield__label" for="sample3">Email</label>
+                                </div>
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" id="sample3">
+                                    <label class="mdl-textfield__label" for="sample3">Número do Documento</label>
+                                </div>
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" id="sample3">
+                                    <label class="mdl-textfield__label" for="sample3">Instituição de Origem</label>
+                                </div>
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" id="sample3">
+                                    <label class="mdl-textfield__label" for="sample3">Data de termino do vinculo</label>
+                                </div>
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="date" placeholder='' id="sample3">
+                                    <label class="mdl-textfield__label" for="sample3">Data de Termino</label>
+                                </div>
+                            </div>
+
+                            <div class="mdl-cell mdl-cell--4-col">
+
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" id="sample3">
+                                    <label class="mdl-textfield__label" for="sample3">Sexo</label>
+                                </div>
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" id="sample3">
+                                    <label class="mdl-textfield__label" for="sample3">Nacionalidade</label>
+                                </div>
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" id="sample3">
+                                    <label class="mdl-textfield__label" for="sample3">Nivel</label>
+                                </div>
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" id="sample3">
+                                    <label class="mdl-textfield__label" for="sample3">Ano Titulação</label>
+                                </div>
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" id="sample3">
+                                    <label class="mdl-textfield__label" for="sample3">País titulação</label>
+                                </div>
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" id="sample3">
+                                    <label class="mdl-textfield__label" for="sample3">Tipo de Vinculo com a Instituição</label>
+                                </div>
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" id="sample3">
+                                    <label class="mdl-textfield__label" for="sample3">Carga horaria semanal</label>
+                                </div>
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" id="sample3">
+                                    <label class="mdl-textfield__label" for="sample3">Data de inicio do Vinculo</label>
+                                </div>
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" id="sample3">
+                                    <label class="mdl-textfield__label" for="sample3">Participação em bancas e TCC</label>
+                                </div>
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="date" placeholder='' id="sample3">
+                                    <label class="mdl-textfield__label" for="sample3">Data de Nascimento</label>
+                                </div>
+                            </div>
+                            <div class="mdl-cell mdl-cell--4-col">
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" id="sample3">
+                                    <label class="mdl-textfield__label" for="sample3">Regime de Trabalho</label>
+                                </div>
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" id="sample3">
+                                    <label class="mdl-textfield__label" for="sample3">Categoria</label>
+                                </div>
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" id="sample3">
+                                    <label class="mdl-textfield__label" for="sample3">Bolsa de Produtividade</label>
+                                </div>
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" id="sample3">
+                                    <label class="mdl-textfield__label" for="sample3">Carga horaria semanal</label>
+                                </div>
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" id="sample3">
+                                    <label class="mdl-textfield__label" for="sample3">Data de inicio do Vinculo</label>
+                                </div>
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" id="sample3">
+                                    <label class="mdl-textfield__label" for="sample3">Carga horaria semanal</label>
+                                </div>
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" id="sample3">
+                                    <label class="mdl-textfield__label" for="sample3">Data de inicio do Vinculo</label>
+                                </div>
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" id="sample3">
+                                    <label class="mdl-textfield__label" for="sample3">Participação em projetos</label>
+                                </div>
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" id="sample3">
+                                    <label class="mdl-textfield__label" for="sample3">Participação em produção intelectual</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id='form-discente' class="panel_cadastro" style="display: none">
+                        <div class="mdl-grid">
+                            <div class="mdl-cell mdl-cell--4-col">
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" id="nome_area_add">
+                                    <label class="mdl-textfield__label" for="nome_area_add">Nome da área</label>
+                                </div>
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" id="desc_area_add">
+                                    <label class="mdl-textfield__label" for="desc_area_add">Descrição</label>
+                                </div>
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input date-mask" type="date" placeholder="" id="data_inicio_area_add">
+                                    <label class="mdl-textfield__label" for="data_inicio_area_add">Data de Inicio</label>
+                                </div>
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="date" placeholder="" maxlength="10" id="data_fim_area_add">
+                                    <label class="mdl-textfield__label" for="data_fim_area_add">Data de Termino</label>
+                                </div>
+                            </div>
+                            <div class="mdl-cell mdl-cell--4-col">
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" id="nome_area_add">
+                                    <label class="mdl-textfield__label" for="nome_area_add">Nome da área</label>
+                                </div>
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" id="desc_area_add">
+                                    <label class="mdl-textfield__label" for="desc_area_add">Descrição</label>
+                                </div>
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input date-mask" type="date" placeholder="" id="data_inicio_area_add">
+                                    <label class="mdl-textfield__label" for="data_inicio_area_add">Data de Inicio</label>
+                                </div>
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="date" placeholder="" maxlength="10" id="data_fim_area_add">
+                                    <label class="mdl-textfield__label" for="data_fim_area_add">Data de Termino</label>
+                                </div>
+                            </div>
+                            <div class="mdl-cell mdl-cell--4-col">
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" id="nome_area_add">
+                                    <label class="mdl-textfield__label" for="nome_area_add">Nome da área</label>
+                                </div>
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" id="desc_area_add">
+                                    <label class="mdl-textfield__label" for="desc_area_add">Descrição</label>
+                                </div>
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input date-mask" type="date" placeholder="" id="data_inicio_area_add">
+                                    <label class="mdl-textfield__label" for="data_inicio_area_add">Data de Inicio</label>
+                                </div>
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="date" placeholder="" maxlength="10" id="data_fim_area_add">
+                                    <label class="mdl-textfield__label" for="data_fim_area_add">Data de Termino</label>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div id='form-projeto' class="panel_cadastro" style="display: none">
+                        <h4>Projeto</h4>
+                        <div class="mdl-grid">
+                            <div class="mdl-cell mdl-cell--4-col">4</div>
+                            <div class="mdl-cell mdl-cell--4-col">4</div>
+                            <div class="mdl-cell mdl-cell--4-col">4</div>
+                        </div>
+                    </div>
+                    <div id='form-participante-ext' class="panel_cadastro" style="display: none">
+                        <h4>Participantes externos</h4>
+                        <div class="mdl-grid">
+                            <div class="mdl-cell mdl-cell--4-col">4</div>
+                            <div class="mdl-cell mdl-cell--4-col">4</div>
+                            <div class="mdl-cell mdl-cell--4-col">4</div>
+                        </div>
+                    </div>
+                    <div id='form-tcc' class="panel_cadastro" style="display: none">
+                        <h4>TCC</h4>
+                        <div class="mdl-grid">
+                            <div class="mdl-cell mdl-cell--4-col">4</div>
+                            <div class="mdl-cell mdl-cell--4-col">4</div>
+                            <div class="mdl-cell mdl-cell--4-col">4</div>
+                        </div>
+                    </div>
+                    <div id='form-producao' class="panel_cadastro" style="display: none">
+                        <h4>Produção intectual</h4>
+                        <div class="mdl-grid">
+                            <div class="mdl-cell mdl-cell--4-col">4</div>
+                            <div class="mdl-cell mdl-cell--4-col">4</div>
+                            <div class="mdl-cell mdl-cell--4-col">4</div>
+                        </div>
+                    </div>
                 </div>
 
             </div>
             <div id='actions-sign-up'>
-                <button id='cancel-add' class="mdl-button mdl-js-button mdl-js-ripple-effect">
-                  Cancelar
-                </button>
-                <button id='btnCadastro' type="submit" class="mdl-button mdl-js-button mdl-js-ripple-effect">
-                  Cadastrar
-                </button>
+                <button id="cancel-add" style='margin: 1em' class="btn-close mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-button--colored   	">
+                    <i class=" material-icons">close</i>
+                    <button id="btnCadastro" style='margin: 1em' class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-button--colored   	">
+                        <i class="material-icons">save</i>
+                    </button>
             </div>
         </div>
     </div>
 
-  
-  <div class="demo-layout-transparent mdl-layout mdl-js-layout">
-    <header class="mdl-layout__header mdl-layout__header">
-        <div class="mdl-layout__header-row" style="width: 100%">
-          <span id="title-screen" class="mdl-layout-title">Inicio</span>
-          <div class="mdl-layout-spacer"></div>
-            <a id="button-nav" class="mdl-navigation__link" onclick="openModal()">
-              <i class="material-icons mdl-list__item-icon crud">add</i>
-              Novo Cadastro</a>
-          <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable">
-            <label class="mdl-button mdl-js-button mdl-button--icon" for="search">
-              <i class="material-icons">search</i>
-            </label>
-            <div class="mdl-textfield__expandable-holder">
-              <input class="mdl-textfield__input" type="text" id="search">
-              <label class="mdl-textfield__label" for="search">Enter your query...</label>
+
+    <div class="demo-layout-transparent mdl-layout mdl-js-layout">
+        <header class="mdl-layout__header mdl-layout__header">
+            <div class="mdl-layout__header-row" style="width: 100%">
+                <span id="title-screen" class="mdl-layout-title">Inicio</span>
+                <div class="mdl-layout-spacer"></div>
+                <a id="button-nav" class="mdl-navigation__link" onclick="openModal()">
+                    <i class="material-icons mdl-list__item-icon crud">add</i>
+                    Novo Cadastro</a>
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable">
+                    <label class="mdl-button mdl-js-button mdl-button--icon" for="search">
+                        <i class="material-icons">search</i>
+                    </label>
+                    <div class="mdl-textfield__expandable-holder">
+                        <input class="mdl-textfield__input" type="text" id="search">
+                        <label class="mdl-textfield__label" for="search">Enter your query...</label>
+                    </div>
+                </div>
+                <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" id="hdrbtn">
+                    <i class="material-icons">more_vert</i>
+                </button>
+                <ul class="mdl-menu mdl-js-menu mdl-js-ripple-effect mdl-menu--bottom-right" for="hdrbtn">
+                    <li class="mdl-menu__item">Sobre</li>
+                    <li class="mdl-menu__item">Contato</li>
+                    <li class="mdl-menu__item">Legal information</li>
+                </ul>
             </div>
-          </div>
-          <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" id="hdrbtn">
-            <i class="material-icons">more_vert</i>
-          </button>
-          <ul class="mdl-menu mdl-js-menu mdl-js-ripple-effect mdl-menu--bottom-right" for="hdrbtn">
-            <li class="mdl-menu__item">Sobre</li>
-            <li class="mdl-menu__item">Contato</li>
-            <li class="mdl-menu__item">Legal information</li>
-          </ul> 
-      </div>
-    </header>
-    <div class="mdl-layout__drawer">
-      <header class="demo-drawer-header">
-        <div id ="demo-avatar-dropdown" class="demo-avatar-dropdown">
-          <img src="./images/logo.png" id ="avatar"/>
-          <div style="width: 100%;text-align: center; display: grid">
-            <h6 id = "name-profile">Nome Usuario</h6> 
-            <span id = "name-cargo">Cargo</span>  
-          </div>
+        </header>
+        <div class="mdl-layout__drawer">
+            <header class="demo-drawer-header">
+                <div id="demo-avatar-dropdown" class="demo-avatar-dropdown">
+                    <img src="./images/logo.png" id="avatar" />
+                    <div style="width: 100%;text-align: center; display: grid">
+                        <h6 id="name-profile">Nome Usuario</h6>
+                        <span id="name-cargo">Cargo</span>
+                    </div>
 
-          <div class="mdl-layout-spacer"></div>
-          </ul>
+                    <div class="mdl-layout-spacer"></div>
+                    </ul>
+                </div>
+            </header>
+            <nav class="demo-navigation mdl-navigation">
+                <a class="mdl-navigation__link mdl-color-text--blue-grey-400" id="item-drawer-inicio">
+                    <i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">home</i>Inicio</a>
+                <a class="mdl-navigation__link mdl-color-text--blue-grey-400" id="item-drawer-my_account">
+                    <i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">account_box</i>
+                    <span>Minha Conta</span>
+                </a>
+                <a class="mdl-navigation__link mdl-color-text--blue-grey-400" id="item-drawer-publications">
+                    <i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">inbox</i>Publicações</a>
+                <a class="mdl-navigation__link mdl-color-text--blue-grey-400" id="item-drawer-solicitations">
+                    <i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">local_offer</i>Solicitações</a>
+                <a class="mdl-navigation__link mdl-color-text--blue-grey-400" id="item-drawer-estatistics">
+                    <i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">assessment</i>Estatistica</a>
+                <a class="mdl-navigation__link mdl-color-text--blue-grey-400" href="/" id="btn_logout">
+                    <i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">keyboard_backspace</i>Sair</a>
+
+                <div class="mdl-layout-spacer"></div>
+            </nav>
         </div>
-      </header>
-      <nav class="demo-navigation mdl-navigation">
-        <a class="mdl-navigation__link mdl-color-text--blue-grey-400" id="item-drawer-inicio"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">home</i>Inicio</a>
-        <a class="mdl-navigation__link mdl-color-text--blue-grey-400" id="item-drawer-my_account"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">account_box</i><span>Minha Conta</span></a>
-        <a class="mdl-navigation__link mdl-color-text--blue-grey-400" id="item-drawer-publications"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">inbox</i>Publicações</a>
-        <a class="mdl-navigation__link mdl-color-text--blue-grey-400" id="item-drawer-solicitations"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">local_offer</i>Solicitações</a>
-        <a class="mdl-navigation__link mdl-color-text--blue-grey-400" id="item-drawer-estatistics"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">assessment</i>Estatistica</a>
-        <a class="mdl-navigation__link mdl-color-text--blue-grey-400" href="/" id="btn_logout"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">keyboard_backspace</i>Sair</a>
-
-        <div class="mdl-layout-spacer"></div>
-      </nav>
-    </div>
-    <main class="mdl-layout__content">
-        <div class="panel" id="inicio_panel">
-            <section id='square-menu'>
+        <main class="mdl-layout__content">
+            <div class="panel" id="inicio_panel">
+                <section id='square-menu'>
                     <!-- Gavetas -->
                     <div id='group-option' class="terciary_color">
                         <div class='option' id="my_account">
-                        <a class="mdl-navigation__link" id="my_account" style="margin-top: 5vh">
-                            <i class="material-icons" role="presentation" id="icon-option">account_circle</i>
-                            <h5 style="color: white">Minha conta</h5>
-                        </a>
+                            <a class="mdl-navigation__link" id="my_account" style="margin-top: 5vh">
+                                <i class="material-icons" role="presentation" id="icon-option">account_circle</i>
+                                <h5 style="color: white">Minha conta</h5>
+                            </a>
                         </div>
-                        <div class='option' id="professores"> 
+                        <div class='option' id="professores">
                             <a class="mdl-navigation__link" style="margin-top: 5vh">
                                 <i class="material-icons" role="presentation" id="icon-option">people</i>
                                 <h5 style="color: white">Professores</h5>
@@ -142,119 +511,119 @@
                         </div>
                     </div>
                     <div id='group-option'>
-                            <div class='option' id="publications">
-                                <a class="mdl-navigation__link" style="margin-top: 5vh">
-                                    <i class="material-icons" role="presentation" id="icon-option">notes</i>
-                                    <h5 style="color: white">Produção Intelectual</h5>
-    
-                                </a>
-                            </div>
-                            <div id='option-account'>
-                            <div id ="demo-avatar-dropdown" class="demo-avatar-dropdown">
-                                <img src="./images/user.png" id ="mini-avatar"/>
+                        <div class='option' id="publications">
+                            <a class="mdl-navigation__link" style="margin-top: 5vh">
+                                <i class="material-icons" role="presentation" id="icon-option">notes</i>
+                                <h5 style="color: white">Produção Intelectual</h5>
+
+                            </a>
+                        </div>
+                        <div id='option-account'>
+                            <div id="demo-avatar-dropdown" class="demo-avatar-dropdown">
+                                <img src="./images/user.png" id="mini-avatar" />
                                 <div style="width: 100%;text-align: center; display: grid">
-                                <h6 id = "name-info">Nome Usuario</h6> 
-                                <span id = "name-cargo">Cargo</span>  
+                                    <h6 id="name-info">Nome Usuario</h6>
+                                    <span id="name-cargo">Cargo</span>
                                 </div>
                                 </ul>
                             </div>
-                            </div>
-                            <div class='option' id="projetos">
-                                <a class="mdl-navigation__link" style="margin-top: 5vh">
-                                    <i class="material-icons" role="presentation" id="icon-option">inbox</i>
-                                    <h5 style="color: white">Projetos</h5>
-    
-                                </a>
-                            </div>
+                        </div>
+                        <div class='option' id="projetos">
+                            <a class="mdl-navigation__link" style="margin-top: 5vh">
+                                <i class="material-icons" role="presentation" id="icon-option">inbox</i>
+                                <h5 style="color: white">Projetos</h5>
+
+                            </a>
+                        </div>
                     </div>
                     <div id='group-option'>
-                            <div class='option' id="financiadores">
-                                <a class="mdl-navigation__link" style="margin-top: 5vh">
-                                    <i class="material-icons" role="presentation" id="icon-option">attach_money</i>
-                                    <h5 style="color: white">Financiadores</h5>
-    
-                                </a>
-                            </div>
-                            <div class='option' id="participantes_ext">
-                                <a class="mdl-navigation__link" style="margin-top: 5vh">
-                                    <i class="material-icons" role="presentation" id="icon-option">people_outline</i>
-                                    <h5 style="color: white">Participantes Externos</h5>
-    
-                                </a>
-                            </div>
-                            <div class='option' id="tccs">
-                                <a class="mdl-navigation__link" style="margin-top: 5vh">
-                                    <i class="material-icons" role="presentation" id="icon-option">file_copy</i>
-                                    <h5 style="color: white">Trabalhos de conclusão</h5>
-    
-                                </a>
-                            </div>
-                    </div>
-                    
-            </section>
-        </div>
+                        <div class='option' id="financiadores">
+                            <a class="mdl-navigation__link" style="margin-top: 5vh">
+                                <i class="material-icons" role="presentation" id="icon-option">attach_money</i>
+                                <h5 style="color: white">Financiadores</h5>
 
-        <div id="my_account_panel" class="panel" style="display: none">
-            <div style="display: -webkit-box">
-                <img src="./images/user.png" id="avatar_my_account"/>
-                <div id="name_my_account">
-                    <h3 id="name_my_account">Nome</h3>
-                    <span>Cargo</span>
-                </div>
-                <div id="options-panel_my_account">
-                   
-                    <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab" onclick="snackbar('edit')">
-                        <i class="material-icons" id="functions-panel">edit</i>
-                    </button>
-                    <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab" onclick="snackbar('print')">
-                        <i class="material-icons" id="functions-panel">print</i>
-                    </button>
-                    
-                </div>
+                            </a>
+                        </div>
+                        <div class='option' id="participantes_ext">
+                            <a class="mdl-navigation__link" style="margin-top: 5vh">
+                                <i class="material-icons" role="presentation" id="icon-option">people_outline</i>
+                                <h5 style="color: white">Participantes Externos</h5>
+
+                            </a>
+                        </div>
+                        <div class='option' id="tccs">
+                            <a class="mdl-navigation__link" style="margin-top: 5vh">
+                                <i class="material-icons" role="presentation" id="icon-option">file_copy</i>
+                                <h5 style="color: white">Trabalhos de conclusão</h5>
+
+                            </a>
+                        </div>
+                    </div>
+
+                </section>
             </div>
-            <div id="section_one">
+
+            <div id="my_account_panel" class="panel" style="display: none">
+                <div style="display: -webkit-box">
+                    <img src="./images/user.png" id="avatar_my_account" />
+                    <div id="name_my_account">
+                        <h3 id="name_my_account">Nome</h3>
+                        <span>Cargo</span>
+                    </div>
+                    <div id="options-panel_my_account">
+
+                        <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab" onclick="snackbar('edit')">
+                            <i class="material-icons" id="functions-panel">edit</i>
+                        </button>
+                        <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab" onclick="snackbar('print')">
+                            <i class="material-icons" id="functions-panel">print</i>
+                        </button>
+
+                    </div>
+                </div>
+                <div id="section_one">
                     <div id="info_personal_container">
-                            <fieldset>
-                                <legend class="legends">Informações Pessoais</legend>
-                                <div id="box">
-                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                        <input class="mdl-textfield__input" type="text" id="sample3">
-                                        <label class="mdl-textfield__label" for="sample3">Nome</label>
-                                    </div>
-                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                            <input class="mdl-textfield__input" type="text" id="sample3">
-                                            <label class="mdl-textfield__label" for="sample3">Email</label>
-                                    </div>
-                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                        <input class="mdl-textfield__input" type="text" id="sample3">
-                                        <label class="mdl-textfield__label" for="sample3">CPF</label>
-                                    </div>
+                        <fieldset>
+                            <legend class="legends">Informações Pessoais</legend>
+                            <div id="box">
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" id="sample3">
+                                    <label class="mdl-textfield__label" for="sample3">Nome</label>
                                 </div>
-                                
-                            </fieldset>
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" id="sample3">
+                                    <label class="mdl-textfield__label" for="sample3">Email</label>
+                                </div>
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" id="sample3">
+                                    <label class="mdl-textfield__label" for="sample3">CPF</label>
+                                </div>
+                            </div>
+
+                        </fieldset>
                     </div>
                     <div id="address_personal_container">
-                            <fieldset>
-                                <legend class="legends">Endereço</legend>
-                                <div id="box">
-                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                        <input class="mdl-textfield__input" type="text" id="sample3">
-                                        <label class="mdl-textfield__label" for="sample3">Endereço</label>
-                                    </div>
-                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                            <input class="mdl-textfield__input" type="text" id="sample3">
-                                            <label class="mdl-textfield__label" for="sample3">Complemento</label>
-                                    </div>
-                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                        <input class="mdl-textfield__input" type="text" id="sample3">
-                                        <label class="mdl-textfield__label" for="sample3">CEP</label>
-                                    </div>
+                        <fieldset>
+                            <legend class="legends">Endereço</legend>
+                            <div id="box">
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" id="sample3">
+                                    <label class="mdl-textfield__label" for="sample3">Endereço</label>
                                 </div>
-                                
-                            </fieldset>
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" id="sample3">
+                                    <label class="mdl-textfield__label" for="sample3">Complemento</label>
+                                </div>
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" id="sample3">
+                                    <label class="mdl-textfield__label" for="sample3">CEP</label>
+                                </div>
+                            </div>
+
+                        </fieldset>
                     </div>
-            </div>
-            <div id="education_personal_container">
+                </div>
+                <div id="education_personal_container">
                     <fieldset>
                         <legend class="legends">Educação</legend>
                         <div id="box">
@@ -263,189 +632,189 @@
                                 <label class="mdl-textfield__label" for="sample3">Endereço</label>
                             </div>
                             <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                    <input class="mdl-textfield__input" type="text" id="sample3">
-                                    <label class="mdl-textfield__label" for="sample3">Complemento</label>
+                                <input class="mdl-textfield__input" type="text" id="sample3">
+                                <label class="mdl-textfield__label" for="sample3">Complemento</label>
                             </div>
                             <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                                 <input class="mdl-textfield__input" type="text" id="sample3">
                                 <label class="mdl-textfield__label" for="sample3">CEP</label>
                             </div>
                         </div>
-                        
+
                     </fieldset>
-            </div>
-            <div id="projetos_personal_container">
+                </div>
+                <div id="projetos_personal_container">
                     <h3>Projetos</h3>
-                    <table class="mdl-data-table mdl-js-data-table mdl-data-table mdl-shadow--2dp">
-                            <thead>
-                                <tr>
-                                <th class="mdl-data-table__cell--non-numeric">Nome</th>
-                                <th>Status</th>
-                                <th>Area</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                <td class="mdl-data-table__cell--non-numeric">Acrylic (Transparent)</td>
-                                <td>25</td>
-                                <td>$2.90</td>
-                                </tr>
-                                <tr>
-                                <td class="mdl-data-table__cell--non-numeric">Plywood (Birch)</td>
-                                <td>50</td>
-                                <td>$1.25</td>
-                                </tr>
-                                <tr>
-                                <td class="mdl-data-table__cell--non-numeric">Laminate (Gold on Blue)</td>
-                                <td>10</td>
-                                <td>$2.35</td>
-                                </tr>
-                            </tbody>
-                        </table>
-            </div>
-            <div id="publications_personal_container">
-                    <h3>Publicações</h3>
                     <table class="mdl-data-table mdl-js-data-table mdl-data-table mdl-shadow--2dp">
                         <thead>
                             <tr>
-                            <th class="mdl-data-table__cell--non-numeric">Nome</th>
-                            <th>Data</th>
-                            <th>Download</th>
+                                <th class="mdl-data-table__cell--non-numeric">Nome</th>
+                                <th>Status</th>
+                                <th>Area</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                            <td class="mdl-data-table__cell--non-numeric">Acrylic (Transparent)</td>
-                            <td>25</td>
-                            <td>$2.90</td>
+                                <td class="mdl-data-table__cell--non-numeric">Acrylic (Transparent)</td>
+                                <td>25</td>
+                                <td>$2.90</td>
                             </tr>
                             <tr>
-                            <td class="mdl-data-table__cell--non-numeric">Plywood (Birch)</td>
-                            <td>50</td>
-                            <td>$1.25</td>
+                                <td class="mdl-data-table__cell--non-numeric">Plywood (Birch)</td>
+                                <td>50</td>
+                                <td>$1.25</td>
                             </tr>
                             <tr>
-                            <td class="mdl-data-table__cell--non-numeric">Laminate (Gold on Blue)</td>
-                            <td>10</td>
-                            <td>$2.35</td>
+                                <td class="mdl-data-table__cell--non-numeric">Laminate (Gold on Blue)</td>
+                                <td>10</td>
+                                <td>$2.35</td>
                             </tr>
                         </tbody>
                     </table>
-            </div>
-        </div>
-        <div id="professores_panel" class="panel" style="display: none">
-            <div class="view">
-                <h3 id="title-panel" style="text-align: Left; width: 80%; margin-left: 5vh">Professores</h3>
-                <div id="options-panel">
-                    
-                    <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab" onclick="snackbar('added')">
-                        <i class="material-icons" id="functions-panel">add</i>
-                    </button>
-                    <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab" onclick="snackbar('removed')">
-                        <i class="material-icons" id="functions-panel">remove</i>
-                    </button>
-                    <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab" onclick="snackbar('edit')">
-                        <i class="material-icons" id="functions-panel">edit</i>
-                    </button>
-                    <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab" onclick="snackbar('print')">
-                        <i class="material-icons" id="functions-panel">print</i>
-                    </button>
-                    
+                </div>
+                <div id="publications_personal_container">
+                    <h3>Publicações</h3>
+                    <table class="mdl-data-table mdl-js-data-table mdl-data-table mdl-shadow--2dp">
+                        <thead>
+                            <tr>
+                                <th class="mdl-data-table__cell--non-numeric">Nome</th>
+                                <th>Data</th>
+                                <th>Download</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="mdl-data-table__cell--non-numeric">Acrylic (Transparent)</td>
+                                <td>25</td>
+                                <td>$2.90</td>
+                            </tr>
+                            <tr>
+                                <td class="mdl-data-table__cell--non-numeric">Plywood (Birch)</td>
+                                <td>50</td>
+                                <td>$1.25</td>
+                            </tr>
+                            <tr>
+                                <td class="mdl-data-table__cell--non-numeric">Laminate (Gold on Blue)</td>
+                                <td>10</td>
+                                <td>$2.35</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
-            <table class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp">
-                <thead>
-                  <tr>
-                    <th class="mdl-data-table__cell--non-numeric">Id</th>
-                    <th>Tipo doc</th>
-                    <th>Nº documento</th>
-                    <th>Data Nasc.</th>
-                    <th>Sexo</th>
-                    <th>Nome Social</th>
-                    <th>Nacionalidade</th>
-                    <th>Bolsa</th>
-                    <th>Email</th>
-                    <th>Nivel</th>
-                    <th>Tipo de Vínculo</th>
-                    <th>Regime de trabalho</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td class="mdl-data-table__cell--non-numeric">25</td>
-                    <td>Rg</td>
-                    <td>176238163</td>
-                    <td>9/12/1977</td>
-                    <td>Masculino</td>
-                    <td>João Silva</td>
-                    <td>Brasileiro</td>
-                    <td>Não</td>
-                    <td>seujoao@gmail.com</td>
-                    <td>Phd</td>
-                    <td>Dedicação exclusiva</td>
-                    <td>40h</td>
-                  </tr>
-                </tbody>
-              </table>
-        </div>
-        <div id="discentes_panel" class="panel" style="display: none">
-            <div class="view">
-                <h3 id="title-panel" >Discentes</h3>
-                <div id="options-panel">
-                    <!-- Large Tooltip -->
-                    <!-- FAB button with ripple -->
-                    <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab">
-                        <i class="material-icons" id="functions-panel">add</i>
-                    </button>
-                    <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab">
-                        <i class="material-icons" id="functions-panel">remove</i>
-                    </button>
-                    <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab">
-                        <i class="material-icons" id="functions-panel">edit</i>
-                    </button>
-                    <!-- FAB button with ripple -->
-                    <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab">
-                        <i class="material-icons" id="functions-panel">print</i>
-                    </button>
-                    
-            </div>
-            <table class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp">
-                <thead>
-                  <tr>
-                    <th class="mdl-data-table__cell--non-numeric">Id</th>
-                    <th>Tipo doc</th>
-                    <th>Nº documento</th>
-                    <th>Data Nasc.</th>
-                    <th>Sexo</th>
-                    <th>Nome Social</th>
-                    <th>Nacionalidade</th>
-                    <th>Bolsa</th>
-                    <th>Email</th>
-                    <th>Nivel</th>
-                    <th>Tipo de Vínculo</th>
-                    <th>Regime de trabalho</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td class="mdl-data-table__cell--non-numeric">25</td>
-                    <td>Rg</td>
-                    <td>176238163</td>
-                    <td>9/12/1977</td>
-                    <td>Masculino</td>
-                    <td>João Silva</td>
-                    <td>Brasileiro</td>
-                    <td>Não</td>
-                    <td>seujoao@gmail.com</td>
-                    <td>Phd</td>
-                    <td>Dedicação exclusiva</td>
-                    <td>40h</td>
-                  </tr>
-                </tbody>
-              </table>
-        </div>
-        <div id="publications_panel" class="panel" style="display: none">
+            <div id="professores_panel" class="panel" style="display: none">
                 <div class="view">
+                    <h3 id="title-panel" style="text-align: Left; width: 80%; margin-left: 5vh">Professores</h3>
+                    <div id="options-panel">
+
+                        <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab" onclick="snackbar('added')">
+                            <i class="material-icons" id="functions-panel">add</i>
+                        </button>
+                        <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab" onclick="snackbar('removed')">
+                            <i class="material-icons" id="functions-panel">remove</i>
+                        </button>
+                        <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab" onclick="snackbar('edit')">
+                            <i class="material-icons" id="functions-panel">edit</i>
+                        </button>
+                        <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab" onclick="snackbar('print')">
+                            <i class="material-icons" id="functions-panel">print</i>
+                        </button>
+
+                    </div>
+                </div>
+                <table id='ex-table' class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp">
+                    <thead>
+                        <tr>
+                            <th class="mdl-data-table__cell--non-numeric">Id</th>
+                            <th>Tipo doc</th>
+                            <th>Nº documento</th>
+                            <th>Data Nasc.</th>
+                            <th>Sexo</th>
+                            <th>Nome Social</th>
+                            <th>Nacionalidade</th>
+                            <th>Bolsa</th>
+                            <th>Email</th>
+                            <th>Nivel</th>
+                            <th>Tipo de Vínculo</th>
+                            <th>Regime de trabalho</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="mdl-data-table__cell--non-numeric">25</td>
+                            <td>Rg</td>
+                            <td>176238163</td>
+                            <td>9/12/1977</td>
+                            <td>Masculino</td>
+                            <td>João Silva</td>
+                            <td>Brasileiro</td>
+                            <td>Não</td>
+                            <td>seujoao@gmail.com</td>
+                            <td>Phd</td>
+                            <td>Dedicação exclusiva</td>
+                            <td>40h</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div id="discentes_panel" class="panel" style="display: none">
+                <div class="view">
+                    <h3 id="title-panel">Discentes</h3>
+                    <div id="options-panel">
+                        <!-- Large Tooltip -->
+                        <!-- FAB button with ripple -->
+                        <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab">
+                            <i class="material-icons" id="functions-panel">add</i>
+                        </button>
+                        <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab">
+                            <i class="material-icons" id="functions-panel">remove</i>
+                        </button>
+                        <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab">
+                            <i class="material-icons" id="functions-panel">edit</i>
+                        </button>
+                        <!-- FAB button with ripple -->
+                        <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab">
+                            <i class="material-icons" id="functions-panel">print</i>
+                        </button>
+
+                    </div>
+                    <table class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp">
+                        <thead>
+                            <tr>
+                                <th class="mdl-data-table__cell--non-numeric">Id</th>
+                                <th>Tipo doc</th>
+                                <th>Nº documento</th>
+                                <th>Data Nasc.</th>
+                                <th>Sexo</th>
+                                <th>Nome Social</th>
+                                <th>Nacionalidade</th>
+                                <th>Bolsa</th>
+                                <th>Email</th>
+                                <th>Nivel</th>
+                                <th>Tipo de Vínculo</th>
+                                <th>Regime de trabalho</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="mdl-data-table__cell--non-numeric">25</td>
+                                <td>Rg</td>
+                                <td>176238163</td>
+                                <td>9/12/1977</td>
+                                <td>Masculino</td>
+                                <td>João Silva</td>
+                                <td>Brasileiro</td>
+                                <td>Não</td>
+                                <td>seujoao@gmail.com</td>
+                                <td>Phd</td>
+                                <td>Dedicação exclusiva</td>
+                                <td>40h</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div id="publications_panel" class="panel" style="display: none">
+                    <div class="view">
                         <h3 id="title-panel" style="text-align: Left; width: 80%; margin-left: 5vh">Publicações</h3>
                         <div id="options-panel">
                             <!-- Large Tooltip -->
@@ -463,189 +832,193 @@
                             <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab">
                                 <i class="material-icons" id="functions-panel">print</i>
                             </button>
-                            
+
                         </div>
-            <table class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp">
-                <thead>
-                  <tr>
-                    <th class="mdl-data-table__cell--non-numeric">Id</th>
-                    <th>Tipo doc</th>
-                    <th>Nº documento</th>
-                    <th>Data Nasc.</th>
-                    <th>Sexo</th>
-                    <th>Nome Social</th>
-                    <th>Nacionalidade</th>
-                    <th>Bolsa</th>
-                    <th>Email</th>
-                    <th>Nivel</th>
-                    <th>Tipo de Vínculo</th>
-                    <th>Regime de trabalho</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td class="mdl-data-table__cell--non-numeric">25</td>
-                    <td>Rg</td>
-                    <td>176238163</td>
-                    <td>9/12/1977</td>
-                    <td>Masculino</td>
-                    <td>João Silva</td>
-                    <td>Brasileiro</td>
-                    <td>Não</td>
-                    <td>seujoao@gmail.com</td>
-                    <td>Phd</td>
-                    <td>Dedicação exclusiva</td>
-                    <td>40h</td>
-                  </tr>
-                </tbody>
-              </table>
-        </div>
+                        <table class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp">
+                            <thead>
+                                <tr>
+                                    <th class="mdl-data-table__cell--non-numeric">Id</th>
+                                    <th>Tipo doc</th>
+                                    <th>Nº documento</th>
+                                    <th>Data Nasc.</th>
+                                    <th>Sexo</th>
+                                    <th>Nome Social</th>
+                                    <th>Nacionalidade</th>
+                                    <th>Bolsa</th>
+                                    <th>Email</th>
+                                    <th>Nivel</th>
+                                    <th>Tipo de Vínculo</th>
+                                    <th>Regime de trabalho</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="mdl-data-table__cell--non-numeric">25</td>
+                                    <td>Rg</td>
+                                    <td>176238163</td>
+                                    <td>9/12/1977</td>
+                                    <td>Masculino</td>
+                                    <td>João Silva</td>
+                                    <td>Brasileiro</td>
+                                    <td>Não</td>
+                                    <td>seujoao@gmail.com</td>
+                                    <td>Phd</td>
+                                    <td>Dedicação exclusiva</td>
+                                    <td>40h</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
 
-        <div id="solicitacoes_panel" class="panel" style="display: none">
-            <div class="view">
-                <h3 id="title-panel" >Solicitações</h3>
-                <div id="options-panel">
-                    <!-- Large Tooltip -->
-                    <!-- FAB button with ripple -->
-                    <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab">
-                        <i class="material-icons" id="functions-panel">add</i>
-                    </button>
-                    <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab">
-                        <i class="material-icons" id="functions-panel">remove</i>
-                    </button>
-                    <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab">
-                        <i class="material-icons" id="functions-panel">edit</i>
-                    </button>
-                    <!-- FAB button with ripple -->
-                    <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab">
-                        <i class="material-icons" id="functions-panel">print</i>
-                    </button>
-                    
-            </div>
-        </div>
+                    <div id="solicitacoes_panel" class="panel" style="display: none">
+                        <div class="view">
+                            <h3 id="title-panel">Solicitações</h3>
+                            <div id="options-panel">
+                                <!-- Large Tooltip -->
+                                <!-- FAB button with ripple -->
+                                <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab">
+                                    <i class="material-icons" id="functions-panel">add</i>
+                                </button>
+                                <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab">
+                                    <i class="material-icons" id="functions-panel">remove</i>
+                                </button>
+                                <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab">
+                                    <i class="material-icons" id="functions-panel">edit</i>
+                                </button>
+                                <!-- FAB button with ripple -->
+                                <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab">
+                                    <i class="material-icons" id="functions-panel">print</i>
+                                </button>
 
-        <div id="estatistica_panel" class="panel" style="display: none">
-            <div class="view">
-                <h3 id="title-panel" >Estatistica</h3>
-                <div id="options-panel">
-                    <!-- Large Tooltip -->
-                    <!-- FAB button with ripple -->
-                    <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab">
-                        <i class="material-icons" id="functions-panel">add</i>
-                    </button>
-                    <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab">
-                        <i class="material-icons" id="functions-panel">remove</i>
-                    </button>
-                    <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab">
-                        <i class="material-icons" id="functions-panel">edit</i>
-                    </button>
-                    <!-- FAB button with ripple -->
-                    <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab">
-                        <i class="material-icons" id="functions-panel">print</i>
-                    </button>
-                    
-            </div>
+                            </div>
+                        </div>
+
+                        <div id="estatistica_panel" class="panel" style="display: none">
+                            <div class="view">
+                                <h3 id="title-panel">Estatistica</h3>
+                                <div id="options-panel">
+                                    <!-- Large Tooltip -->
+                                    <!-- FAB button with ripple -->
+                                    <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab">
+                                        <i class="material-icons" id="functions-panel">add</i>
+                                    </button>
+                                    <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab">
+                                        <i class="material-icons" id="functions-panel">remove</i>
+                                    </button>
+                                    <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab">
+                                        <i class="material-icons" id="functions-panel">edit</i>
+                                    </button>
+                                    <!-- FAB button with ripple -->
+                                    <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab">
+                                        <i class="material-icons" id="functions-panel">print</i>
+                                    </button>
+
+                                </div>
+                            </div>
+                            <div id="participantes_ext_panel" class="panel" style="display: none">
+                                <div class="view">
+                                    <h3 id="title-panel">Participantes Externos</h3>
+                                    <div id="options-panel">
+                                        <!-- Large Tooltip -->
+                                        <!-- FAB button with ripple -->
+                                        <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab">
+                                            <i class="material-icons" id="functions-panel">add</i>
+                                        </button>
+                                        <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab">
+                                            <i class="material-icons" id="functions-panel">remove</i>
+                                        </button>
+                                        <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab">
+                                            <i class="material-icons" id="functions-panel">edit</i>
+                                        </button>
+                                        <!-- FAB button with ripple -->
+                                        <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab">
+                                            <i class="material-icons" id="functions-panel">print</i>
+                                        </button>
+
+                                    </div>
+                                </div>
+                                <div id="projetos_panel" class="panel" style="display: none">
+                                    <div class="view">
+                                        <h3 id="title-panel">Projetos</h3>
+                                        <div id="options-panel">
+                                            <!-- Large Tooltip -->
+                                            <!-- FAB button with ripple -->
+                                            <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab">
+                                                <i class="material-icons" id="functions-panel">add</i>
+                                            </button>
+                                            <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab">
+                                                <i class="material-icons" id="functions-panel">remove</i>
+                                            </button>
+                                            <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab">
+                                                <i class="material-icons" id="functions-panel">edit</i>
+                                            </button>
+                                            <!-- FAB button with ripple -->
+                                            <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab">
+                                                <i class="material-icons" id="functions-panel">print</i>
+                                            </button>
+
+                                        </div>
+                                        <h1 style="text-align: center; width: 100%">Projetos</h1>
+                                    </div>
+                                    <div id="financiadores_panel" class="panel" style="display: none">
+                                        <div class="view">
+                                            <h3 id="title-panel">Fianciadores</h3>
+                                            <div id="options-panel">
+                                                <!-- Large Tooltip -->
+                                                <!-- FAB button with ripple -->
+                                                <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab">
+                                                    <i class="material-icons" id="functions-panel">add</i>
+                                                </button>
+                                                <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab">
+                                                    <i class="material-icons" id="functions-panel">remove</i>
+                                                </button>
+                                                <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab">
+                                                    <i class="material-icons" id="functions-panel">edit</i>
+                                                </button>
+                                                <!-- FAB button with ripple -->
+                                                <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab">
+                                                    <i class="material-icons" id="functions-panel">print</i>
+                                                </button>
+
+                                            </div>
+                                        </div>
+                                        <div id="tccs_panel" class="panel" style="display: none">
+                                            <div class="view">
+                                                <h3 id="title-panel">Trabalho de conclusão de curso</h3>
+                                                <div id="options-panel">
+                                                    <!-- Large Tooltip -->
+                                                    <!-- FAB button with ripple -->
+                                                    <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab">
+                                                        <i class="material-icons" id="functions-panel">add</i>
+                                                    </button>
+                                                    <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab">
+                                                        <i class="material-icons" id="functions-panel">remove</i>
+                                                    </button>
+                                                    <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab">
+                                                        <i class="material-icons" id="functions-panel">edit</i>
+                                                    </button>
+                                                    <!-- FAB button with ripple -->
+                                                    <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab">
+                                                        <i class="material-icons" id="functions-panel">print</i>
+                                                    </button>
+
+                                                </div>
+                                            </div>
+                                            </section>
+
+        </main>
         </div>
-        <div id="participantes_ext_panel" class="panel" style="display: none">
-            <div class="view">
-                <h3 id="title-panel" >Participantes Externos</h3>
-                <div id="options-panel">
-                    <!-- Large Tooltip -->
-                    <!-- FAB button with ripple -->
-                    <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab">
-                        <i class="material-icons" id="functions-panel">add</i>
-                    </button>
-                    <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab">
-                        <i class="material-icons" id="functions-panel">remove</i>
-                    </button>
-                    <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab">
-                        <i class="material-icons" id="functions-panel">edit</i>
-                    </button>
-                    <!-- FAB button with ripple -->
-                    <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab">
-                        <i class="material-icons" id="functions-panel">print</i>
-                    </button>
-                    
-            </div>
-        </div>
-        <div id="projetos_panel" class="panel" style="display: none">
-            <div class="view">
-                <h3 id="title-panel" >Projetos</h3>
-                <div id="options-panel">
-                    <!-- Large Tooltip -->
-                    <!-- FAB button with ripple -->
-                    <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab">
-                        <i class="material-icons" id="functions-panel">add</i>
-                    </button>
-                    <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab">
-                        <i class="material-icons" id="functions-panel">remove</i>
-                    </button>
-                    <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab">
-                        <i class="material-icons" id="functions-panel">edit</i>
-                    </button>
-                    <!-- FAB button with ripple -->
-                    <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab">
-                        <i class="material-icons" id="functions-panel">print</i>
-                    </button>
-                    
-            </div> <h1 style="text-align: center; width: 100%">Projetos</h1>
-        </div>
-        <div id="financiadores_panel" class="panel" style="display: none">
-            <div class="view">
-                <h3 id="title-panel" >Fianciadores</h3>
-                <div id="options-panel">
-                    <!-- Large Tooltip -->
-                    <!-- FAB button with ripple -->
-                    <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab">
-                        <i class="material-icons" id="functions-panel">add</i>
-                    </button>
-                    <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab">
-                        <i class="material-icons" id="functions-panel">remove</i>
-                    </button>
-                    <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab">
-                        <i class="material-icons" id="functions-panel">edit</i>
-                    </button>
-                    <!-- FAB button with ripple -->
-                    <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab">
-                        <i class="material-icons" id="functions-panel">print</i>
-                    </button>
-                    
-            </div>
-        </div>
-        <div id="tccs_panel" class="panel" style="display: none">
-            <div class="view">
-                <h3 id="title-panel" >Trabalho de conclusão de curso</h3>
-                <div id="options-panel">
-                    <!-- Large Tooltip -->
-                    <!-- FAB button with ripple -->
-                    <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab">
-                        <i class="material-icons" id="functions-panel">add</i>
-                    </button>
-                    <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab">
-                        <i class="material-icons" id="functions-panel">remove</i>
-                    </button>
-                    <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab">
-                        <i class="material-icons" id="functions-panel">edit</i>
-                    </button>
-                    <!-- FAB button with ripple -->
-                    <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab">
-                        <i class="material-icons" id="functions-panel">print</i>
-                    </button>
-                    
-            </div>
-        </div>
-      </section>
-      
-    </main>
-  </div>
-  </body>
-    <footer>
-        <script src="js/main.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
-        <script src="js/cadastros.js"></script>
-        <script src="js/jquery-3.3.1.min.js"></script>
-        <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
-        <script src="js/app.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
-    </footer>
+</body>
+<footer>
+    <script src="js/main.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-firestore.js"></script>
+    <script src="js/cadastros.js"></script>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/db.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
+</footer>
+
 </html>

@@ -83,6 +83,22 @@ h1, h2, h3, h4,{
     z-index: 10; /* keep on top of other elements on the page */
     box-shadow: 0 0 0 9999px rgba(0,0,0,0.5);
 }
+.modal_cadastro {
+    /* some styles to position the modal at the center of the page */
+ 	position: absolute;
+	top: 7%;
+	left: 3%;
+	right: 3%;
+	height: 80%;
+    border-radius: 10px;
+	background: white;
+	text-align: center;
+    padding-bottom: 2%;
+
+    /* needed styles for the overlay */
+    z-index: 10; /* keep on top of other elements on the page */
+    box-shadow: 0 0 0 9999px rgba(0,0,0,0.5);
+}
 #actions-sign-up{
     padding-left: 2%;
     padding-right: 2%;
