@@ -749,14 +749,14 @@
                     <div id="options-panel">
                         <!-- Large Tooltip -->
                         <!-- FAB button with ripple -->
-                        <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab">
-                            <i class="material-icons" id="functions-panel">add</i>
-                        </button>
-                        <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab">
-                            <i class="material-icons" id="functions-panel">remove</i>
+                        <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab" id='refresh_discente'>
+                            <i class="material-icons" id="functions-panel">refresh</i>
                         </button>
                         <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab">
                             <i class="material-icons" id="functions-panel">edit</i>
+                        </button>
+                        <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab">
+                            <i class="material-icons" id="functions-panel">remove</i>
                         </button>
                         <!-- FAB button with ripple -->
                         <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab">
@@ -764,7 +764,7 @@
                         </button>
 
                     </div>
-                    <table class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp">
+                    <table id='discente-table' class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp">
                         <thead>
                             <tr>
                                 <th class="mdl-data-table__cell--non-numeric">Id</th>
@@ -782,218 +782,280 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td class="mdl-data-table__cell--non-numeric">25</td>
-                                <td>Rg</td>
-                                <td>176238163</td>
-                                <td>9/12/1977</td>
-                                <td>Masculino</td>
-                                <td>João Silva</td>
-                                <td>Brasileiro</td>
-                                <td>Não</td>
-                                <td>seujoao@gmail.com</td>
-                                <td>Phd</td>
-                                <td>Dedicação exclusiva</td>
-                                <td>40h</td>
-                            </tr>
+
                         </tbody>
                     </table>
                 </div>
-                <div id="publications_panel" class="panel" style="display: none">
-                    <div class="view">
-                        <h3 id="title-panel" style="text-align: Left; width: 80%; margin-left: 5vh">Publicações</h3>
-                        <div id="options-panel">
-                            <!-- Large Tooltip -->
-                            <!-- FAB button with ripple -->
-                            <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab">
-                                <i class="material-icons" id="functions-panel">add</i>
-                            </button>
-                            <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab">
-                                <i class="material-icons" id="functions-panel">remove</i>
-                            </button>
-                            <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab">
-                                <i class="material-icons" id="functions-panel">edit</i>
-                            </button>
-                            <!-- FAB button with ripple -->
-                            <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab">
-                                <i class="material-icons" id="functions-panel">print</i>
-                            </button>
+                <table id='discente-table' class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp">
+                    <thead>
+                        <tr>
+                            <th class="mdl-data-table__cell--non-numeric">Id</th>
+                            <th>Nome</th>
+                            <th>Tipo doc</th>
+                            <th>Nº documento</th>
+                            <th>Data Nasc.</th>
+                            <th>Sexo</th>
+                            <th>Nacionalidade</th>
+                            <th>Bolsa</th>
+                            <th>Email</th>
+                            <th>Nivel</th>
+                            <th>Tipo de Vínculo</th>
+                            <th>Regime de trabalho</th>
+                        </tr>
+                    </thead>
+                    <tbody>
 
-                        </div>
-                        <table class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp">
-                            <thead>
-                                <tr>
-                                    <th class="mdl-data-table__cell--non-numeric">Id</th>
-                                    <th>Tipo doc</th>
-                                    <th>Nº documento</th>
-                                    <th>Data Nasc.</th>
-                                    <th>Sexo</th>
-                                    <th>Nome Social</th>
-                                    <th>Nacionalidade</th>
-                                    <th>Bolsa</th>
-                                    <th>Email</th>
-                                    <th>Nivel</th>
-                                    <th>Tipo de Vínculo</th>
-                                    <th>Regime de trabalho</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="mdl-data-table__cell--non-numeric">25</td>
-                                    <td>Rg</td>
-                                    <td>176238163</td>
-                                    <td>9/12/1977</td>
-                                    <td>Masculino</td>
-                                    <td>João Silva</td>
-                                    <td>Brasileiro</td>
-                                    <td>Não</td>
-                                    <td>seujoao@gmail.com</td>
-                                    <td>Phd</td>
-                                    <td>Dedicação exclusiva</td>
-                                    <td>40h</td>
-                                </tr>
-                            </tbody>
-                        </table>
+                    </tbody>
+                </table>
+
+            </div>
+            <div id="publications_panel" class="panel" style="display: none">
+                <div class="view">
+                    <h3 id="title-panel" style="text-align: Left; width: 80%; margin-left: 5vh">Publicações</h3>
+                    <div id="options-panel">
+                        <!-- Large Tooltip -->
+                        <!-- FAB button with ripple -->
+                        <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab" id='refresh_publications'>
+                            <i class="material-icons" id="functions-panel">refresh</i>
+                        </button>
+                        <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab">
+                            <i class="material-icons" id="functions-panel">remove</i>
+                        </button>
+                        <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab">
+                            <i class="material-icons" id="functions-panel">edit</i>
+                        </button>
+                        <!-- FAB button with ripple -->
+                        <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab">
+                            <i class="material-icons" id="functions-panel">print</i>
+                        </button>
+
                     </div>
+                    <table id='publicacao-table' class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp">
+                        <thead>
+                            <tr>
+                                <th class="mdl-data-table__cell--non-numeric">Id</th>
+                                <th>Tipo doc</th>
+                                <th>Nº documento</th>
+                                <th>Data Nasc.</th>
+                                <th>Sexo</th>
+                                <th>Nome Social</th>
+                                <th>Nacionalidade</th>
+                                <th>Bolsa</th>
+                                <th>Email</th>
+                                <th>Nivel</th>
+                                <th>Tipo de Vínculo</th>
+                                <th>Regime de trabalho</th>
+                            </tr>
+                        </thead>
+                        <tbody>
 
-                    <div id="solicitacoes_panel" class="panel" style="display: none">
-                        <div class="view">
-                            <h3 id="title-panel">Solicitações</h3>
-                            <div id="options-panel">
-                                <!-- Large Tooltip -->
-                                <!-- FAB button with ripple -->
-                                <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab">
-                                    <i class="material-icons" id="functions-panel">add</i>
-                                </button>
-                                <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab">
-                                    <i class="material-icons" id="functions-panel">remove</i>
-                                </button>
-                                <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab">
-                                    <i class="material-icons" id="functions-panel">edit</i>
-                                </button>
-                                <!-- FAB button with ripple -->
-                                <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab">
-                                    <i class="material-icons" id="functions-panel">print</i>
-                                </button>
+                        </tbody>
+                    </table>
+                </div>
+                <table id='publicacoes-table' class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp">
+                    <thead>
+                        <tr>
+                            <th class="mdl-data-table__cell--non-numeric">Id</th>
+                            <th>Tipo doc</th>
+                            <th>Nº documento</th>
+                            <th>Data Nasc.</th>
+                            <th>Sexo</th>
+                            <th>Nome Social</th>
+                            <th>Nacionalidade</th>
+                            <th>Bolsa</th>
+                            <th>Email</th>
+                            <th>Nivel</th>
+                            <th>Tipo de Vínculo</th>
+                            <th>Regime de trabalho</th>
+                        </tr>
+                    </thead>
+                    <tbody>
 
-                            </div>
-                        </div>
+                    </tbody>
+                </table>
+            </div>
+            <div id="projetos_panel" class="panel" style="display: none">
+                <div class="view">
+                    <h3 id="title-panel">Projetos</h3>
+                    <div id="options-panel">
+                        <!-- Large Tooltip -->
+                        <!-- FAB button with ripple -->
+                        <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab" id='refresh_projetos'>
+                            <i class="material-icons" id="functions-panel">refresh</i>
+                        </button>
+                        <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab">
+                            <i class="material-icons" id="functions-panel">remove</i>
+                        </button>
+                        <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab">
+                            <i class="material-icons" id="functions-panel">edit</i>
+                        </button>
+                        <!-- FAB button with ripple -->
+                        <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab">
+                            <i class="material-icons" id="functions-panel">print</i>
+                        </button>
 
-                        <div id="estatistica_panel" class="panel" style="display: none">
-                            <div class="view">
-                                <h3 id="title-panel">Estatistica</h3>
-                                <div id="options-panel">
-                                    <!-- Large Tooltip -->
-                                    <!-- FAB button with ripple -->
-                                    <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab">
-                                        <i class="material-icons" id="functions-panel">add</i>
-                                    </button>
-                                    <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab">
-                                        <i class="material-icons" id="functions-panel">remove</i>
-                                    </button>
-                                    <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab">
-                                        <i class="material-icons" id="functions-panel">edit</i>
-                                    </button>
-                                    <!-- FAB button with ripple -->
-                                    <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab">
-                                        <i class="material-icons" id="functions-panel">print</i>
-                                    </button>
+                    </div>
+                    <h1 style="text-align: center; width: 100%">Projetos</h1>
+                </div>
+                <table id='projetos-table' class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp">
+                    <thead>
+                        <tr>
+                            <th class="mdl-data-table__cell--non-numeric">Id</th>
+                            <th>Tipo doc</th>
+                            <th>Nº documento</th>
+                            <th>Data Nasc.</th>
+                            <th>Sexo</th>
+                            <th>Nome Social</th>
+                            <th>Nacionalidade</th>
+                            <th>Bolsa</th>
+                            <th>Email</th>
+                            <th>Nivel</th>
+                            <th>Tipo de Vínculo</th>
+                            <th>Regime de trabalho</th>
+                        </tr>
+                    </thead>
+                    <tbody>
 
-                                </div>
-                            </div>
-                            <div id="participantes_ext_panel" class="panel" style="display: none">
-                                <div class="view">
-                                    <h3 id="title-panel">Participantes Externos</h3>
-                                    <div id="options-panel">
-                                        <!-- Large Tooltip -->
-                                        <!-- FAB button with ripple -->
-                                        <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab">
-                                            <i class="material-icons" id="functions-panel">add</i>
-                                        </button>
-                                        <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab">
-                                            <i class="material-icons" id="functions-panel">remove</i>
-                                        </button>
-                                        <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab">
-                                            <i class="material-icons" id="functions-panel">edit</i>
-                                        </button>
-                                        <!-- FAB button with ripple -->
-                                        <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab">
-                                            <i class="material-icons" id="functions-panel">print</i>
-                                        </button>
+                    </tbody>
+                </table>
+            </div>
+            <div id="financiadores_panel" class="panel" style="display: none">
+                <div class="view">
+                    <h3 id="title-panel">Financiadores</h3>
+                    <div id="options-panel">
+                        <!-- Large Tooltip -->
+                        <!-- FAB button with ripple -->
+                        <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab" id='refresh_financiadores'>
+                            <i class="material-icons" id="functions-panel">refresh</i>
+                        </button>
+                        <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab">
+                            <i class="material-icons" id="functions-panel">remove</i>
+                        </button>
+                        <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab">
+                            <i class="material-icons" id="functions-panel">edit</i>
+                        </button>
+                        <!-- FAB button with ripple -->
+                        <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab">
+                            <i class="material-icons" id="functions-panel">print</i>
+                        </button>
 
-                                    </div>
-                                </div>
-                                <div id="projetos_panel" class="panel" style="display: none">
-                                    <div class="view">
-                                        <h3 id="title-panel">Projetos</h3>
-                                        <div id="options-panel">
-                                            <!-- Large Tooltip -->
-                                            <!-- FAB button with ripple -->
-                                            <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab">
-                                                <i class="material-icons" id="functions-panel">add</i>
-                                            </button>
-                                            <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab">
-                                                <i class="material-icons" id="functions-panel">remove</i>
-                                            </button>
-                                            <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab">
-                                                <i class="material-icons" id="functions-panel">edit</i>
-                                            </button>
-                                            <!-- FAB button with ripple -->
-                                            <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab">
-                                                <i class="material-icons" id="functions-panel">print</i>
-                                            </button>
+                    </div>
+                </div>
+                <table id='financiadores-table' class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp">
+                    <thead>
+                        <tr>
+                            <th class="mdl-data-table__cell--non-numeric">Id</th>
+                            <th>Tipo doc</th>
+                            <th>Nº documento</th>
+                            <th>Data Nasc.</th>
+                            <th>Sexo</th>
+                            <th>Nome Social</th>
+                            <th>Nacionalidade</th>
+                            <th>Bolsa</th>
+                            <th>Email</th>
+                            <th>Nivel</th>
+                            <th>Tipo de Vínculo</th>
+                            <th>Regime de trabalho</th>
+                        </tr>
+                    </thead>
+                    <tbody>
 
-                                        </div>
-                                        <h1 style="text-align: center; width: 100%">Projetos</h1>
-                                    </div>
-                                    <div id="financiadores_panel" class="panel" style="display: none">
-                                        <div class="view">
-                                            <h3 id="title-panel">Fianciadores</h3>
-                                            <div id="options-panel">
-                                                <!-- Large Tooltip -->
-                                                <!-- FAB button with ripple -->
-                                                <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab">
-                                                    <i class="material-icons" id="functions-panel">add</i>
-                                                </button>
-                                                <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab">
-                                                    <i class="material-icons" id="functions-panel">remove</i>
-                                                </button>
-                                                <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab">
-                                                    <i class="material-icons" id="functions-panel">edit</i>
-                                                </button>
-                                                <!-- FAB button with ripple -->
-                                                <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab">
-                                                    <i class="material-icons" id="functions-panel">print</i>
-                                                </button>
+                    </tbody>
+                </table>
+            </div>
+            <div id="participantes_ext_panel" class="panel" style="display: none">
+                <div class="view">
+                    <h3 id="title-panel">Participantes Externos</h3>
+                    <div id="options-panel">
+                        <!-- Large Tooltip -->
+                        <!-- FAB button with ripple -->
+                        <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab" id='refresh_participantes'>
+                            <i class="material-icons" id="functions-panel">refresh</i>
+                        </button>
+                        <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab">
+                            <i class="material-icons" id="functions-panel">remove</i>
+                        </button>
+                        <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab">
+                            <i class="material-icons" id="functions-panel">edit</i>
+                        </button>
+                        <!-- FAB button with ripple -->
+                        <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab">
+                            <i class="material-icons" id="functions-panel">print</i>
+                        </button>
 
-                                            </div>
-                                        </div>
-                                        <div id="tccs_panel" class="panel" style="display: none">
-                                            <div class="view">
-                                                <h3 id="title-panel">Trabalho de conclusão de curso</h3>
-                                                <div id="options-panel">
-                                                    <!-- Large Tooltip -->
-                                                    <!-- FAB button with ripple -->
-                                                    <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab">
-                                                        <i class="material-icons" id="functions-panel">add</i>
-                                                    </button>
-                                                    <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab">
-                                                        <i class="material-icons" id="functions-panel">remove</i>
-                                                    </button>
-                                                    <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab">
-                                                        <i class="material-icons" id="functions-panel">edit</i>
-                                                    </button>
-                                                    <!-- FAB button with ripple -->
-                                                    <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab">
-                                                        <i class="material-icons" id="functions-panel">print</i>
-                                                    </button>
+                    </div>
+                </div>
+                <table id='participantes_ext-table' class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp">
+                    <thead>
+                        <tr>
+                            <th class="mdl-data-table__cell--non-numeric">Id</th>
+                            <th>Tipo doc</th>
+                            <th>Nº documento</th>
+                            <th>Data Nasc.</th>
+                            <th>Sexo</th>
+                            <th>Nome Social</th>
+                            <th>Nacionalidade</th>
+                            <th>Bolsa</th>
+                            <th>Email</th>
+                            <th>Nivel</th>
+                            <th>Tipo de Vínculo</th>
+                            <th>Regime de trabalho</th>
+                        </tr>
+                    </thead>
+                    <tbody>
 
-                                                </div>
-                                            </div>
-                                            </section>
+                    </tbody>
+                </table>
+            </div>
+            <div id="tccs_panel" class="panel" style="display: none">
+                <div class="view">
+                    <h3 id="title-panel">Trabalho de conclusão de curso</h3>
+                    <div id="options-panel">
+                        <!-- Large Tooltip -->
+                        <!-- FAB button with ripple -->
+                        <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab" id='refresh_tccs'>
+                            <i class="material-icons" id="functions-panel">refresh</i>
+                        </button>
+                        <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab">
+                            <i class="material-icons" id="functions-panel">remove</i>
+                        </button>
+                        <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab">
+                            <i class="material-icons" id="functions-panel">edit</i>
+                        </button>
+                        <!-- FAB button with ripple -->
+                        <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab">
+                            <i class="material-icons" id="functions-panel">print</i>
+                        </button>
+
+                    </div>
+                </div>
+                <table id='tcc-table' class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp">
+                    <thead>
+                        <tr>
+                            <th class="mdl-data-table__cell--non-numeric">Id</th>
+                            <th>Tipo doc</th>
+                            <th>Nº documento</th>
+                            <th>Data Nasc.</th>
+                            <th>Sexo</th>
+                            <th>Nome Social</th>
+                            <th>Nacionalidade</th>
+                            <th>Bolsa</th>
+                            <th>Email</th>
+                            <th>Nivel</th>
+                            <th>Tipo de Vínculo</th>
+                            <th>Regime de trabalho</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
+            </div>
+
+            </section>
 
         </main>
-        </div>
+    </div>
 </body>
 <footer>
     <script src="js/main.js"></script>
