@@ -21,7 +21,7 @@ Histórico de Revisões
   | 30/05/2018 | 0.2        | Navegação de menu e telas                                                             | @MelisseCabral |
   | 02/06/2018 | 0.3        | Implementação do sistema de login e cadastro de novo usuários                         | @MelisseCabral |
   | 03/06/2018 | 0.4        | Responsividade parcial para dispositivos móveis                                       | @MelisseCabral |
-  |            | 0.5        |                                                                                       |                |
+  |            | 0.5        | Implementação das funções de cadastro e listagem das entidades                        |                |
   |            | 0.6        |                                                                                       |                |
   |            | 0.7        |                                                                                       |                |
   |            | 0.8        |                                                                                       |                | 
@@ -184,10 +184,9 @@ navegacional da aplicação.<p/>
 Representação do Software
 =========================
 
-   <Nome do executável><versão>
    ----------------------------
    ### Funções disponíveis na versão
-
+  <p> As funções disponíveis são as descritas anteriormente.</p>
   Procedimentos para execução
   ---------------------------
-  ### Execução
+  <P>Pode-se fazer o acesso direto pelo site http://posgradufc.ga</P>
