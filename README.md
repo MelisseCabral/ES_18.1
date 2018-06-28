@@ -21,7 +21,7 @@ Histórico de Revisões
   | 30/05/2018 | 0.2        | Navegação de menu e telas                                                             | @MelisseCabral |
   | 02/06/2018 | 0.3        | Implementação do sistema de login e cadastro de novo usuários                         | @MelisseCabral |
   | 03/06/2018 | 0.4        | Responsividade parcial para dispositivos móveis                                       | @MelisseCabral |
-  |            | 0.5        | Implementação das funções de cadastro e listagem das entidades                        |                |
+  | 27/06/2018 | 0.5        | Implementação das funções de cadastro e listagem das entidades                        | @MelisseCabral |
   |            | 0.6        |                                                                                       |                |
   |            | 0.7        |                                                                                       |                |
   |            | 0.8        |                                                                                       |                | 
