@@ -88,6 +88,8 @@ $(function () {
     var nat_proj = document.getElementById("nat_proj");
     var situacao_proj = document.getElementById("situacao_proj");
 
+    loadTables();
+
     btn_insertion_db.addEventListener('click', function () {
         insertData(active_chip);
         active_chip = 'financiador';
@@ -131,7 +133,6 @@ $(function () {
             }
         }
         else if (active_chip == 'fomento') {
-            console.log(active_chip);
             path = 'programaFomento';
             obj = {
                 idFinancer: id_finan.value,
@@ -283,12 +284,24 @@ $(function () {
 
         db.collection(path).add(obj)
             .then(function (docRef) {
+                closeModal();
                 snackbar("Adicionado")
+                loadTables();
             })
             .catch(function (error) {
                 snackbar(error);
             });
 
+    }
+
+    function loadTables() {
+        atualizaProfessoresTable();
+        atualizaFinancersTable();
+        atualizaAlunosTable();
+        atualizaExternosTable();
+        atualizaProducaoIntelTable();
+        atualizaProjetoTable();
+        atualizaTccTable();
     }
 
     //funções banco de dados de listagem
@@ -540,6 +553,8 @@ $(function () {
             snackbar(error);
         });
     }
+
+
     var forms = document.querySelectorAll(".panel_cadastro");
     var chips = document.querySelectorAll(".mdl-chip");
 

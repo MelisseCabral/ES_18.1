@@ -49,26 +49,35 @@ Sumário
     6.1 [Funções disponíveis na versão](#funções-disponíveis-na-versão)<br>
     6.2 [Procedimentos para execução](#procedimentos-para-execução)<br>
 
-Introdução
+1. Introdução
 ==========
 
 <p>Esse projeto está focado no usuário que necessita de uma interface
 amigável. Promovendo por meio da simplicidade de layout a descomplexidade no
-uso, facilidade até mesmo ao mais inexperiente usuário.<p/>
+uso, facilidade até mesmo ao mais inexperiente usuário. Este projeto traz o
+desenvolvimento de um sistema de gerenciamento de pós-graduação, de forma a
+facilitar os processos em um sistema computacional simples e fácil de usar.
+Este sistema deve fazer com que o professor consiga administrar melhor os 
+seus alunos, projetos, entre outros.<p/>
 
-Visão Geral
------------
-
-<p>Este documento está organizado em várias
-seções com conteúdo específico. A **seção 2** mostra uma visão geral do
+<p>Este documento está organizado em várias seções com o conteúdo específico,
+na qual esta foi a seção 1. A **seção 2** mostra uma visão geral do
 escopo do projeto. A **seção 3** descreve os requisitos funcionais da
 aplicação. A **seção 4** descreve os requisitos não-funcionais. A
 **seção 5** apresenta os diagramas dos casos de uso. A **seção 6**
 descreve os casos de uso da aplicação. A **seção 7** mostra o modelo
 navegacional da aplicação.<p/>
+2. Visão Geral
+-----------
 
 ### Descrição Geral do sistema
 <p></p>
+<p>O sistema a ser desenvolvido é voltado para
+o gerenciamento de pós-graduação. O mesmo deve trazer funcionalidades
+como o cadastro de alunos, de financiadores, de programa de fomento,
+de area de concentração, entre outros. O sistema deve trazer um melhore
+gerenciamento, podendo até pesquisar qualquer um dos itens cadastrados e
+até gerar relatórios.
 
 ### Acrônimos e Abreviações
 <p>[Essa sub-seção deve mostrar as definições de todos os termos, acrônimos e abreviações necessárias para a interpretação desse plano.]</p>
@@ -135,7 +144,6 @@ Funcionalidades:
 <b>Funcionalidade:</b> Cadastro de alunos da pos graduação.<br>
 <b>Funcionalidade:</b> Cadastro de financiadores.<br>
 <b>Funcionalidade:</b> Cadastro de programa de fomento.<br>
-<b>Funcionalidade:</b> Cadastro de financiadores.<br>
 <b>Funcionalidade:</b> Cadastro de area de concentração.<br>
 <b>Funcionalidade:</b> Cadastro de linha de pesquisa.<br>
 <b>Funcionalidade:</b> Cadastro de projetos.<br>
@@ -143,12 +151,6 @@ Funcionalidades:
 <b>Funcionalidade:</b> Cadastro de trabalho de conclusão.<br>
 <b>Funcionalidade:</b> Cadastro de produção intelectual.<br>
 <b>Funcionalidade:</b> Gerar relatórios.<br>
-
-
-<b>US2:</b>Como discente, gostaria de ter criar uma conta.<br>
-<b>Cliente:</b> Discente sem vinculo.<br>
-<b>Funcionalidade:</b> Criação de conta para alunos da pos graduação.<br>
-<br>
 
 
 Arquitetura do Sistema
