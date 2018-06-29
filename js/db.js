@@ -88,6 +88,45 @@ $(function () {
     var nat_proj = document.getElementById("nat_proj");
     var situacao_proj = document.getElementById("situacao_proj");
 
+    // Campos cadastro de Externos
+
+    var nome_ext = document.getElementById("nome_ext");
+    var nome_social_ext = document.getElementById("nome_social_ext");
+    var tipo_doc_ext = document.getElementById("tipo_doc_ext");
+    var num_doc_disc = document.getElementById("num_doc_disc");
+    var email_ext = document.getElementById("email_ext");
+    var sexo_ext = document.getElementById("sexo_ext");
+    var situacao_ext = document.getElementById("situacao_ext");
+    var nasc_ext = document.getElementById("nasc_ext");
+    var id_partPP = document.getElementById("id_partPP");
+    var id_part_prod_ext = document.getElementById("id_part_prod_ext");
+    var id_banca_tcc_ext = document.getElementById("id_banca_tcc_ext");
+    var nivel_ext = document.getElementById("nivel_ext");
+    var bolsapp_ext = document.getElementById("bolsapp_ext");
+    var inst_tit_ext = document.getElementById("inst_tit_ext");
+    var inst_origem_ext = document.getElementById("inst_origem_ext");
+    var data_nasc_ext = document.getElementById("data_nasc_ext");
+
+    // Campos cadastro de TCCS
+
+    var titulo_tcc = document.getElementById("titulo_tcc");
+    var date_defesa = document.getElementById("date_defesa");
+    var abstract_tcc = document.getElementById("abstract_tcc");
+    var id_area_tcc = document.getElementById("id_area_tcc");
+    var id_autor = document.getElementById("id_autor");
+    var id_finan_tcc = document.getElementById("id_finan_tcc");
+    var id_linha_tcc = document.getElementById("id_linha_tcc");
+    var id_orient_tcc = document.getElementById("id_orient_tcc");
+    var idioma_tcc = document.getElementById("idioma_tcc");
+    var same_field_tcc = document.getElementById("same_field_tcc");
+    var num_pags_tcc = document.getElementById("num_pags_tcc");
+    var keywords_tcc = document.getElementById("keywords_tcc");
+    var proj_pesq_tcc = document.getElementById("proj_pesq_tcc");
+    var resumo_tcc = document.getElementById("resumo_tcc");
+    var tipo_inst_tcc = document.getElementById("tipo_inst_tcc");
+    var tipo_tcc = document.getElementById("tipo_tcc");
+    var tipo_veic_tcc = document.getElementById("tipo_veic_tcc");
+
     loadTables();
 
     btn_insertion_db.addEventListener('click', function () {
@@ -121,7 +160,7 @@ $(function () {
             console.log(obj)
         }
 
-        else if (active_chip == 'financiador') {
+        else if (path == 'financiador') {
             path = 'financers';
             obj = {
                 cnpj: cnpj.value,
@@ -132,7 +171,7 @@ $(function () {
                 statusJuri: status_jur.value
             }
         }
-        else if (active_chip == 'fomento') {
+        else if (path == 'fomento') {
             path = 'programaFomento';
             obj = {
                 idFinancer: id_finan.value,
@@ -217,49 +256,47 @@ $(function () {
         else if (path == 'participante-ext') {
             path = 'externos';
             obj = {
-                nome: '',
-                nomeSocial: ''.value,
-                email: '',
-                dataNasc: '',
-                sexo: ''.value,
-                tipoDocumento: '',
-                numDocumento: '',
-                nacionalidade: '',
-                situacao: '',
-                idPartPP: '',
-                idPartIntel: '',
-                idBancaTcc: '',
-                nivel: '',
-                bolsaPP: '',
-                instTitulacao: '',
+                nome: nome_ext.value,
+                nomeSocial: nome_social_ext.value,
+                email: email_ext,
+                dataNasc: data_nasc_ext,
+                sexo: sexo_ext.value,
+                tipoDocumento: tipo_doc_ext,
+                numDocumento: num_doc_ext,
+                nacionalidade: nasc_ext,
+                situacao: situacao_ext,
+                idPartPP: id_partPP,
+                idPartIntel: id_part_prod_ext,
+                idBancaTcc: id_banca_tcc_ext,
+                nivel: nivel_ext,
+                bolsaPP: bolsapp_ext,
+                instTitulacao: inst_tit_ext,
                 paisTitulacao: '',
-                instOrigem: '',
-                nivel: '',
+                instOrigem: inst_origem_ext,
 
             }
         }
         else if (path == 'tcc') {
             obj = {
-                abstract: "",
-                dataDefesa: "",
-                expecAtuacao: "Engenharia",
-                idAreaConcetracao: "",
-                idAutor: "fJUa1YdfmLJeuknWyBlN",
-                idFinanciador: "",
-                idLinhaPesquisa: "",
-                idOrientador: "",
-                idTcc: "",
-                idioma: "Portugues",
-                membros: "id prof, id externos",
-                mesmaArea: true,
-                numeroPaginas: "10",
-                palavrasChave: "carro, bola,etc",
-                projetoDePesquisa: "",
-                resumo: "Estudo de um novo paradigma de programação",
-                tipoInst: "",
-                tipoTcc: "Monografia",
-                tipoVeicEmpr: "Tipo Veiculo Empregatico",
-                titulo: "Novo Paradigma de Programação"
+                abstract: abstract_tcc.value,
+                dataDefesa: date_defesa.value,
+                expecAtuacao: atuacao_tcc.value,
+                idAreaConcetracao: id_area_tcc.value,
+                idAutor: id_autor.value,
+                idFinanciador: id_finan_tcc.value,
+                idLinhaPesquisa: id_linha_tcc.value,
+                idOrientador: id_orient_tcc.value,
+                idioma: idioma_tcc.value,
+                membros: '',
+                mesmaArea: same_field_tcc.value,
+                numeroPaginas: num_pags_tcc.value,
+                palavrasChave: keywords_tcc.value,
+                projetoDePesquisa: proj_pesq_tcc.value,
+                resumo: resumo_tcc.value,
+                tipoInst: tipo_inst_tcc.value,
+                tipoTcc: tipo_tcc.value,
+                tipoVeicEmpr: tipo_veic_tcc.value,
+                titulo: titulo_tcc.value
             }
         }
         else if (path == 'producao') {
@@ -291,7 +328,6 @@ $(function () {
             .catch(function (error) {
                 snackbar(error);
             });
-
     }
 
     function loadTables() {
@@ -338,17 +374,15 @@ $(function () {
             snackbar(error);
         });
     }
-
     function atualizaFinancersTable() {
         db.collection('financers').get().then(function (querySnapshot) {
-            $('#financers-table tbody tr').remove();
+            $('#financiadores-table tbody tr').remove();
             querySnapshot.forEach(function (doc) {
                 var content = '';
 
                 content += '<tr>';
                 content += '<td></td>';
                 content += '<td class="mdl-data-table__cell--non-numeric">25</td>';
-                content += '<td></td>';
                 content += '<td>' + doc.data().nomeFantasia + '</td>';
                 content += '<td>' + doc.data().razaoSocial + '</td>';
                 content += '<td>' + doc.data().cnpj + '</td>';
@@ -356,7 +390,7 @@ $(function () {
                 content += '<td>' + doc.data().statusJuri + '</td>';
                 content += '</tr>';
 
-                $('#financers-table').append(content);
+                $('#financiadores-table').append(content);
             });
         }).catch(function (error) {
             snackbar(error);
@@ -364,7 +398,7 @@ $(function () {
     }
     function atualizaAlunosTable() {
         db.collection('discentes').get().then(function (querySnapshot) {
-            $('#aluno-table body tr').remove();
+            $('#discente-table body tr').remove();
             querySnapshot.forEach(function (doc) {
                 var content = '';
 
@@ -384,13 +418,14 @@ $(function () {
                 content += '<td>' + doc.data().situacao + 'r</td>';
                 content += '</tr>';
 
-                $('#aluno-table').append(content);
+                $('#discente-table').append(content);
             });
         }).catch(function (error) {
             snackbar(error);
         });
     }
-    function atualiaAreaConcentracaoTalbe() {
+    /*
+    function atualiaAreaConcentracaoTable() {
         db.collection('areaConcentracao').get().then(function (querySnapshot) {
             $('#area-concentracao-table body tr').remove();
             querySnapshot.forEach(function (doc) {
@@ -411,7 +446,7 @@ $(function () {
             snackbar(error);
         });
     }
-
+    */
     function atualizaExternosTable() {
         db.collection('externos').get().then(function (querySnapshot) {
             $('#externos-table body tr').remove();
@@ -426,7 +461,6 @@ $(function () {
                 content += '<td>' + doc.data().numDocumento + '</td>';//numero documento
                 content += '<td>' + doc.data().dataNasc + '</td>';//data de nascimento
                 content += '<td>' + doc.data().sexo + '</td>';//sexo
-                content += '<td>' + doc.data().nomeSocial + '</td>'; //column1
                 content += '<td>' + doc.data().nacionalidade + '</td>';//nacionalidade
                 content += '<td>' + doc.data().paisTitulacao + '</td>';//pais titulação
                 content += '<td>' + doc.data().bolsaPP + '</td>';//bolsa projeto pesquisa
@@ -440,33 +474,34 @@ $(function () {
             snackbar(error);
         });
     }
-
-    function atualizaLinhaPesquisaTable() {
-        db.collection('linhaPesquisa').get().then(function (querySnapshot) {
-            $('#linha-pesquisa-table body tr').remove();
-            querySnapshot.forEach(function (doc) {
-                var content = '';
-
-                content += '<tr>';
-                content += '<td></td>';
-                content += '<td class="mdl-data-table__cell--non-numeric">25</td>';
-                content += '<td>' + doc.data().nome + '</td>';//nome da linha de pesquisa
-                content += '<td>' + doc.data().descricao + '</td>';//descrição da linha de pesquisa
-                content += '<td>' + doc.data().dataInicio + '</td>';//data de inicio
-                content += '<td>' + doc.data().dataFim + '</td>';//data fim
-                content += '</tr>';
-
-                $('#linha-pesquisa-table').append(content);
+    /*
+        function atualizaLinhaPesquisaTable() {
+            db.collection('linhaPesquisa').get().then(function (querySnapshot) {
+                $('#linha-pesquisa-table body tr').remove();
+                querySnapshot.forEach(function (doc) {
+                    var content = '';
+    
+                    content += '<tr>';
+                    content += '<td></td>';
+                    content += '<td class="mdl-data-table__cell--non-numeric">25</td>';
+                    content += '<td>' + doc.data().nome + '</td>';//nome da linha de pesquisa
+                    content += '<td>' + doc.data().descricao + '</td>';//descrição da linha de pesquisa
+                    content += '<td>' + doc.data().dataInicio + '</td>';//data de inicio
+                    content += '<td>' + doc.data().dataFim + '</td>';//data fim
+                    content += '</tr>';
+    
+                    $('#linha-pesquisa-table').append(content);
+                });
+            }).catch(function (error) {
+                snackbar(error);
             });
-        }).catch(function (error) {
-            snackbar(error);
-        });
-    }
-
+        }
+    */
     function atualizaProducaoIntelTable() {
         db.collection('producaoIntel').get().then(function (querySnapshot) {
-            $('#producao-intel-table body tr').remove();
+            $('#publicacoes-table body tr').remove();
             querySnapshot.forEach(function (doc) {
+
                 var content = '';
 
                 content += '<tr>';
@@ -480,13 +515,14 @@ $(function () {
                 content += '<td>' + doc.data().url + '</td>';//site da produção intelectual
                 content += '</tr>';
 
-                $('#producao-intel-table').append(content);
+                $('#publicacoes-table').append(content);
             });
         }).catch(function (error) {
             snackbar(error);
         });
     }
 
+    /*
     function atualizaProgramaFomentoTable() {
         db.collection('programaFomento').get().then(function (querySnapshot) {
             $('#programa-fomento-table body tr').remove();
@@ -506,9 +542,10 @@ $(function () {
             snackbar(error);
         });
     }
+    */
 
     function atualizaProjetoTable() {
-        db.collection('projeto').get().then(function (querySnapshot) {
+        db.collection('projetos').get().then(function (querySnapshot) {
             $('#projetos-table body tr').remove();
             querySnapshot.forEach(function (doc) {
                 var content = '';

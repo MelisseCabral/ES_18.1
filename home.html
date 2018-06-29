@@ -198,7 +198,6 @@
                         </div>
 
                     </div>
-
                     <div id='form-professor' class="panel_cadastro" style="display: none">
                         <div class="mdl-grid">
                             <div class="mdl-cell mdl-cell--4-col">
@@ -460,27 +459,185 @@
 
                     </div>
                     <div id='form-participante-ext' class="panel_cadastro" style="display: none">
-                        <h4>Participantes externos</h4>
                         <div class="mdl-grid">
-                            <div class="mdl-cell mdl-cell--4-col">4</div>
-                            <div class="mdl-cell mdl-cell--4-col">4</div>
-                            <div class="mdl-cell mdl-cell--4-col">4</div>
+                            <div class="mdl-cell mdl-cell--4-col">
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" id="nome_ext">
+                                    <label class="mdl-textfield__label" for="nome_ext">Nome</label>
+                                </div>
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" id="nome_social_ext">
+                                    <label class="mdl-textfield__label" for="nome_social_ext">Nome Social</label>
+                                </div>
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" id="tipo_doc_ext">
+                                    <label class="mdl-textfield__label" for="tipo_doc_ext">Tipo Documento</label>
+                                </div>
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" id="num_doc_ext">
+                                    <label class="mdl-textfield__label" for="num_doc_ext">Número do Documento</label>
+                                </div>
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" id="email_ext">
+                                    <label class="mdl-textfield__label" for="email_ext">Email</label>
+                                </div>
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" id="sexo_ext">
+                                    <label class="mdl-textfield__label" for="sexo_ext">Sexo</label>
+                                </div>
+                            </div>
+
+                            <div class="mdl-cell mdl-cell--4-col">
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" id="situacao_ext">
+                                    <label class="mdl-textfield__label" for="situacao_ext">Situaçao</label>
+                                </div>
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" id="nasc_ext">
+                                    <label class="mdl-textfield__label" for="nasc_ext">Nacionalidade</label>
+                                </div>
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" id="id_partPP">
+                                    <label class="mdl-textfield__label" for="id_partPP">Id orientação</label>
+                                </div>
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" id="id_part_prod_ext">
+                                    <label class="mdl-textfield__label" for="id_part_prod_ext">ID Pesquisa</label>
+                                </div>
+
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" id="id_banca_tcc_ext">
+                                    <label class="mdl-textfield__label" for="id_banca_tcc_ext">ID Banca TCC</label>
+                                </div>
+
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" id="nivel_ext">
+                                    <label class="mdl-textfield__label" for="nivel_ext">Nível</label>
+                                </div>
+                            </div>
+                            <div class="mdl-cell mdl-cell--4-col">
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" id="bolsapp_ext">
+                                    <label class="mdl-textfield__label" for="bolsapp_ext">Bolsa</label>
+                                </div>
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" id="inst_tit_ext">
+                                    <label class="mdl-textfield__label" for="inst_tit_ext">Instituição da Titulação</label>
+                                </div>
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" id="pais_tit_ext">
+                                    <label class="mdl-textfield__label" for="pais_tit_ext">País da Titulação</label>
+                                </div>
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" id="inst_origem_ext">
+                                    <label class="mdl-textfield__label" for="inst_origem_ext">Instituição de Origem</label>
+                                </div>
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="date" placeholder='' id="data_nasc_ext">
+                                    <label class="mdl-textfield__label" for="data_nasc_ext">Data de Nascimento</label>
+                                </div>
+                            </div>
                         </div>
                     </div>
+
                     <div id='form-tcc' class="panel_cadastro" style="display: none">
-                        <h4>TCC</h4>
                         <div class="mdl-grid">
-                            <div class="mdl-cell mdl-cell--4-col">4</div>
-                            <div class="mdl-cell mdl-cell--4-col">4</div>
-                            <div class="mdl-cell mdl-cell--4-col">4</div>
+                            <div class="mdl-cell mdl-cell--4-col">
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" id="titulo_tcc">
+                                    <label class="mdl-textfield__label" for="titulo_tcc">Titulo</label>
+                                </div>
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" id="desc_proj">
+                                    <label class="mdl-textfield__label" for="desc_proj">Descrição</label>
+                                </div>
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" id="id_area_proj">
+                                    <label class="mdl-textfield__label" for="id_area_proj">ID da Area deConcentracao</label>
+                                </div>
+
+                            </div>
+
+                            <div class="mdl-cell mdl-cell--4-col">
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" id="id_finan_proj">
+                                    <label class="mdl-textfield__label" for="id_finan_proj">ID do Financiador</label>
+                                </div>
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" id="id_pesq_proj">
+                                    <label class="mdl-textfield__label" for="id_pesq_proj">ID de Linha de Pesquisa</label>
+                                </div>
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" id="id_prod_proj">
+                                    <label class="mdl-textfield__label" for="id_prod_proj">ID Produção Intelectual</label>
+                                </div>
+
+                            </div>
+                            <div class="mdl-cell mdl-cell--4-col">
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" id="id_tcc_proj">
+                                    <label class="mdl-textfield__label" for="id_tcc_proj">ID de Trabalho de conclusão</label>
+                                </div>
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" id="nat_proj">
+                                    <label class="mdl-textfield__label" for="nat_proj">Natureza do projeto</label>
+                                </div>
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" id="situacao_proj">
+                                    <label class="mdl-textfield__label" for="situacao_proj">Situação</label>
+                                </div>
+
+                            </div>
                         </div>
                     </div>
                     <div id='form-producao' class="panel_cadastro" style="display: none">
-                        <h4>Produção intectual</h4>
                         <div class="mdl-grid">
-                            <div class="mdl-cell mdl-cell--4-col">4</div>
-                            <div class="mdl-cell mdl-cell--4-col">4</div>
-                            <div class="mdl-cell mdl-cell--4-col">4</div>
+                            <div class="mdl-cell mdl-cell--4-col">
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" id="nome_proj">
+                                    <label class="mdl-textfield__label" for="nome_proj">Nome</label>
+                                </div>
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" id="desc_proj">
+                                    <label class="mdl-textfield__label" for="desc_proj">Descrição</label>
+                                </div>
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" id="id_area_proj">
+                                    <label class="mdl-textfield__label" for="id_area_proj">ID da Area deConcentracao</label>
+                                </div>
+
+                            </div>
+
+                            <div class="mdl-cell mdl-cell--4-col">
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" id="id_finan_proj">
+                                    <label class="mdl-textfield__label" for="id_finan_proj">ID do Financiador</label>
+                                </div>
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" id="id_pesq_proj">
+                                    <label class="mdl-textfield__label" for="id_pesq_proj">ID de Linha de Pesquisa</label>
+                                </div>
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" id="id_prod_proj">
+                                    <label class="mdl-textfield__label" for="id_prod_proj">ID Produção Intelectual</label>
+                                </div>
+
+                            </div>
+                            <div class="mdl-cell mdl-cell--4-col">
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" id="id_tcc_proj">
+                                    <label class="mdl-textfield__label" for="id_tcc_proj">ID de Trabalho de conclusão</label>
+                                </div>
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" id="nat_proj">
+                                    <label class="mdl-textfield__label" for="nat_proj">Natureza do projeto</label>
+                                </div>
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" id="situacao_proj">
+                                    <label class="mdl-textfield__label" for="situacao_proj">Situação</label>
+                                </div>
+
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -545,8 +702,6 @@
                     <i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">account_box</i>
                     <span>Minha Conta</span>
                 </a>
-                <a class="mdl-navigation__link mdl-color-text--blue-grey-400" id="item-drawer-publications">
-                    <i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">inbox</i>Publicações</a>
                 <a class="mdl-navigation__link mdl-color-text--blue-grey-400" id="item-drawer-solicitations">
                     <i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">local_offer</i>Solicitações</a>
                 <a class="mdl-navigation__link mdl-color-text--blue-grey-400" id="item-drawer-estatistics">
@@ -837,43 +992,21 @@
                         </button>
 
                     </div>
-                    <table id='discente-table' class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp">
-                        <thead>
-                            <tr>
-                                <th class="mdl-data-table__cell--non-numeric">Id</th>
-                                <th>Tipo doc</th>
-                                <th>Nº documento</th>
-                                <th>Data Nasc.</th>
-                                <th>Sexo</th>
-                                <th>Nome Social</th>
-                                <th>Nacionalidade</th>
-                                <th>Bolsa</th>
-                                <th>Email</th>
-                                <th>Nivel</th>
-                                <th>Tipo de Vínculo</th>
-                                <th>Regime de trabalho</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-
-                        </tbody>
-                    </table>
                 </div>
                 <table id='discente-table' class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp">
                     <thead>
                         <tr>
-                            <th class="mdl-data-table__cell--non-numeric">Id</th>
+                            <th class="mdl-data-table__cell--non-numeric">ID</th>
                             <th>Nome</th>
-                            <th>Tipo doc</th>
+                            <th>Tipo documento</th>
                             <th>Nº documento</th>
                             <th>Data Nasc.</th>
                             <th>Sexo</th>
                             <th>Nacionalidade</th>
-                            <th>Bolsa</th>
+                            <th>Deficiencia</th>
                             <th>Email</th>
                             <th>Nivel</th>
-                            <th>Tipo de Vínculo</th>
-                            <th>Regime de trabalho</th>
+                            <th>Situação</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -929,17 +1062,12 @@
                     <thead>
                         <tr>
                             <th class="mdl-data-table__cell--non-numeric">Id</th>
-                            <th>Tipo doc</th>
-                            <th>Nº documento</th>
-                            <th>Data Nasc.</th>
-                            <th>Sexo</th>
-                            <th>Nome Social</th>
-                            <th>Nacionalidade</th>
-                            <th>Bolsa</th>
-                            <th>Email</th>
-                            <th>Nivel</th>
-                            <th>Tipo de Vínculo</th>
-                            <th>Regime de trabalho</th>
+                            <th>Titulo</th>
+                            <th>Tipo</th>
+                            <th>Nome Jornal</th>
+                            <th>Autores</th>
+                            <th>ISSN</th>
+                            <th>URL</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -974,17 +1102,10 @@
                     <thead>
                         <tr>
                             <th class="mdl-data-table__cell--non-numeric">Id</th>
-                            <th>Tipo doc</th>
-                            <th>Nº documento</th>
-                            <th>Data Nasc.</th>
-                            <th>Sexo</th>
-                            <th>Nome Social</th>
-                            <th>Nacionalidade</th>
-                            <th>Bolsa</th>
-                            <th>Email</th>
-                            <th>Nivel</th>
-                            <th>Tipo de Vínculo</th>
-                            <th>Regime de trabalho</th>
+                            <th>Nome</th>
+                            <th>Natureza</th>
+                            <th>Descrição</th>
+                            <th>Situação</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -1018,17 +1139,11 @@
                     <thead>
                         <tr>
                             <th class="mdl-data-table__cell--non-numeric">Id</th>
-                            <th>Tipo doc</th>
-                            <th>Nº documento</th>
-                            <th>Data Nasc.</th>
-                            <th>Sexo</th>
-                            <th>Nome Social</th>
-                            <th>Nacionalidade</th>
-                            <th>Bolsa</th>
-                            <th>Email</th>
-                            <th>Nivel</th>
-                            <th>Tipo de Vínculo</th>
-                            <th>Regime de trabalho</th>
+                            <th>Nome Fantasia</th>
+                            <th>Razão Social</th>
+                            <th>CNPJ</th>
+                            <th>País</th>
+                            <th>Status Júridico</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -1058,21 +1173,21 @@
 
                     </div>
                 </div>
-                <table id='participantes_ext-table' class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp">
+                <table id='externos-table' class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp">
                     <thead>
                         <tr>
-                            <th class="mdl-data-table__cell--non-numeric">Id</th>
-                            <th>Tipo doc</th>
+                            <th class="mdl-data-table__cell--non-numeric">ID</th>
+                            <th>Nome</th>
+                            <th>Tipo documento</th>
                             <th>Nº documento</th>
                             <th>Data Nasc.</th>
                             <th>Sexo</th>
-                            <th>Nome Social</th>
                             <th>Nacionalidade</th>
+                            <th>Pais de Titulação</th>
                             <th>Bolsa</th>
                             <th>Email</th>
                             <th>Nivel</th>
-                            <th>Tipo de Vínculo</th>
-                            <th>Regime de trabalho</th>
+                            <th>Situação</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -1106,17 +1221,13 @@
                     <thead>
                         <tr>
                             <th class="mdl-data-table__cell--non-numeric">Id</th>
-                            <th>Tipo doc</th>
-                            <th>Nº documento</th>
-                            <th>Data Nasc.</th>
-                            <th>Sexo</th>
-                            <th>Nome Social</th>
-                            <th>Nacionalidade</th>
-                            <th>Bolsa</th>
-                            <th>Email</th>
-                            <th>Nivel</th>
-                            <th>Tipo de Vínculo</th>
-                            <th>Regime de trabalho</th>
+                            <th>Titulo</th>
+                            <th>Resumo</th>
+                            <th>Idioma</th>
+                            <th>Tipo</th>
+                            <th>ID Aluno</th>
+                            <th>Número de páginas</th>
+                            <th>Atuação</th>
                         </tr>
                     </thead>
                     <tbody>
